@@ -154,7 +154,7 @@ Copy every **numbered** `.md` file from `starter-kit/rules/` into `~/.claude/rul
 Verify by listing both folders and showing me the count. There should be 18 rules.
 Then tell me honestly that nothing visible changes after this. These files load silently into every conversation from now on, in every project. Show me the 18 titles so I know what I just agreed to, and tell me `starter-kit/rules/README.md` says which to read first and in what order.
 
-**Step 4a. Install the plugins that do product work.**
+**Step 4. Install the plugins that do product work.**
 Anthropic publishes plugins built for people who do knowledge work rather than engineering. Run these in the terminal for me:
 
 ```
@@ -162,28 +162,28 @@ claude plugin marketplace add anthropics/knowledge-work-plugins
 claude plugin install product-management@knowledge-work-plugins
 ```
 
-Then show me what else is in that marketplace and let me choose. Ones that likely fit someone running her own business and building her own apps: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not install them all.** Let me pick two or three.
+Then show me what else is in that marketplace and let me choose. Ones that likely fit someone running her own business and building her own apps: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not install them all.** Let me pick one or two, so I end up with two or three in total.
 
-Then stop and tell me to do Step 4b myself.
+Then stop and tell me to do Step 5 myself.
 
-**Step 4b. This one is mine to type, not yours.**
+**Step 5. This one is mine to type, not yours.**
 Tell me to type `/reload-plugins` into Claude Code, and explain that a line starting with `/` is a Claude Code command, which is why you cannot run it for me. Wait until I say I have done it. Then run `claude plugin list` and show me the output so we both know it took.
 
-Then tell me that the product-management plugin also brought twelve connections to tools like Slack, Notion, Linear, Jira and Figma, that I connect them by typing `/mcp`, and that `starter-kit/reference/connectors.md` explains which are there and what to be careful about. Do not connect any of them now.
+Then tell me that the product-management plugin also brought sixteen connections to tools like Slack, Gmail, Google Calendar, Notion, Linear, Jira and Figma, that I connect them by typing `/mcp`, and that `starter-kit/reference/connectors.md` explains which are there and what to be careful about. Do not connect any of them now.
 
-**Step 5. Prove it works on something real.**
+**Step 6. Prove it works on something real.**
 Ask me what I am actually working on this week. Then use the product-management plugin to produce a real first draft of it: a spec, a competitive brief, a research synthesis, whatever fits. Not a demo, the real thing.
-This step matters more than the four before it. If I do not see something useful today I will not come back tomorrow.
+This step matters more than the five before it. If I do not see something useful today I will not come back tomorrow.
 
-**Step 6. Set up the notebook that survives between conversations.**
+**Step 7. Set up the notebook that survives between conversations.**
 Every new conversation starts knowing nothing about the last one. Fix that now, before it costs me a Monday morning.
 Create `.claude/wiki/` in my project and copy `_hot.md` and `_log.md` into it from `starter-kit/templates/`. Then add the block from `starter-kit/templates/CLAUDE-wiki-snippet.md` to the bottom of my `CLAUDE.md` so you actually read them.
 Show me what to say at the end of a working session to keep them current.
 
-**Step 7. Walk me through undoing all of it.**
+**Step 8. Walk me through undoing all of it.**
 Read `starter-kit/reference/undo.md` and walk me through it, checking each command against what you actually did in this session. Tell me if anything in it does not match. I want to know the way out before I go further, including how to stop you mid-task.
 
-**Step 8. Tell me what you did NOT install and why.**
+**Step 9. Tell me what you did NOT install and why.**
 Read `starter-kit/GROWTH.md` and summarise it: what is deliberately missing, and the specific moment that should bring me back for each one. **Do not install any of it now.**
 
 Then stop. I have enough for today.
@@ -194,7 +194,7 @@ Then stop. I have enough for today.
 
 ## What you should have at the end
 
-A project folder Claude works in. A `CLAUDE.md` it reads every time. Eighteen rules loaded into every conversation. Two or three plugins that do your actual job, plus twelve tool connections waiting whenever you want them. A notebook that survives between conversations. One real piece of work already finished.
+A project folder Claude works in. A `CLAUDE.md` it reads every time. Eighteen rules loaded into every conversation. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. One real piece of work already finished.
 
 Everything else waits until you feel the problem it solves, and [GROWTH.md](GROWTH.md) names those moments.
 
