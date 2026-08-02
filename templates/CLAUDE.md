@@ -56,4 +56,11 @@ Example:
 
 - Current state and what is in progress: `.claude/wiki/_hot.md`
 - Session by session record: `.claude/wiki/_log.md`
+- Corrections I have already given you, so I never give them twice: `lessons/index.md`
 - [Add your own pointers here as the project grows.]
+
+## Read at the start of every conversation
+
+Read `lessons/index.md` if it exists, before doing any work. It is the list of things I have already
+corrected you on. This line is what makes that happen: nothing loads a lessons file automatically, so
+if this line is deleted, every lesson in that folder stops being read.

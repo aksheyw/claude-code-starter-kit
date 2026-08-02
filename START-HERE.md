@@ -10,7 +10,7 @@ Two things before you start.
 
 **You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, and this is the most common way day one stops dead.
 
-**You need macOS 13 or later.** Apple menu, then About This Mac.
+**You need macOS 11 (Big Sur) or later.** Apple menu, then About This Mac. That is the app's requirement; the terminal version in the fold at the bottom needs macOS 13.
 
 You do **not** need Node.js, npm, Homebrew, or the command line. The app includes everything.
 
@@ -73,7 +73,7 @@ If you reject something, Claude asks how you would rather do it.
 Two more controls worth knowing before you need them:
 
 - **Stop it any time.** Click the stop button. Or just type what you actually wanted and press Enter, which redirects it without stopping first.
-- **Two other modes exist.** *Accept edits* stops asking, which is faster once you trust it. *Plan* makes it think out loud without touching anything. Stay in Manual for now.
+- **Other modes exist**, in a selector next to the send button. *Accept edits* stops asking, which is faster once you trust it. *Plan* makes it think out loud without touching anything. There are more than these, and which you see depends on your plan and setup, so read the selector rather than trusting this list. Stay in Manual for now.
 
 You are set up. Everything from here is Claude doing the work.
 
@@ -116,7 +116,7 @@ Verify by listing both folders and showing me the count. There should be 18 rule
 Then tell me honestly that nothing visible changes after this. These files load silently into every conversation from now on, in every project, and they work the same whether I use the app or the terminal. Show me the 18 titles so I know what I agreed to, and tell me `starter-kit/rules/README.md` says which to read first.
 
 **Step 4. Hand me the plugin install, because it is mine to click.**
-Tell me to click the **+** button next to the prompt box and choose **Plugins**, then wait for me.
+Tell me to click the **+** button next to the prompt box, choose **Plugins**, and then click **Add plugin**, because the first screen only lists what I already have and the browser is one click further in. Then wait for me.
 
 Walk me through it while I look: I want the `product-management` plugin from Anthropic's knowledge-work set. Tell me what it adds in one line before I install it.
 

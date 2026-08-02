@@ -2,7 +2,7 @@
 
 A connector lets Claude Code read from and write to a tool you already use, so you can ask a question in plain language instead of opening six tabs. "What did we ship last sprint and what are people complaining about?" reaches your tracker and your support inbox and comes back as one answer.
 
-**You do not have to configure any of this by hand.** Installing the `product-management` plugin on day one brings sixteen connectors with it, already pointed at the right place. All that is left is signing in to the ones you actually use.
+**You do not have to configure any of this by hand.** Installing the `product-management` plugin on day one brings sixteen connectors with it. Fourteen arrive pointed at the right address and need only your sign-in. Two, Gmail and Google Calendar, are listed but have no address filled in yet in the public manifest, so treat those as unconfirmed until you see them working. `/mcp` is what tells you the truth on your own machine.
 
 ## What arrives with the plugin
 
@@ -11,8 +11,8 @@ Read on 2026-08-02 from the manifest in the live marketplace repo, `anthropics/k
 | Connector | What it reaches |
 |---|---|
 | `slack` | Messages, channels, threads |
-| `gmail` | Mail |
-| `google calendar` | Events and availability |
+| `gmail` | Mail. Listed with no address filled in yet, so may not connect |
+| `google calendar` | Events and availability. Same, listed with no address yet |
 | `linear` | Issues, projects, cycles |
 | `atlassian` | Jira and Confluence |
 | `asana` | Tasks and projects |
@@ -66,9 +66,13 @@ claude mcp add <name> -- <command>
 
 ## One thing worth being careful about
 
-Anthropic says this plainly, and it is worth repeating rather than burying: a connector runs code on your machine with your permissions, and Anthropic does not control or verify what third-party ones do.
+Connectors come in two shapes and the risk is different for each.
 
-The sixteen above come from Anthropic's own marketplace and point at the tool vendors themselves. That is a different risk level from something you found in a list of two thousand community plugins.
+The sixteen above are the safer shape. They are addresses on the internet, run by the tool vendors themselves, and nothing new runs on your Mac. The real risk with these is what you are handing over: once Slack is connected, Claude can read your messages, and once a connector can write, it can act in that tool as you. That is worth being deliberate about, and it is why you connect what you use rather than all sixteen.
+
+The other shape is a connector that installs a program on your machine and runs it. Anthropic says plainly that a plugin can run code on your computer with your permissions, and that it does not control or verify what third-party ones do. Those deserve a much harder look, and none of the sixteen above is one.
+
+So: connect what you use from sources you recognise. Before installing a connector from anywhere else, find out which shape it is. Asking Claude to read its source and tell you what it does is a genuinely good use of it.
 
 So: connect what you use from sources you recognise. Before installing a connector from anywhere else, look at what it is and who wrote it. If you cannot tell, ask Claude Code to read its source and explain what it does before you install it, which is a genuinely good use of it.
 

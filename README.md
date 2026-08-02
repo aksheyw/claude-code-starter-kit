@@ -29,7 +29,7 @@ A tool installed before you have its problem is friction with no payoff. Install
 
 So the test for day one is strict: you feel the value the same afternoon, it needs no engineering knowledge, and it cannot fail silently.
 
-**Six things pass:** the app itself, one project folder, a `CLAUDE.md` it reads every time, nine rules, two or three plugins, and one real piece of work finished.
+**Six things pass:** the app itself, one project folder, a `CLAUDE.md` it reads every time, eighteen rules of which nine apply from day one, two or three plugins, and one real piece of work finished.
 
 Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until the first time an app you are building needs a paid key. Version control, quality gates, review councils and backups wait too, and [GROWTH.md](GROWTH.md) names the moment that earns each one.
 
@@ -56,7 +56,7 @@ A few install commands in `GROWTH.md` differ from the repo they point at. Each s
 
 When you correct Claude on something, write the correction down so you never have to give it twice.
 
-You type `/learn` into Claude Code. It writes the correction into a file it reads at the start of every conversation, so you never give that correction again. Every rule in this repo started as one.
+You type `/learn`. It writes the correction into a lessons file, and points your project's `CLAUDE.md` at that file so it actually gets read next time. Both halves matter: a lesson nothing loads is a diary. Every rule in this repo started as one.
 
 **The tools are the residue. The habit is the thing.** Your set will look different from this one within a couple of months, and that is the point, not drift.
 

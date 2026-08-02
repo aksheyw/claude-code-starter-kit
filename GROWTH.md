@@ -97,7 +97,7 @@ Then restart Claude Code and type `/cb-` to see if the commands appear.
 
 **Trigger.** Something you are building needs an API key (OpenAI, Stripe, anything you pay for) and Claude writes that key straight into a file to make it work.
 
-This is the one thing on this page that is genuinely unrecoverable. **Published history is append-only.** Deleting a key in a later change does not remove it from the history, and the usual outcome is that you have to cancel the key and get a new one. Automated scanners find published keys in minutes.
+This is the one thing on this page that is genuinely unrecoverable, and not for the reason people assume. History can be rewritten, and later on this page you will see the tools for it. **What cannot be undone is that somebody already has the key.** Automated scanners find published keys within minutes of a push, so by the time you notice, scrubbing the history changes nothing. The fix is always to cancel that key and get a new one.
 
 Two things, in this order. First, ask Claude Code:
 
@@ -195,7 +195,7 @@ Not because these are bad. Because they solve problems you do not have, and each
 | **Test-coverage and code-style rules** | They make Claude refuse to agree your app is finished until it hits targets that do not apply to a first small project. You will experience it as Claude being obstinate and never connect it to a file you copied. |
 | **A second project notebook system** | Two notebooks in one project means neither is trusted and both go stale. Pick one and stay with it. |
 | **Job-search tooling** | Built for someone applying for roles. One version loads a personal profile into every conversation in every project, which is a privacy surface, not a feature. |
-| **Everything in the 2,000-plus community plugin marketplace** | Anthropic states plainly that plugins run code on your machine with your privileges and that it cannot verify what they do. Install from there only when you have a specific need and have looked at the source. |
+| **The community plugin marketplace** | It listed 2,307 plugins when this was checked on 2026-08-01, against 276 in Anthropic's own. Anthropic states plainly that plugins run code on your machine with your privileges and that it cannot verify what they do. Install from there only when you have a specific need and have looked at the source. |
 
 ---
 

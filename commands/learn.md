@@ -39,8 +39,26 @@ so in one line and stop. A folder of noise is worse than a folder of four good l
 ```
 
 - Add one line to `lessons/index.md` under the matching heading: the date, the short
-  description, and the rule in under fifteen words. The index is what gets read at the start
-  of every session, so it has to stay scannable.
+  description, and the rule in under fifteen words. Keep it scannable.
+
+## 3b. Make sure the index actually gets read
+
+**Nothing loads `lessons/index.md` on its own.** Only `CLAUDE.md` is read automatically, so a lesson
+filed without this step is a lesson nobody reads. Do this every time, and do it before reporting
+success:
+
+- Open the project's `CLAUDE.md`. If there is no `CLAUDE.md`, say so and offer to create one, because
+  without it nothing here loads.
+- Search it for `lessons/index.md`. If a pointer is already there, change nothing and say so.
+- If it is missing, show the user this line and ask before adding it:
+
+```markdown
+Read `lessons/index.md` if it exists, before doing any work. It is the list of corrections
+already given, so they never have to be given twice.
+```
+
+- After writing, read `CLAUDE.md` back and confirm the line is present. Do not report the lesson as
+  filed until you have seen it there.
 
 ## 4. Check for graduation
 

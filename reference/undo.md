@@ -2,17 +2,17 @@
 
 Knowing the way out is what makes you willing to try things. Read this once now, before you need it.
 
-Nothing in the day-one setup is hard to reverse. Almost all of it is deleting a file.
+Nothing in the day-one setup is hard to reverse. Almost all of it is deleting a file, and you can ask Claude to do the deleting while you watch.
 
-## Stop Claude mid-task
+## Stop it mid-task
 
-Press `Esc`. It stops where it is and keeps whatever it had already finished. Nothing closes and nothing is lost.
+Press **Esc**. It stops where it is and keeps whatever it had already finished. Nothing closes and nothing is lost.
 
-If the whole thing is unresponsive, `Ctrl` and `C` together quits Claude Code. Your files are untouched. Start it again with `claude`.
+If the app itself stops responding, quit it the normal Mac way, `Cmd` `Q`, and open it again. Your files are untouched.
 
 ## Go back to how things were
 
-Type `/rewind`, or press `Esc` twice with nothing typed in the box. It lists the prompts you sent this session and offers to put the code back, the conversation back, or both.
+Type `/rewind`, or press **Esc** twice with nothing typed in the box. It lists the prompts you sent this session and offers to put the code back, the conversation back, or both.
 
 **Rewind has holes, and they are the dangerous ones.** Know them before you rely on it:
 
@@ -24,77 +24,67 @@ That last one is why version control matters, and the first time you have work y
 
 This is the short version. Rule `05-how-to-stop-it-and-get-back` in your rules folder is the fuller one, and it is the file to trust if the two ever disagree.
 
-## Remove the rules
+---
 
-```bash
-rm ~/.claude/rules/*.md
-```
+# Removing what this kit installed
 
-Then check, because this is exactly the kind of command that looks like it worked when it did not:
+The three sections below are deliberately separate, and they get progressively less reversible. Do not run the later ones to achieve the earlier ones.
 
-```bash
-ls ~/.claude/rules/
-```
+## 1. Remove this kit, and nothing else
 
-That should print nothing. If it still lists files, they are still loading into every conversation.
+This is almost certainly the one you want. It takes out exactly what the setup put in and leaves everything else alone.
 
-To remove one rule rather than all of them, delete it by its full name:
+Say this to Claude:
 
-```bash
-rm ~/.claude/rules/07-write-so-it-lands.md
-```
+> Delete only these files, and show me each one before you do it. In `~/.claude/rules/`: the eighteen files listed below. In `~/.claude/commands/`: `learn.md`. In this project: `CLAUDE.md`, and the `.claude/wiki/` folder. Do not delete anything else in `~/.claude/`.
 
-Nothing else depends on that folder. Emptying it returns Claude Code to how it behaves out of the box.
-
-## Remove the /learn command
-
-```bash
-rm ~/.claude/commands/learn.md
-```
-
-## Remove a plugin
-
-Inside Claude Code:
+The eighteen rule files, by exact name, so nothing else goes with them:
 
 ```
-/plugin uninstall <name>@<marketplace>
+01-start-in-the-right-folder.md      20-agree-the-shape-first.md
+02-talk-to-me-in-plain-words.md      21-write-so-it-lands.md
+03-write-the-project-instructions.md 22-saving-is-not-publishing.md
+04-stop-before-anything-expensive.md 23-before-anyone-else-uses-it.md
+05-how-to-stop-it-and-get-back.md    30-agree-the-approach-before-any-code.md
+06-make-it-prove-it.md               31-ask-for-a-test-that-fails-first.md
+07-never-guess-never-undersell.md    32-code-that-stays-easy-to-change.md
+08-get-it-out-of-the-chat.md         33-delegate-the-reading-keep-the-judgement.md
+09-every-correction-becomes-a-rule.md 34-pressure-test-the-expensive-decisions.md
 ```
 
-Or to keep it installed but switch it off:
+**Why the list rather than "delete everything in the rules folder".** That folder is shared. Anything you write yourself later, or install from anywhere else, lives there too. A blanket delete takes those with it and you will not notice until something stops behaving the way you taught it.
 
-```
-/plugin disable <name>@<marketplace>
-```
+To remove **one** rule rather than all eighteen, delete just that file by name.
 
-Then `/reload-plugins`. Use `claude plugin list` to see the exact names.
+Then ask Claude to list `~/.claude/rules/` and `~/.claude/commands/` so you can see what is left.
 
-## Disconnect a connector
+## 2. Remove a plugin or a connection
 
-Inside Claude Code, `/mcp`, then choose the one you want and disconnect it. That removes Claude's access. It does not change anything in the tool itself.
+**A plugin:** click the **+** button next to the prompt box, choose **Plugins**, and remove it there. Same place you installed it.
 
-## Remove the project notebook
+**A connection:** type `/mcp`, pick the one you want, and disconnect. That removes Claude's access. It changes nothing inside the tool itself.
 
-It is two files inside your own project:
+## 3. Remove Claude Code entirely
 
-```bash
-rm -rf .claude/wiki/
-```
+**Read this before running it.** `~/.claude/` is not just this kit. It holds every plugin you have installed, your permission settings, your conversation history, anything Claude has remembered, and any rules or commands you wrote yourself. `~/.claude.json` holds account and connection state.
 
-Also delete the block you added to your `CLAUDE.md` telling Claude to read them, otherwise it will look for files that are no longer there.
+Deleting them is not "uninstalling the starter kit". It is resetting Claude Code to the day you installed it, and nothing here restores it afterwards.
 
-## Remove Claude Code entirely
+If that is genuinely what you want, and only then, this is the command. It is the one place in this guide that needs a terminal, because Finder hides these folders:
 
 ```bash
 rm -rf ~/.claude ~/.claude.json
 ```
 
-That removes the rules, commands, plugins, and its memory of your setup. Your projects and your own files are untouched, because they live in your own folders.
+Your own projects and files are untouched, because they live in your own folders.
 
-To also remove the program itself, use whichever method you installed it with.
+To also remove the app itself, drag Claude from Applications to the Bin, the same as any Mac app.
+
+---
 
 ## The one thing that is genuinely not reversible
 
-**A password or key that reaches published history.** Once something is pushed to a shared code host, deleting it in a later change does not remove it from the history, and automated scanners find published keys within minutes.
+**A password or key that reaches a published repository.** Rewriting history afterwards is possible, but it does not help: automated scanners find published keys within minutes, and once a value has been copied you cannot un-copy it.
 
 There is no undo. The fix is to cancel that key with whoever issued it and generate a new one.
 
