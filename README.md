@@ -4,7 +4,7 @@
 
 ### Every guide assumes you know what to install. This one assumes you don't.
 
-![requires](https://img.shields.io/badge/requires-Claude%20Code-D97757) ![plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![rules](https://img.shields.io/badge/rules-9%20for%20day%20one-0E9384) ![ends%20with](https://img.shields.io/badge/ends%20with-one%20real%20thing%20finished-1B2A4A) ![license](https://img.shields.io/badge/license-MIT-green)
+![requires Claude Code](https://img.shields.io/badge/requires-Claude%20Code-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![9 rules for day one](https://img.shields.io/badge/rules-9%20for%20day%20one-0E9384) ![ends with one real thing finished](https://img.shields.io/badge/ends%20with-one%20real%20thing%20finished-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
