@@ -2,7 +2,7 @@
 
 You have used Claude in a browser. Claude Code is the same Claude with access to the files in one folder you choose, so it hands you a finished spreadsheet instead of describing one, and it can remember your project between conversations if you set it up to.
 
-It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same thing with a normal Mac interface and no terminal at all.** Anthropic's own documentation says it plainly: *"No terminal required."*
+It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking. The one exception is rare and is at the bottom of this page.
 
 **Part 1 is clicking, about ten minutes.** Then you paste a brief into Claude and it sets itself up while you watch, stopping after each step to show you it worked.
 
@@ -24,11 +24,11 @@ In Finder, make a folder for something you are actually working on. `Documents` 
 
 ## 1.2 Put this kit inside that folder
 
-**If you are reading this on GitHub:** click the green **Code** button near the top, choose **Download ZIP**, then double-click the downloaded file to unzip it.
+**If you are reading this on GitHub:** click the green **Code** button near the top and choose **Download ZIP**. Then look in your Downloads folder. If you see a zip file, double-click it to unzip. If you see a folder already, Safari unzipped it for you, which it does by default, and there is nothing to click.
 
 **If someone sent you the folder directly:** you already have it.
 
-Now drag the unzipped folder into your project folder, and rename it to `starter-kit`. Downloads from GitHub arrive with `-main` on the end of the name, which is normal and is why you are renaming it.
+Now drag that folder into your project folder and rename it to `starter-kit`. Downloads from GitHub arrive with `-main` on the end of the name, which is normal and is why you are renaming it.
 
 Your project folder should now contain one folder called `starter-kit`. That is all Part 1 needs from you in Finder.
 
@@ -54,9 +54,13 @@ If it asks you to upgrade, your plan does not include Claude Code yet. If it ask
 
 Choose **Local** for the environment. That means Claude works on your own machine with your own files, which is what you want.
 
-Then click **Select folder** and choose the project folder you made in 1.1.
+Then click **Select folder**.
 
-Claude can now see everything in that folder, including `starter-kit`, and nothing outside it.
+**Choose the outer folder, the one you made in 1.1. Do not choose `starter-kit`.** This is the easiest thing on the page to get wrong, because `starter-kit` is the folder you were just handling and it has the more interesting name. Pick it and every instruction in Part 2 points one level too deep, and the setup fails on its second step.
+
+You have it right if the folder you selected *contains* `starter-kit` rather than being it.
+
+Claude now works with the files in that folder. It will ask you before doing anything outside it, and it will ask exactly once during setup, in Step 3, for a reason worth understanding now rather than being surprised by.
 
 ## 1.6 Understand what it will and will not do
 
@@ -79,7 +83,9 @@ You are set up. Everything from here is Claude doing the work.
 
 Copy everything between the two lines and paste it into the Code tab.
 
-It will ask permission before it does anything. Read what it asks. It will want to read your `starter-kit` folder and to write into a settings folder called `.claude`, and both are expected.
+It will ask permission before it does anything. Read what it asks.
+
+One request will look alarming and is not. In Step 3 it asks to write into `~/.claude/`, a hidden settings folder in your home directory, **outside your project**. That is the point: the rules go there so they load in every project from now on, not just this one. If they went in your project folder they would only ever apply here. Say yes to that one. Anything else that wants to leave your project folder, ask it why first.
 
 **Know the way out before you go in.** [`reference/undo.md`](reference/undo.md) reverses every single thing below, and it is worth two minutes now.
 

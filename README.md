@@ -2,16 +2,16 @@
 
 # 🚪 claude-code-starter-kit: day one with the Claude Code desktop app, for people who have never opened a terminal
 
-### Every guide starts at a command line. This one never reaches one.
+### Every guide starts at a command line. This one starts with a download.
 
-![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![no terminal on day one](https://img.shields.io/badge/day%20one-no%20terminal-0E9384) ![9 rules for day one](https://img.shields.io/badge/rules-9%20for%20day%20one-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
+![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![day one is clicking not commands](https://img.shields.io/badge/day%20one-clicking%2C%20not%20commands-0E9384) ![18 rules, 9 on day one](https://img.shields.io/badge/rules-18%2C%209%20on%20day%20one-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
 ---
 
 <img src="docs/without-a-door-vs-day-one.svg" width="100%"
-     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking followed by nine guided steps: install the Claude desktop app, pick one project folder where every change is shown before it happens, a CLAUDE.md plus eighteen rules, two or three plugins that bring sixteen tool connections, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
+     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every change is shown before it happens, then nine guided steps in which Claude sets itself up: a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
 
 Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide describes the version that runs in a terminal. This one uses the desktop app, which is the same Claude Code with a normal Mac interface, and the docs put it plainly: no terminal required.
 
