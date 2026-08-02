@@ -2,7 +2,7 @@
 
 A connector lets Claude Code read from and write to a tool you already use, so you can ask a question in plain language instead of opening six tabs. "What did we ship last sprint and what are people complaining about?" reaches your tracker and your support inbox and comes back as one answer.
 
-**You do not have to configure any of this by hand.** Installing the `product-management` plugin on day one brings sixteen connectors with it. Fourteen arrive pointed at the right address and need only your sign-in. Two, Gmail and Google Calendar, are listed but have no address filled in yet in the public manifest, so treat those as unconfirmed until you see them working. `/mcp` is what tells you the truth on your own machine.
+**You do not have to configure any of this by hand.** The `product-management` plugin brings sixteen connectors with it. Fourteen arrive pointed at the right address and need only your sign-in. Two, Gmail and Google Calendar, are listed with no address filled in, and that is deliberate rather than a bug: Anthropic's documentation says these particular hosts only accept a sign-in that starts from claude.ai, so you connect them at **Settings** then **Connectors** on claude.ai and they then appear here on their own. The **+** button then **Connectors** is what tells you the truth on your own machine.
 
 ## What arrives with the plugin
 
@@ -11,8 +11,8 @@ Read on 2026-08-02 from the manifest in the live marketplace repo, `anthropics/k
 | Connector | What it reaches |
 |---|---|
 | `slack` | Messages, channels, threads |
-| `gmail` | Mail. Listed with no address filled in yet, so may not connect |
-| `google calendar` | Events and availability. Same, listed with no address yet |
+| `gmail` | Mail. No address here by design; connect it on claude.ai first |
+| `google calendar` | Events and availability. Same, connect it on claude.ai first |
 | `linear` | Issues, projects, cycles |
 | `atlassian` | Jira and Confluence |
 | `asana` | Tasks and projects |
@@ -26,17 +26,13 @@ Read on 2026-08-02 from the manifest in the live marketplace repo, `anthropics/k
 | `intercom` | Support conversations |
 | `fireflies` | Meeting recordings and transcripts |
 
-**Not in this bundle:** GitHub. Other bundles in the same marketplace may carry it. Run `claude plugin marketplace list` and look, rather than assuming from this page.
+**Not in this bundle:** GitHub. Other plugins in the same set may carry it. Look in **Customize** then **Plugins** rather than assuming from this page.
 
-> **Check the count yourself rather than trusting this page.** An earlier version of this file said twelve and claimed Gmail and Calendar were missing. Both were wrong, because the number came from a pinned older copy of the plugin sitting in a cache rather than from the live manifest. A version cache and the current release are different things, and a page that agrees with a stale copy of itself still agrees with nothing. `/mcp` inside Claude Code lists what you actually have.
+> **Check the count yourself rather than trusting this page.** An earlier version of this file said twelve and claimed Gmail and Calendar were missing. Both were wrong, because the number came from a pinned older copy of the plugin sitting in a cache rather than from the live manifest. A version cache and the current release are different things, and a page that agrees with a stale copy of itself still agrees with nothing. Your own screen is what lists what you actually have.
 
 ## Turning one on
 
-Inside Claude Code:
-
-```
-/mcp
-```
+Click the **+** button next to the prompt box and choose **Connectors**. It sits directly below **Plugins** in the same menu.
 
 That lists every connector available to you and whether it is connected. Pick one and it opens your browser to sign in, the same flow as connecting any app to any other app. **You never paste an API key.**
 
@@ -48,11 +44,13 @@ Ask for something only that tool knows:
 
 > What are the three most recently updated issues in Linear?
 
-If it comes back with real issues, it is connected. If it says it cannot reach Linear, run `/mcp` again and check the status line next to it.
+If it comes back with real issues, it is connected. If it says it cannot reach Linear, open **+** then **Connectors** again and check the status line next to it.
 
 ## Adding one that is not in the list
 
-If a tool you use publishes its own connector, add it directly. The name is yours to choose, the address comes from that tool's own documentation:
+Open **+** then **Connectors** and look first. That screen carries more than the sixteen this plugin brings.
+
+If the tool you want genuinely is not offered there, adding it by hand is the second of the three terminal situations flagged at the top of [START-HERE.md](../START-HERE.md). It is rare, and nothing on day one needs it. The name is yours to choose, the address comes from that tool's own documentation:
 
 ```bash
 claude mcp add --transport http <name> <address>
@@ -71,8 +69,6 @@ Connectors come in two shapes and the risk is different for each.
 The sixteen above are the safer shape. They are addresses on the internet, run by the tool vendors themselves, and nothing new runs on your Mac. The real risk with these is what you are handing over: once Slack is connected, Claude can read your messages, and once a connector can write, it can act in that tool as you. That is worth being deliberate about, and it is why you connect what you use rather than all sixteen.
 
 The other shape is a connector that installs a program on your machine and runs it. Anthropic says plainly that a plugin can run code on your computer with your permissions, and that it does not control or verify what third-party ones do. Those deserve a much harder look, and none of the sixteen above is one.
-
-So: connect what you use from sources you recognise. Before installing a connector from anywhere else, find out which shape it is. Asking Claude to read its source and tell you what it does is a genuinely good use of it.
 
 So: connect what you use from sources you recognise. Before installing a connector from anywhere else, look at what it is and who wrote it. If you cannot tell, ask Claude Code to read its source and explain what it does before you install it, which is a genuinely good use of it.
 

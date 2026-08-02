@@ -2,7 +2,7 @@
 
 You have used Claude in a browser. Claude Code is the same Claude with access to the files in one folder you choose, so it hands you a finished spreadsheet instead of describing one, and it can remember your project between conversations if you set it up to.
 
-It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking. The one exception is rare and is at the bottom of this page.
+It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking. Three rare situations in this kit do touch a terminal, and day one hits none of them: a Mac that turns out to be missing Git, adding a tool connection that is not in the bundled set, and removing Claude Code completely. Each one is flagged where it comes up.
 
 **Part 1 is clicking, about ten minutes.** Then you paste a brief into Claude and it sets itself up while you watch, stopping after each step to show you it worked.
 
@@ -113,19 +113,29 @@ Explain that you read this file at the start of every conversation about this pr
 **Step 3. Install the rules.**
 Copy every **numbered** `.md` file from `starter-kit/rules/` into `~/.claude/rules/`, creating that folder if it does not exist. Do not copy `rules/README.md`, which explains the set rather than being part of it. Then copy `starter-kit/commands/learn.md` into `~/.claude/commands/`.
 Verify by listing both folders and showing me the count. There should be 18 rules.
-Then tell me honestly that nothing visible changes after this. These files load silently into every conversation from now on, in every project, and they work the same whether I use the app or the terminal. Show me the 18 titles so I know what I agreed to, and tell me `starter-kit/rules/README.md` says which to read first.
+Then tell me the honest limitation, because it would be easy to let me assume otherwise. Claude Code reads that folder when a conversation **starts**, so these files change nothing for the rest of this one. They load from my **next** conversation onward, in every project, and they work the same whether I use the app or the terminal. The same is true of `/learn`: it becomes available next time, not now.
+Show me the 18 titles so I know what I agreed to, and tell me `starter-kit/rules/README.md` says which to read first. Then tell me how to check they actually loaded: start a new conversation and ask you to list the rules you can see. If the 18 titles come back, they are live.
 
-**Step 4. Hand me the plugin install, because it is mine to click.**
-Tell me to click the **+** button next to the prompt box, choose **Plugins**, and then click **Add plugin**, because the first screen only lists what I already have and the browser is one click further in. Then wait for me.
+**Step 4. Have me look at what I already have, before either of us installs anything.**
+Anthropic adds a set of work plugins by default, so the one I want is probably already there. Checking first costs thirty seconds and saves me installing something twice.
 
-Walk me through it while I look: I want the `product-management` plugin from Anthropic's knowledge-work set. Tell me what it adds in one line before I install it.
+Tell me to open **Customize** in the left sidebar and click the **Plugins** tab. Then wait for me. This screen is mine to look at, not yours to run.
+
+While I have it open, ask me whether **Product Management** is in the list, and have me read out what I see next to it.
+
+- **If it is there,** nothing to install. Tell me in one line what it adds, and carry on.
+- **If it is not there,** tell me to use the **Browse** button on that same screen to find it, and talk me through it while I look.
+
+Either way, do not tell me it worked until I have told you what I can see.
 
 Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones that likely fit someone running her own business and building her own apps: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
 
-When I say I am done, verify what actually got installed and show me. If a plugin I picked is not there, say so rather than assuming it worked.
+Two things that may not match, and I would rather you say so than smooth over: that list of names comes from the published set and what my screen offers can lag behind it, and the panel may be showing plugins for the folder I currently have open. If a name I pick is not on my screen, tell me plainly instead of assuming it is hiding somewhere.
+
+When I say I am done, verify what I actually ended up with and show me.
 
 **Step 5. Tell me what came with it.**
-Tell me the product-management plugin also brought sixteen connections to tools like Slack, Gmail, Google Calendar, Notion, Linear, Jira and Figma, that I turn one on by typing `/mcp`, and that `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
+Tell me the product-management plugin also brought sixteen connections to tools like Slack, Gmail, Google Calendar, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Connectors**. That is the item directly below **Plugins** in the same menu, so it is a place I have already been. Tell me `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
 
 **Step 6. Prove it works on something real.**
 Ask me what I am actually working on this week. Then use the product-management plugin to produce a real first draft of it: a spec, a competitive brief, a research synthesis, whatever fits. Not a demo, the real thing.
@@ -156,7 +166,7 @@ Everything else waits until you feel the problem it solves, and [GROWTH.md](GROW
 
 ## If something went wrong
 
-**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal from your Applications folder, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is the only step in this whole guide that touches a terminal, and most people never hit it.
+**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal from your Applications folder, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is one of the three terminal situations flagged at the top of this page, and most people never hit it.
 
 **A step in Part 2 failed.** Tell Claude exactly what you saw, including the error text, and ask it to explain the error before fixing it. Understanding the failure is worth more on day one than getting past it.
 

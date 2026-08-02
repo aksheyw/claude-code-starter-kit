@@ -60,9 +60,9 @@ Then ask Claude to list `~/.claude/rules/` and `~/.claude/commands/` so you can 
 
 ## 2. Remove a plugin or a connection
 
-**A plugin:** click the **+** button next to the prompt box, choose **Plugins**, and remove it there. Same place you installed it.
+**A plugin:** open **Customize** in the left sidebar and click the **Plugins** tab. Same screen you checked during setup.
 
-**A connection:** type `/mcp`, pick the one you want, and disconnect. That removes Claude's access. It changes nothing inside the tool itself.
+**A connection:** click the **+** button next to the prompt box, choose **Connectors**, pick the one you want, and disconnect. Same place you turned it on. That removes Claude's access. It changes nothing inside the tool itself.
 
 ## 3. Remove Claude Code entirely
 
@@ -70,7 +70,7 @@ Then ask Claude to list `~/.claude/rules/` and `~/.claude/commands/` so you can 
 
 Deleting them is not "uninstalling the starter kit". It is resetting Claude Code to the day you installed it, and nothing here restores it afterwards.
 
-If that is genuinely what you want, and only then, this is the command. It is the one place in this guide that needs a terminal, because Finder hides these folders:
+If that is genuinely what you want, and only then, this is the command. It is one of the three terminal situations flagged at the top of [START-HERE.md](../START-HERE.md), and it needs one because Finder hides these folders:
 
 ```bash
 rm -rf ~/.claude ~/.claude.json

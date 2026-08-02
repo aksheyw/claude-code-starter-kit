@@ -127,12 +127,18 @@ Then restart, ask it to write a fake API key into a test file, and check you get
 
 **Trigger.** You say "push this to GitHub", it happens instantly, and you realise nothing stood between your laptop and a public repo.
 
-Type these **inside Claude Code**, not in Terminal. Pasting them into Terminal gives you an error about no such file:
+This one is not in the set Anthropic installs by default, so you add where it comes from first, then install it.
+
+**In the desktop app:** open **Customize** in the left sidebar, click the **Plugins** tab, and use **Add** to add a source from a GitHub address. The address is `aksheyw/claude-code-ship-gate`. Then use **Browse** on that same screen to install **ship-gate**.
+
+**If you use the terminal version**, the same thing is two typed commands:
 
 ```
 /plugin marketplace add aksheyw/claude-code-ship-gate
 /plugin install ship-gate@ship-gate
 ```
+
+Those two only work in the terminal version. Typed into the desktop app they come back with "not available in this environment", which is a limit of that surface rather than anything you did wrong.
 
 Then `/reload-plugins`, and inside a project that is already under version control:
 
