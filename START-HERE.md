@@ -24,7 +24,7 @@ In Finder, make a folder for something you are actually working on. `Documents` 
 
 ## 1.2 Put this kit inside that folder
 
-**If you are reading this on GitHub:** click the green **Code** button near the top and choose **Download ZIP**. Then look in your Downloads folder. If you see a zip file, double-click it to unzip. If you see a folder already, Safari unzipped it for you, which it does by default, and there is nothing to click.
+**If you are reading this on GitHub:** click the green **Code** button near the top of this web page and choose **Download ZIP**. That is GitHub's button, in your browser. It is not the **Code** tab inside the Claude app, which you will meet in 1.4 and which is a different thing with the same name. Then look in your Downloads folder. If you see a zip file, double-click it to unzip. If you see a folder already, Safari unzipped it for you, which it does by default, and there is nothing to click.
 
 **If someone sent you the folder directly:** you already have it.
 
@@ -135,7 +135,9 @@ Two things that may not match, and I would rather you say so than smooth over: t
 When I say I am done, verify what I actually ended up with and show me.
 
 **Step 5. Tell me what came with it.**
-Tell me the product-management plugin also brought sixteen connections to tools like Slack, Gmail, Google Calendar, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Connectors**. That is the item directly below **Plugins** in the same menu, so it is a place I have already been. Tell me `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
+Tell me the product-management plugin also brought sixteen connections to tools like Slack, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Connectors**. That is the item directly below **Plugins** in the same menu, so it is a place I have already been.
+Then tell me the exception, because it is the one I would otherwise hit first: Gmail and Google Calendar are on the list but do not connect from here. They have to be signed in on claude.ai, under Settings then Connectors, after which they appear here on their own. Say that plainly rather than letting me discover it by failing.
+Tell me `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
 
 **Step 6. Prove it works on something real.**
 Ask me what I am actually working on this week. Then use the product-management plugin to produce a real first draft of it: a spec, a competitive brief, a research synthesis, whatever fits. Not a demo, the real thing.
@@ -166,7 +168,7 @@ Everything else waits until you feel the problem it solves, and [GROWTH.md](GROW
 
 ## If something went wrong
 
-**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal from your Applications folder, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is one of the three terminal situations flagged at the top of this page, and most people never hit it.
+**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is one of the three terminal situations flagged at the top of this page, and most people never hit it.
 
 **A step in Part 2 failed.** Tell Claude exactly what you saw, including the error text, and ask it to explain the error before fixing it. Understanding the failure is worth more on day one than getting past it.
 

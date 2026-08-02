@@ -11,7 +11,7 @@
 ---
 
 <img src="docs/without-a-door-vs-day-one.svg" width="100%"
-     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every change is shown before it happens, then nine guided steps in which Claude sets itself up: a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
+     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every change is shown before it happens, then nine guided steps in which Claude sets itself up: a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, a notebook that carries what you agreed into the next conversation, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
 
 Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide describes the version that runs in a terminal. This one uses the desktop app, which is the same Claude Code with a normal Mac interface, and the docs put it plainly: no terminal required.
 
@@ -29,9 +29,9 @@ A tool installed before you have its problem is friction with no payoff. Install
 
 So the test for day one is strict: you feel the value the same afternoon, it needs no engineering knowledge, and it cannot fail silently.
 
-**Six things pass:** the app itself, one project folder, a `CLAUDE.md` it reads every time, eighteen rules of which nine apply from day one, two or three plugins, and one real piece of work finished.
+**Seven things pass:** the app itself, one project folder, a `CLAUDE.md` it reads every time, eighteen rules of which nine apply from day one, two or three plugins, a notebook that carries what you agreed into the next conversation, and one real piece of work finished.
 
-Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until the first time an app you are building needs a paid key. Version control, quality gates, review councils and backups wait too, and [GROWTH.md](GROWTH.md) names the moment that earns each one.
+Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until the first time an app you are building needs a paid key. So do version control, which keeps every earlier version of your work so you can go back to one; quality gates, which are checks that have to pass before your work goes live; review councils, which are several Claudes arguing a decision out before you commit to it; and backups. [GROWTH.md](GROWTH.md) names the moment that earns each one.
 
 <details>
 <summary>📦 <b>What is in here</b>, and where the depth went</summary>
@@ -64,7 +64,7 @@ You type `/learn`. It writes the correction into a lessons file, and points your
 
 **You already run Claude Code daily.** You have made these calls already and yours fit you better. The repos below are the useful part for you.
 
-**You are on the free Claude plan.** Claude Code needs Pro, Max, Team, Enterprise or a Console account, and nothing here works around that.
+**You are on the free Claude plan.** Claude Code needs Pro, Max, Team or Enterprise, and nothing here works around that.
 
 **You want maximum power today.** This is deliberately small, because the failure it is built against is installing all eight and being able to explain none of them.
 

@@ -57,7 +57,7 @@ ls ~/.claude/skills/deep-review/
 
 Should print `SKILL.md`. Restart Claude Code, type `/deep-review`, check it completes.
 
-> **These commands differ from that repo's README, checked 2026-08-01.** The README puts `SKILL.md` in as a loose file, and a skill has to be a folder containing `SKILL.md`. It also has no `mkdir`, so it fails on a machine where `~/.claude/rules/` does not exist yet, which is every new machine. If the README has since been fixed, follow it instead of this.
+> **These match that repo's README, re-checked 2026-08-02.** An earlier version of this page warned that they differed. That warning was written on 2026-08-01, the repo was corrected on 2026-08-02, and the warning outlived it by a day. Follow the repo if the two ever disagree again.
 
 **The most expensive version** is running your plan past a genuinely different AI model, from a different company, because two models trained differently fail differently. Worth knowing about. Not worth paying for in week two.
 
@@ -143,10 +143,12 @@ Those two only work in the terminal version. Typed into the desktop app they com
 Then `/reload-plugins`, and inside a project that is already under version control:
 
 ```
-/ship-init
+/ship-gate:ship-init
 ```
 
-**Learn the way out before you need it: `/ship off` disables it for one project.**
+The `ship-gate:` prefix is not decoration. Installed this way the commands are namespaced, and that repo's own README says so. The shorter `/ship-init` only exists if you used its personal install script instead, which this page does not.
+
+**Learn the way out before you need it: `/ship-gate:ship off` disables it for one project.**
 
 ---
 
@@ -168,7 +170,7 @@ ls ~/.claude/skills/audit/
 
 Should print `SKILL.md`.
 
-> **Take one skill, not all twelve, and note the command differs from that repo's README, checked 2026-08-01.** The README's version copies each folder's *contents* rather than the folders, so every file lands at the same path and overwrites the last. It exits successfully and prints nothing, so it looks like it worked. Nine of the other skills are about servers, containers and machine-learning data, which is not your problem.
+> **Take one skill, not all twelve.** Nine of the others are about servers, containers and machine-learning data, which is not your problem. An earlier version of this page also warned that the repo's own install command was broken. It was, and it was fixed on 2026-08-02, re-checked the same day. Follow the repo.
 
 ---
 

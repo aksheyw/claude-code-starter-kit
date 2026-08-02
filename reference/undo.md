@@ -18,7 +18,7 @@ Type `/rewind`, or press **Esc** twice with nothing typed in the box. It lists t
 
 - It restores files it edited **itself**. It does **not** restore files changed by commands it ran, so anything deleted, moved or copied sits outside it.
 - It does not cover work done by a second session it started on its own.
-- It is undo for **this session only**. Close the conversation and it is gone.
+- It belongs to **one conversation**, not to your project. Closing the conversation does not destroy it, and you can still rewind after coming back to it, but it is deleted along with the conversation after thirty days.
 
 That last one is why version control matters, and the first time you have work you would hate to lose is the moment to add it. See [GROWTH.md](../GROWTH.md).
 
