@@ -1,149 +1,104 @@
 # Start here
 
-You have used Claude in a browser. Claude Code is the same Claude running on your own computer, able to read and change the files in one folder you choose. That is the whole difference and it is a big one: it hands you a finished spreadsheet instead of describing one, and it can remember your project between conversations if you set it up to.
+You have used Claude in a browser. Claude Code is the same Claude with access to the files in one folder you choose, so it hands you a finished spreadsheet instead of describing one, and it can remember your project between conversations if you set it up to.
 
-**Part 1 you do by hand and it takes about fifteen minutes.** Then you paste a brief into Claude Code and it sets itself up while you watch, stopping after each step to show you it worked.
+It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same thing with a normal Mac interface and no terminal at all.** Anthropic's own documentation says it plainly: *"No terminal required."*
 
-Three things before you start.
+**Part 1 is clicking, about ten minutes.** Then you paste a brief into Claude and it sets itself up while you watch, stopping after each step to show you it worked.
 
-**You need a paid Claude plan.** Pro, Max, Team, Enterprise, or a Console account. The free plan does not include Claude Code, and this is the most common way day one stops dead.
+Two things before you start.
+
+**You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, and this is the most common way day one stops dead.
 
 **You need macOS 13 or later.** Apple menu, then About This Mac.
 
-**You do not need Node.js, npm, or Homebrew.** Some guides say otherwise; they describe an older install path. You do need one developer tool called git, and step 1.4 installs it for you.
+You do **not** need Node.js, npm, Homebrew, or the command line. The app includes everything.
 
 ---
 
-# Part 1: by hand
+# Part 1: clicking
 
-## 1.1 Get this kit onto your computer
+## 1.1 Make a folder for your first project
 
-Do this first, in your browser, because everything in Part 2 reads from it.
+In Finder, make a folder for something you are actually working on. `Documents` is a fine home for it. Anything real beats a folder called `test`, because the last step of this setup produces actual work and you want it somewhere you will look again.
 
-**If you are reading this on GitHub:** click the green **Code** button near the top, choose **Download ZIP**, then double-click the downloaded file to unzip it. It lands in your Downloads folder.
+## 1.2 Put this kit inside that folder
 
-**If someone sent you the folder directly:** put it in your Downloads folder and skip ahead.
+**If you are reading this on GitHub:** click the green **Code** button near the top, choose **Download ZIP**, then double-click the downloaded file to unzip it.
 
-One thing that will look wrong and is not: a folder downloaded from GitHub arrives with `-main` on the end of its name, so you get `claude-code-starter-kit-main`. That is normal. Step 1.5 renames it.
+**If someone sent you the folder directly:** you already have it.
 
-## 1.2 Open Terminal
+Now drag the unzipped folder into your project folder, and rename it to `starter-kit`. Downloads from GitHub arrive with `-main` on the end of the name, which is normal and is why you are renaming it.
 
-Press `Cmd` and `Space` together, type `terminal`, press Return. A window opens with some text and a blinking cursor.
+Your project folder should now contain one folder called `starter-kit`. That is all Part 1 needs from you in Finder.
 
-That window takes instructions one line at a time. You will paste six lines into it today and then mostly never come back.
+## 1.3 Install the Claude app
 
-Four things worth knowing, because they are what confuses everyone at first:
+[**Download for macOS**](https://claude.ai/api/desktop/darwin/universal/dmg/latest/redirect). One build works on both Intel and Apple Silicon, so you do not need to know which you have.
 
-- **`~` means your home folder.** So `~/Documents/my-project` means a folder called `Documents` in your home folder, with `my-project` inside it.
-- **A name starting with a dot is hidden.** Finder does not show `.claude` by default. Press `Cmd` `Shift` `.` in any Finder window to show hidden files, and again to hide them.
-- **Silence means it worked.** This is the big one. Most commands print nothing when they succeed and just give you a fresh prompt back. An empty screen is success. Commands complain when they fail, not when they work.
-- **A line starting with `/` is different.** Those get typed *inside Claude Code*, not into Terminal. Everything else on this page goes into Terminal. Getting these two mixed up is the single most common way people get stuck, so the rest of this page always says which.
+Open the downloaded file and drag Claude into your Applications folder, the same as any other Mac app. Launch it and sign in with the account your paid plan is on.
 
-## 1.3 Install Claude Code
+## 1.4 Open the Code tab
 
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
+Three tabs sit across the top: **Chat**, **Cowork** and **Code**.
 
-This is the install Anthropic recommends for a Mac and it keeps itself updated from then on.
+- **Chat** is the Claude you already know. No access to your files.
+- **Cowork** runs longer jobs on its own in the background.
+- **Code** is the one you want. It works with the files in a folder you pick, and shows you every change before it happens.
 
-Then **quit Terminal completely and open it again.** The installer adds Claude Code to the list of programs your terminal knows about, and that list is only read when a window opens. Skipping this is the usual reason the next line says "command not found".
+Click **Code**.
 
-```bash
-claude --version
-```
+If it asks you to upgrade, your plan does not include Claude Code yet. If it asks you to sign in online, do that and restart the app.
 
-You should see a version number followed by `(Claude Code)`.
+## 1.5 Point it at your folder
 
-## 1.4 Install git
+Choose **Local** for the environment. That means Claude works on your own machine with your own files, which is what you want.
 
-```bash
-xcode-select --install
-```
+Then click **Select folder** and choose the project folder you made in 1.1.
 
-**A system window will pop up asking to install developer tools. That window is normal. It is not an error and you have not broken anything.** Click Install. It is roughly a gigabyte and takes a few minutes.
+Claude can now see everything in that folder, including `starter-kit`, and nothing outside it.
 
-If it instead says the tools are already installed, you are fine, carry on.
+## 1.6 Understand what it will and will not do
 
-You need this because the plugins in Step 4 are downloaded using git, and without it that step fails partway through. Better to pay this cost now, deliberately, than to hit the popup mid-setup and think something went wrong.
+This is the part worth thirty seconds, because it is what makes everything after it safe to try.
 
-```bash
-git --version
-```
+The Code tab starts in **Manual mode**. Claude does not edit your files. It *proposes* a change, shows you a diff, which is a side-by-side of exactly what would change, and waits. You press **Accept** or **Reject**. Anthropic's documentation is unambiguous: *"Your files aren't modified until you accept."*
 
-You should see a version number.
+If you reject something, Claude asks how you would rather do it.
 
-## 1.5 Make your project folder and put the kit in it
+Two more controls worth knowing before you need them:
 
-```bash
-mkdir -p ~/Documents/my-project
-```
+- **Stop it any time.** Click the stop button. Or just type what you actually wanted and press Enter, which redirects it without stopping first.
+- **Two other modes exist.** *Accept edits* stops asking, which is faster once you trust it. *Plan* makes it think out loud without touching anything. Stay in Manual for now.
 
-Use a real name for something you are actually working on rather than `my-project`.
-
-Now move the kit inside it. Use the first line if you downloaded the ZIP from GitHub, the second if someone sent you a folder called `claude-code-starter-kit`:
-
-```bash
-mv ~/Downloads/claude-code-starter-kit-main ~/Documents/my-project/starter-kit
-```
-
-```bash
-mv ~/Downloads/claude-code-starter-kit ~/Documents/my-project/starter-kit
-```
-
-Then go into the project folder:
-
-```bash
-cd ~/Documents/my-project
-```
-
-Check it all landed:
-
-```bash
-ls starter-kit
-```
-
-You should see `README.md`, `START-HERE.md`, `GROWTH.md`, `rules`, `commands`, `templates` and `reference`.
-
-## 1.6 Start it and sign in
-
-```bash
-claude
-```
-
-A browser window opens asking you to log in. Sign in with the account your paid plan is on. The terminal then says `Login successful` and asks you to press Return. If the browser does not open, press `c` to copy the login link and paste it in yourself.
-
-You are now in a conversation with Claude, inside that folder. Type `/help` to see what it can do, or `/usage` at any point to see how much of your plan you have used.
-
-**If it will not log you in**, the usual cause is an old API key sitting in your environment, which quietly overrides your subscription. Quit Claude Code, run `unset ANTHROPIC_API_KEY`, and start `claude` again.
+You are set up. Everything from here is Claude doing the work.
 
 ---
 
-# Part 2: hand this to Claude Code
+# Part 2: hand this to Claude
 
-Two things to know before you paste.
+Copy everything between the two lines and paste it into the Code tab.
 
-**It will ask permission before it does anything.** Read what it asks. It will ask to read the `starter-kit` folder and to write into `~/.claude`, and both of those are expected. Say yes. If it ever asks to delete something you were not expecting, say no and ask it why.
+It will ask permission before it does anything. Read what it asks. It will want to read your `starter-kit` folder and to write into a settings folder called `.claude`, and both are expected.
 
-**Know the way out before you go in.** [`reference/undo.md`](reference/undo.md) reverses every single thing below, and it is worth two minutes now. Almost all of it is deleting a file.
-
-Copy everything between the two lines and paste it into Claude Code.
+**Know the way out before you go in.** [`reference/undo.md`](reference/undo.md) reverses every single thing below, and it is worth two minutes now.
 
 ✂ ---------- copy below this line ----------
 
-I am new to Claude Code. I have it installed, I am signed in, and I am in my project folder. The starter kit is in a folder called `starter-kit` inside this folder.
+I am new to Claude Code and I am using the desktop app, not the terminal. I have signed in, I am in the Code tab, and I have selected my project folder. Inside it is a folder called `starter-kit`.
 
 Work through the steps below **in order**, and **stop after each numbered step** to show me what you did and what proof you have that it worked. Do not run several and then summarise. I want to see each one land.
 
 Ground rules for this whole setup:
 
 - Explain what each step does in plain words **before** you do it, in a sentence or two, the way you would to a smart friend who does not code. No jargon without explaining it in the same sentence.
-- Never tell me something worked because you expect it to. Run a check, show me the output, tell me what I should be seeing.
+- Never tell me something worked because you expect it to. Run a check, show me the result, tell me what I should be seeing.
 - If a step fails, stop and tell me. Do not work around it silently and do not move on.
+- Some steps below are mine to click, not yours to run. When you reach one, hand it to me clearly and wait.
 - If anything in these instructions turns out to be wrong on my machine, say so plainly rather than making it fit.
 
 **Step 1. Show me where I am and what you can reach.**
-Tell me which folder you are working in and list what is in it. Then explain in two sentences how your access actually works: that you operate in the folder I started you in, that you will ask before touching anything outside it, and that you are about to ask exactly that in Step 3 when you write into my settings folder. I would rather understand the real boundary than be told a comforting version of it.
+Tell me which folder you are working in and list what is in it. Then explain in two sentences how your access actually works: that you can see this folder, that you will ask before touching anything outside it, and that you are about to ask exactly that in Step 3 when you write into my settings folder. I would rather understand the real boundary than be told a comforting version of it.
 
 **Step 2. Create my project instructions file.**
 Copy `starter-kit/templates/CLAUDE.md` to `CLAUDE.md` in my project folder. Then interview me to fill it in: what this project is, who it is for, what it is built with if anything, and how I want you to work with me. Ask one question at a time, do not dump a list. Keep the finished file under one page.
@@ -152,24 +107,19 @@ Explain that you read this file at the start of every conversation about this pr
 **Step 3. Install the rules.**
 Copy every **numbered** `.md` file from `starter-kit/rules/` into `~/.claude/rules/`, creating that folder if it does not exist. Do not copy `rules/README.md`, which explains the set rather than being part of it. Then copy `starter-kit/commands/learn.md` into `~/.claude/commands/`.
 Verify by listing both folders and showing me the count. There should be 18 rules.
-Then tell me honestly that nothing visible changes after this. These files load silently into every conversation from now on, in every project. Show me the 18 titles so I know what I just agreed to, and tell me `starter-kit/rules/README.md` says which to read first and in what order.
+Then tell me honestly that nothing visible changes after this. These files load silently into every conversation from now on, in every project, and they work the same whether I use the app or the terminal. Show me the 18 titles so I know what I agreed to, and tell me `starter-kit/rules/README.md` says which to read first.
 
-**Step 4. Install the plugins that do product work.**
-Anthropic publishes plugins built for people who do knowledge work rather than engineering. Run these in the terminal for me:
+**Step 4. Hand me the plugin install, because it is mine to click.**
+Tell me to click the **+** button next to the prompt box and choose **Plugins**, then wait for me.
 
-```
-claude plugin marketplace add anthropics/knowledge-work-plugins
-claude plugin install product-management@knowledge-work-plugins
-```
+Walk me through it while I look: I want the `product-management` plugin from Anthropic's knowledge-work set. Tell me what it adds in one line before I install it.
 
-Then show me what else is in that marketplace and let me choose. Ones that likely fit someone running her own business and building her own apps: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not install them all.** Let me pick one or two, so I end up with two or three in total.
+Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones that likely fit someone running her own business and building her own apps: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
 
-Then stop and tell me to do Step 5 myself.
+When I say I am done, verify what actually got installed and show me. If a plugin I picked is not there, say so rather than assuming it worked.
 
-**Step 5. This one is mine to type, not yours.**
-Tell me to type `/reload-plugins` into Claude Code, and explain that a line starting with `/` is a Claude Code command, which is why you cannot run it for me. Wait until I say I have done it. Then run `claude plugin list` and show me the output so we both know it took.
-
-Then tell me that the product-management plugin also brought sixteen connections to tools like Slack, Gmail, Google Calendar, Notion, Linear, Jira and Figma, that I connect them by typing `/mcp`, and that `starter-kit/reference/connectors.md` explains which are there and what to be careful about. Do not connect any of them now.
+**Step 5. Tell me what came with it.**
+Tell me the product-management plugin also brought sixteen connections to tools like Slack, Gmail, Google Calendar, Notion, Linear, Jira and Figma, that I turn one on by typing `/mcp`, and that `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
 
 **Step 6. Prove it works on something real.**
 Ask me what I am actually working on this week. Then use the product-management plugin to produce a real first draft of it: a spec, a competitive brief, a research synthesis, whatever fits. Not a demo, the real thing.
@@ -181,7 +131,7 @@ Create `.claude/wiki/` in my project and copy `_hot.md` and `_log.md` into it fr
 Show me what to say at the end of a working session to keep them current.
 
 **Step 8. Walk me through undoing all of it.**
-Read `starter-kit/reference/undo.md` and walk me through it, checking each command against what you actually did in this session. Tell me if anything in it does not match. I want to know the way out before I go further, including how to stop you mid-task.
+Read `starter-kit/reference/undo.md` and walk me through it, checking each item against what you actually did in this session. Tell me if anything in it does not match what the desktop app does. I want to know the way out before I go further.
 
 **Step 9. Tell me what you did NOT install and why.**
 Read `starter-kit/GROWTH.md` and summarise it: what is deliberately missing, and the specific moment that should bring me back for each one. **Do not install any of it now.**
@@ -200,6 +150,45 @@ Everything else waits until you feel the problem it solves, and [GROWTH.md](GROW
 
 ## If something went wrong
 
-Run `claude doctor` in Terminal. It checks the install and reports what is broken.
+**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal from your Applications folder, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is the only step in this whole guide that touches a terminal, and most people never hit it.
 
-If a step in Part 2 failed, tell Claude Code exactly what you saw including the error text, and ask it to explain the error before fixing it. Understanding the failure is worth more on day one than getting past it.
+**A step in Part 2 failed.** Tell Claude exactly what you saw, including the error text, and ask it to explain the error before fixing it. Understanding the failure is worth more on day one than getting past it.
+
+<details>
+<summary>⌨️ <b>If you would rather use the terminal version</b></summary>
+
+<br>
+
+The desktop app and the terminal version are the same Claude Code and share the same configuration, so everything in this kit works either way. The rules, the `CLAUDE.md`, the templates and the notebook are identical. Only the setup differs.
+
+If you already live in a terminal, or you are on Linux, install the command-line version instead:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Then quit Terminal and open it again, or the next line will say "command not found". Check it took:
+
+```bash
+claude --version
+```
+
+Move into your project folder and start it:
+
+```bash
+cd ~/Documents/my-project
+claude
+```
+
+Two differences from the steps above. Plugins install by typing a command rather than clicking:
+
+```
+/plugin marketplace add anthropics/knowledge-work-plugins
+/plugin install product-management@knowledge-work-plugins
+```
+
+followed by `/reload-plugins`. And that command downloads using Git, so you need it installed, which the Git note above covers.
+
+You can run both the app and the terminal on the same project at once. `/usage` shows how much of your plan you have used, in either one.
+
+</details>

@@ -14,9 +14,9 @@ Roughly in the order the triggers tend to arrive.
 
 **Trigger.** You ask for one small change, Claude edits four files, and you realise you have no way back to how things were ten minutes ago.
 
-You already installed git on day one, because the plugin step needed it. What you have not done is switch it on for your project, and those are different things: the tool is on your computer, your project is not yet keeping a history.
+Version control keeps a history of your project so you can always return to a working state. Most of the rest of this page assumes it.
 
-Version control keeps that history, so you can always return to a working state. Most of the rest of this page assumes it.
+Most Macs already have the tool it needs, called Git, so this is usually nothing to install. If Claude tells you Git is missing, open Terminal from your Applications folder, type `xcode-select --install`, and click Install when the system window appears. That window is normal and you have not broken anything.
 
 Ask Claude Code:
 

@@ -1,21 +1,21 @@
 <div align="center">
 
-# 🚪 claude-code-starter-kit: day one with Claude Code, for people who have never opened a terminal
+# 🚪 claude-code-starter-kit: day one with the Claude Code desktop app, for people who have never opened a terminal
 
-### Every guide assumes you know what to install. This one assumes you don't.
+### Every guide starts at a command line. This one never reaches one.
 
-![requires Claude Code](https://img.shields.io/badge/requires-Claude%20Code-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![9 rules for day one](https://img.shields.io/badge/rules-9%20for%20day%20one-0E9384) ![ends with one real thing finished](https://img.shields.io/badge/ends%20with-one%20real%20thing%20finished-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
+![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![no terminal on day one](https://img.shields.io/badge/day%20one-no%20terminal-0E9384) ![9 rules for day one](https://img.shields.io/badge/rules-9%20for%20day%20one-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
 ---
 
 <img src="docs/without-a-door-vs-day-one.svg" width="100%"
-     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is fifteen minutes of typing followed by nine guided steps: install Claude Code, install git, one project folder, a CLAUDE.md plus eighteen rules, two plugins that bring sixteen tool connections, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
+     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking followed by nine guided steps: install the Claude desktop app, pick one project folder where every change is shown before it happens, a CLAUDE.md plus eighteen rules, two or three plugins that bring sixteen tool connections, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
 
-Claude Code is Anthropic's assistant running in your terminal instead of a browser tab, changing real files in one folder you choose. Setting it up is where people bounce. Every guide opens at a command, and the good pieces are published one layer at a time with nothing saying which to install first or what to leave alone.
+Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide describes the version that runs in a terminal. This one uses the desktop app, which is the same Claude Code with a normal Mac interface, and the docs put it plainly: no terminal required.
 
-This is the door. Fifteen minutes of typing, then nine guided steps, ending in something you actually needed.
+This is the door. Ten minutes of clicking, then nine guided steps, ending in something you actually needed.
 
 ## Two files, and you only read one today
 
@@ -29,7 +29,7 @@ A tool installed before you have its problem is friction with no payoff. Install
 
 So the test for day one is strict: you feel the value the same afternoon, it needs no engineering knowledge, and it cannot fail silently.
 
-**Six things pass:** Claude Code itself, one project folder, a `CLAUDE.md` it reads every time, nine rules, two or three plugins, and one real piece of work finished.
+**Six things pass:** the app itself, one project folder, a `CLAUDE.md` it reads every time, nine rules, two or three plugins, and one real piece of work finished.
 
 Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until the first time an app you are building needs a paid key. Version control, quality gates, review councils and backups wait too, and [GROWTH.md](GROWTH.md) names the moment that earns each one.
 
