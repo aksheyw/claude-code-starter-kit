@@ -19,7 +19,7 @@ This is the door. Ten minutes of clicking, then nine guided steps, ending in som
 
 ## Two files, and you only read one today
 
-**[START-HERE.md](START-HERE.md)** is the whole day-one path. Fifteen minutes by hand, then you paste a brief into Claude Code and it sets itself up while you watch, stopping after each step to show you proof it worked.
+**[START-HERE.md](START-HERE.md)** is the whole day-one path. Ten minutes by hand, then you paste a brief into Claude Code and it sets itself up while you watch, stopping after each step to show you proof it worked.
 
 **[GROWTH.md](GROWTH.md)** is everything left out, each item behind the moment that earns it. Read it once. Install none of it.
 
