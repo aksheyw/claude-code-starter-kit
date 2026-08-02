@@ -1,0 +1,20 @@
+# Working research. NEVER publish this folder.
+#
+# It holds the raw output of the sweeps that built this kit, and that output is
+# full of one specific person's private detail: a real name, an email address, a
+# GitHub handle, home directory paths, and the names of private projects.
+#
+# This file has to exist BEFORE the first commit. Git history is append-only, so
+# deleting something in a later commit does not remove it from the history. If any
+# of _research/ has already been committed, the fix is to rebuild the history, not
+# to delete the files.
+_research/
+
+# Local scratch
+.DS_Store
+*.tmp
+*.log
+node_modules/
+.env
+.env.*
+!.env.example
