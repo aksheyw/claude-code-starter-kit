@@ -2,7 +2,7 @@
 
 Never accept "done" without seeing the evidence, and never claim done without producing it.
 
-**Why this exists.** An assistant reporting on its own work will tell you it works when it has only read it back. Reading is not running. Most breakage lives in the joins between pieces, and joins only fail when someone actually uses the thing.
+**Why this exists.** An assistant reporting on its own work will tell you it works when it has only read it back. Reading is not running. Breakage tends to live in the joins between pieces, and joins only fail when someone actually uses the thing.
 
 **How to apply it.**
 

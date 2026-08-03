@@ -2,13 +2,13 @@
 
 You have used Claude in a browser. Claude Code is the same Claude with access to the files in one folder you choose, so it hands you a finished spreadsheet instead of describing one, and it can remember your project between conversations if you set it up to.
 
-It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking. Three rare situations in this kit do touch a terminal, and day one hits none of them: a Mac that turns out to be missing Git, adding a tool connection that is not in the bundled set, and removing Claude Code completely. Each one is flagged where it comes up.
+It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking. Day one is clicking and pasting the whole way through, with one possible exception: if your Mac turns out to be missing Git, a standard developer tool that most Macs already have, installing it takes one typed command, and that is covered under "If something went wrong" at the bottom of this page. Two other things sit outside day one: adding a tool connection that is not in the bundled set needs the command-line version, and the documented route for removing Claude Code completely uses a terminal, though [`reference/undo.md`](reference/undo.md) gives a Finder route for that one as well. Several of the optional additions in [GROWTH.md](GROWTH.md), which is week two and later, use one too, and each of those sections says so before it asks you to type anything.
 
 **Part 1 is clicking, about ten minutes.** Then you paste a brief into Claude and it sets itself up while you watch, stopping after each step to show you it worked.
 
 Two things before you start.
 
-**You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, and this is the most common way day one stops dead.
+**You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, so check this before you begin. Nothing later on this page works around it.
 
 **You need macOS 11 (Big Sur) or later.** Apple menu, then About This Mac. That is the app's requirement; the terminal version in the fold at the bottom needs macOS 13.
 
@@ -60,7 +60,7 @@ Then click **Select folder**.
 
 You have it right if the folder you selected *contains* `starter-kit` rather than being it.
 
-Claude now works with the files in that folder. It will ask you before doing anything outside it, and it will ask exactly once during setup, in Step 3, for a reason worth understanding now rather than being surprised by.
+Claude now works with the files in that folder. It will ask you before doing anything outside it. There is one expected reason to leave it during this setup, in Step 3, worth understanding now rather than being surprised by. If it asks a second time for something you did not expect, that is your cue to ask why before saying yes.
 
 ## 1.6 Understand what it will and will not do
 
@@ -83,7 +83,7 @@ You are set up. Everything from here is Claude doing the work.
 
 Copy everything between the two lines and paste it into the Code tab.
 
-It will ask permission before it does anything. Read what it asks.
+In Manual mode, which is where you start, expect it to ask before it edits a file or runs a command. Permissions you have already granted, on this machine or by whoever set it up, can change which further prompts appear. Read what it asks.
 
 One request will look alarming and is not. In Step 3 it asks to write into `~/.claude/`, a hidden settings folder in your home directory, **outside your project**. That is the point: the rules go there so they load in every project from now on, not just this one. If they went in your project folder they would only ever apply here. Say yes to that one. Anything else that wants to leave your project folder, ask it why first.
 
@@ -102,6 +102,7 @@ Ground rules for this whole setup:
 - If a step fails, stop and tell me. Do not work around it silently and do not move on.
 - Some steps below are mine to click, not yours to run. When you reach one, hand it to me clearly and wait.
 - If anything in these instructions turns out to be wrong on my machine, say so plainly rather than making it fit.
+- **Never overwrite a file I already have.** Several steps below copy a file into place under a fixed name. Before each copy, check whether something is already there. If it is, stop, show me what it says, and ask. If I tell you to go ahead, first rename the existing one by adding `.before-starter-kit` to the end, so it is still on disk and `starter-kit/reference/undo.md` can put it back whenever I want it. If a file with that backup name **also** already exists, stop and ask me rather than overwriting it, because that means the setup has run here before and the older one is the copy I would actually want back. Copying over my own work silently is the one thing here I could not recover from.
 
 **Step 1. Show me where I am and what you can reach.**
 Tell me which folder you are working in and list what is in it. Then explain in two sentences how your access actually works: that you can see this folder, that you will ask before touching anything outside it, and that you are about to ask exactly that in Step 3 when you write into my settings folder. I would rather understand the real boundary than be told a comforting version of it.
@@ -117,16 +118,19 @@ Then tell me the honest limitation, because it would be easy to let me assume ot
 Show me the 18 titles so I know what I agreed to, and tell me `starter-kit/rules/README.md` says which to read first. Then tell me how to check they actually loaded: start a new conversation and ask you to list the rules you can see. If the 18 titles come back, they are live.
 
 **Step 4. Have me look at what I already have, before either of us installs anything.**
-Anthropic adds a set of work plugins by default, so the one I want is probably already there. Checking first costs thirty seconds and saves me installing something twice.
+Anthropic adds a catalogue of work plugins by default, called the Knowledge Work marketplace. That means the one I want is almost certainly listed, and it may already be installed. Those are two different things, so tell me which you are asking me to check. Looking first costs thirty seconds and saves me installing something twice.
 
 Tell me to open **Customize** in the left sidebar and click the **Plugins** tab. Then wait for me. This screen is mine to look at, not yours to run.
 
 While I have it open, ask me whether **Product Management** is in the list, and have me read out what I see next to it.
 
-- **If it is there,** nothing to install. Tell me in one line what it adds, and carry on.
-- **If it is not there,** tell me to use the **Browse** button on that same screen to find it, and talk me through it while I look.
+Being listed and being installed are not the same thing, so go by what the screen says next to it, not by whether the name appears:
 
-Either way, do not tell me it worked until I have told you what I can see.
+- **If it says it is installed or enabled,** nothing to do. Tell me in one line what it adds, and carry on.
+- **If there is an Install button next to it,** tell me to click it, and wait until I tell you it has finished.
+- **If it is not in the list at all,** tell me to use the **Browse** button on that same screen to find it, and talk me through it while I look. Once I have found it, have me click **Install** and wait until the screen says it is installed or enabled before you go on.
+
+Either way, do not tell me it worked until I have told you what I can see. Step 6 needs this plugin actually installed, so if I read out something that does not match any of the three cases above, say so rather than guessing which one I meant.
 
 Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones worth considering, depending on what I told you in Step 2 that this project is: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
 
@@ -135,8 +139,8 @@ Two things that may not match, and I would rather you say so than smooth over: t
 When I say I am done, verify what I actually ended up with and show me.
 
 **Step 5. Tell me what came with it.**
-Tell me the product-management plugin also brought sixteen connections to tools like Slack, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Connectors**. That is the item directly below **Plugins** in the same menu, so it is a place I have already been.
-Then tell me the exception, because it is the one I would otherwise hit first: Gmail and Google Calendar are on the list but do not connect from here. They have to be signed in on claude.ai, under Settings then Connectors, after which they appear here on their own. Say that plainly rather than letting me discover it by failing.
+Tell me the product-management plugin also brought sixteen connections to tools like Slack, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Connectors**. That is a different menu from the **Customize** screen you sent me to in Step 4, so tell me plainly that this is the **+** button next to where I type, not the sidebar.
+Tell me that two of the sixteen, Gmail and Google Calendar, arrive with no address filled in and are not covered by this kit, so I should skip them rather than spend day one on mail and calendar. Say that plainly rather than letting me discover it by failing.
 Tell me `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
 
 **Step 6. Prove it works on something real.**
@@ -146,10 +150,13 @@ This step matters more than the five before it. If I do not see something useful
 **Step 7. Set up the notebook that survives between conversations.**
 Every new conversation starts knowing nothing about the last one. Fix that now, before it costs me a Monday morning.
 Create `.claude/wiki/` in my project and copy `_hot.md` and `_log.md` into it from `starter-kit/templates/`. Then add the block from `starter-kit/templates/CLAUDE-wiki-snippet.md` to the bottom of my `CLAUDE.md` so you actually read them.
+**Then fill both files in, now, rather than leaving me the templates.** They arrive as placeholders in square brackets with `YYYY-MM-DD` where the date goes, and a placeholder left in place is worse than an empty file, because the next conversation reads it as if it were true. Use what you already know from today: what I told you this project is in Step 2, the piece of work you produced in Step 6, and anything I said was next or unresolved. Put today's real date in both. Where you genuinely do not know, ask me one question rather than inventing an answer or leaving the bracket.
+`_log.md` also arrives with a second, blank entry as an example of the shape. Delete that one rather than leaving it, and write a single real entry for today.
+Then show me both finished files and read them back to me, so I can see there is no `[` and no `YYYY-MM-DD` left in either.
 Show me what to say at the end of a working session to keep them current.
 
-**Step 8. Walk me through undoing all of it.**
-Read `starter-kit/reference/undo.md` and walk me through it, checking each item against what you actually did in this session. Tell me if anything in it does not match what the desktop app does. I want to know the way out before I go further.
+**Step 8. Talk me through how I would undo all of it. Do not undo anything.**
+Read `starter-kit/reference/undo.md` and explain it to me, checking each item against what you actually did in this session. **This step is reading and explaining only. Do not delete, move or reverse a single thing, and do not run any command from that file.** It contains deletion commands, and today I want to know the way out exists, not to take it. Tell me if anything in it does not match what the desktop app does.
 
 **Step 9. Tell me what you did NOT install and why.**
 Read `starter-kit/GROWTH.md` and summarise it: what is deliberately missing, and the specific moment that should bring me back for each one. **Do not install any of it now.**
@@ -168,7 +175,7 @@ Everything else waits until you feel the problem it solves, and [GROWTH.md](GROW
 
 ## If something went wrong
 
-**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is one of the three terminal situations flagged at the top of this page, and most people never hit it.
+**The Code tab shows an error about Git.** Most Macs have Git already, but not all. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, type `xcode-select --install`, press Return, and click Install when the system window appears. It is about a gigabyte. That window is normal and you have not broken anything. This is the one day-one step that needs a terminal, flagged at the top of this page.
 
 **A step in Part 2 failed.** Tell Claude exactly what you saw, including the error text, and ask it to explain the error before fixing it. Understanding the failure is worth more on day one than getting past it.
 

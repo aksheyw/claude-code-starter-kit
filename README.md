@@ -15,11 +15,11 @@
 
 Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide describes the version that runs in a terminal. This one uses the desktop app, which is the same Claude Code with a normal Mac interface, and the docs put it plainly: no terminal required.
 
-This is the door. Ten minutes of clicking, then nine guided steps, ending in something you actually needed.
+This is the door. About ten minutes of clicking, then nine guided steps, ending in something you actually needed.
 
 ## Two files, and you only read one today
 
-**[START-HERE.md](START-HERE.md)** is the whole day-one path. Ten minutes by hand, then you paste a brief into Claude Code and it sets itself up while you watch, stopping after each step to show you proof it worked.
+**[START-HERE.md](START-HERE.md)** is the whole day-one path. About ten minutes by hand, then you paste a brief into Claude Code and it sets itself up while you watch, stopping after each step to show you proof it worked.
 
 **[GROWTH.md](GROWTH.md)** is everything left out, each item behind the moment that earns it. Read it once. Install none of it.
 

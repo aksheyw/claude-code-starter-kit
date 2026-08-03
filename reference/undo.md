@@ -18,7 +18,7 @@ Type `/rewind`, or press **Esc** twice with nothing typed in the box. It lists t
 
 - It restores files it edited **itself**. It does **not** restore files changed by commands it ran, so anything deleted, moved or copied sits outside it.
 - It does not cover work done by a second session it started on its own.
-- It belongs to **one conversation**, not to your project. Closing the conversation does not destroy it, and you can still rewind after coming back to it, but it is deleted along with the conversation after thirty days.
+- It belongs to **one conversation**, not to your project. Closing the conversation does not destroy it, and you can still rewind after coming back to it, but it is deleted along with the conversation after thirty days by default. That window is a setting, `cleanupPeriodDays`, so on a machine somebody else configured it may be shorter.
 
 That last one is why version control matters, and the first time you have work you would hate to lose is the moment to add it. See [GROWTH.md](../GROWTH.md).
 
@@ -32,11 +32,29 @@ The three sections below are deliberately separate, and they get progressively l
 
 ## 1. Remove this kit, and nothing else
 
-This is almost certainly the one you want. It takes out exactly what the setup put in and leaves everything else alone.
+This is almost certainly the one you want. It takes the kit out of the way and leaves everything else alone.
+
+**Nothing here is deleted outright.** Everything the kit installed is *moved* into one folder in your project called `starter-kit-undo-kept`, so you can look through it before you throw anything away. That matters more than it sounds: `CLAUDE.md` and the two notebook files started as templates, but Steps 2 and 7 filled them with **your** project information. By the time you undo, they are your writing, not the kit's. Deleting them because the kit created them would throw away exactly the work the kit was for.
+
+**If you already had a file with one of these names before you ran the setup**, the setup was told to ask you first and to rename yours by adding `.before-starter-kit` to the end. Undoing puts that one back.
 
 Say this to Claude:
 
-> Delete only these files, and show me each one before you do it. In `~/.claude/rules/`: the eighteen files listed below. In `~/.claude/commands/`: `learn.md`. In this project: `CLAUDE.md`, and the `.claude/wiki/` folder. Do not delete anything else in `~/.claude/`.
+> Undo the starter kit. Show me every file before you touch it, and do not touch anything not on this list.
+>
+> The list is exactly: in `~/.claude/rules/`, the eighteen files named below. In `~/.claude/commands/`: `learn.md`. In this project: `CLAUDE.md`, and inside `.claude/wiki/`, the two files `_hot.md` and `_log.md`.
+>
+> **Delete nothing.** Make a folder in my project called `starter-kit-undo-kept`, and for each file on the list that exists, move it in there, keeping the folder it came from as a subfolder so I can tell a rule from a notebook file. If `starter-kit-undo-kept` already exists, stop and tell me rather than writing into it.
+>
+> Then, for any file on the list that has a `.before-starter-kit` copy sitting beside where it was, rename that copy back to the original name. That is the file I had before the setup, and it goes back where it was.
+>
+> Then, only if `.claude/wiki/` is now completely empty, remove the folder itself. If anything else is in there it is mine, so leave the folder and tell me what is in it.
+>
+> Finally, list what is now in `starter-kit-undo-kept` and tell me plainly that nothing has been destroyed and I can delete that folder myself once I have looked through it.
+>
+> Do not touch anything else in `~/.claude/`, do not search the rest of my project for backup files, and tell me if anything on the list is missing rather than assuming.
+
+Once you have looked inside `starter-kit-undo-kept` and are sure there is nothing in it you want, drag it to the Bin. That is the only deletion in this section, and you are the one doing it.
 
 The eighteen rule files, by exact name, so nothing else goes with them:
 
@@ -70,7 +88,7 @@ Then ask Claude to list `~/.claude/rules/` and `~/.claude/commands/` so you can 
 
 Deleting them is not "uninstalling the starter kit". It is resetting Claude Code to the day you installed it, and nothing here restores it afterwards.
 
-If that is genuinely what you want, and only then, this is the command. It is one of the three terminal situations flagged at the top of [START-HERE.md](../START-HERE.md), and it needs one because Finder hides these folders:
+If that is genuinely what you want, and only then, this is the command. It is one of the terminal situations flagged at the top of [START-HERE.md](../START-HERE.md). Finder can reach hidden folders through **Go** then **Go to Folder**, so you could delete them by hand instead; the documented route is the typed one below. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, and type:
 
 ```bash
 rm -rf ~/.claude ~/.claude.json

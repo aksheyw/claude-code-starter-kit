@@ -1,6 +1,6 @@
 # What to add, and when
 
-Nothing here is on day one. Every item is behind a **trigger**: a specific moment you will recognise when it happens. That is deliberate. A tool installed before you have its problem is friction with no payoff, and the usual result is a setup you stop trusting because half of it does things you never asked for.
+Nothing here is on day one. Every item is behind a **trigger**: a specific moment you will recognise when it happens. That is deliberate. A tool installed before you have its problem is friction with no payoff, and installing it early can leave you with a setup you do not trust, because half of it does things you never asked for.
 
 Read this once so you know what exists. Then come back when something on this page describes your week.
 
@@ -14,7 +14,7 @@ Roughly in the order the triggers tend to arrive.
 
 **Trigger.** You ask for one small change, Claude edits four files, and you realise you have no way back to how things were ten minutes ago.
 
-Version control keeps a history of your project so you can always return to a working state. Most of the rest of this page assumes it.
+Version control keeps a history of your project, so you can return to any state you saved. It only protects what you have saved into that history, so a file you never added, or an hour of work since your last save, is not in it. Most of the rest of this page assumes you have this turned on.
 
 Most Macs already have the tool it needs, called Git, so this is usually nothing to install. If Claude tells you Git is missing, open Terminal from your Applications folder, type `xcode-select --install`, and click Install when the system window appears. That window is normal and you have not broken anything.
 
@@ -40,7 +40,9 @@ Two ways to fix it, and the cheap one is enough at first.
 
 > Here is a plan. Do not improve it. Try to find the reason it fails. What is the one assumption it rests on, and what happens if that assumption is wrong?
 
-**The structured one.** A published review method that runs several passes with a different angle each time, rather than one pass that sees what it saw the first time:
+**The structured one.** A published review method that runs several passes with a different angle each time, rather than one pass that sees what it saw the first time.
+
+**This one uses Terminal.** It lives in your Applications folder, inside a subfolder called **Utilities**. Open it and type these in, one block at a time, pressing Return after each line:
 
 ```bash
 cd ~/Desktop
@@ -68,6 +70,8 @@ Should print `SKILL.md`. Restart Claude Code, type `/deep-review`, check it comp
 **Trigger.** The first Monday you sit down, say "let's carry on with the pricing page", and Claude has no idea what the pricing page is or why you chose that payment provider on Thursday.
 
 You already have the two-file version from day one (`_hot.md` and `_log.md`). If that habit has stuck and you want the fuller version, with a proper session-close routine and a generated handoff note you paste into the next conversation:
+
+**This one uses Terminal** (Applications, then Utilities). Open it and check first whether you have Node.js, a piece of software this tool needs:
 
 ```bash
 node --version
@@ -103,7 +107,7 @@ Two things, in this order. First, ask Claude Code:
 
 > Set up this project so secrets never get committed. Create a `.env` file for the keys, add it to `.gitignore`, and show me both files. Explain what each one does.
 
-Second, a scan that runs automatically every time a file is written:
+Second, a scan that runs automatically every time a file is written. **This part uses Terminal** (Applications, then Utilities):
 
 ```bash
 cd ~/Desktop
@@ -113,7 +117,7 @@ mkdir -p ~/.claude/scripts/hooks
 cp hooks/secret-scan-postwrite.sh ~/.claude/scripts/hooks/
 ```
 
-**Copy only that one file.** The others in that repo are built around a different way of working. In particular, one of them blocks Claude whenever a message starts with a word like "wait", which is exactly how most people redirect mid-sentence, and it will look like the tool is broken.
+**Copy only that one file.** The others in that repo are built around a different way of working. In particular, one of them blocks Claude whenever a message starts with a word like "wait", which is a natural way to redirect mid-sentence, and it will look like the tool is broken.
 
 Copying the script does not switch it on. Rather than hand-editing a settings file, say this to Claude Code:
 
@@ -156,6 +160,8 @@ The `ship-gate:` prefix is not decoration. Installed this way the commands are n
 
 **Trigger.** The week you first plan to put something in front of a customer, a friend, or an app store.
 
+**This one uses Terminal** (Applications, then Utilities):
+
 ```bash
 cd ~/Desktop
 git clone https://github.com/aksheyw/claude-code-learned-skills.git
@@ -178,7 +184,9 @@ Should print `SKILL.md`.
 
 **Trigger.** You correct Claude on something and think "I have told you this before." Or you start thinking about a new laptop. Whichever comes first, and do not wait for the second.
 
-Reinstalling Claude Code takes two minutes. The rules, the lessons and the project notebooks you built do not come back, because you are the only copy.
+Reinstalling Claude Code is quick. The rules, the lessons and the project notebooks you built do not come back, because you are the only copy.
+
+**This one uses Terminal** (Applications, then Utilities):
 
 ```bash
 cd ~/Desktop
