@@ -10,6 +10,20 @@
 # to delete the files.
 _research/
 
+# Internal working state for THIS repo. Never published.
+#
+# These two were tracked until 2026-08-03 and were caught one push away from going
+# out. A cross-vendor review found them while every earlier privacy check watched
+# _research/ and nothing else. HANDOFF.md named the first reader, described her in
+# the third person, carried an instruction not to send the repo to her, and stated
+# star counts, which the repo's own rules ban as a popularity claim. The wiki said
+# the same things in more detail. They now live in _research/internal/.
+#
+# Root-anchored on purpose: the `.claude/wiki/` that START-HERE and the templates
+# tell a READER to create lives in THEIR project, and must keep working.
+/HANDOFF.md
+/.claude/
+
 # Local scratch
 .DS_Store
 *.tmp

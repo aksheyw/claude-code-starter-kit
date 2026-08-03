@@ -128,7 +128,7 @@ While I have it open, ask me whether **Product Management** is in the list, and 
 
 Either way, do not tell me it worked until I have told you what I can see.
 
-Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones that likely fit someone running her own business and building her own apps: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
+Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones worth considering, depending on what I told you in Step 2 that this project is: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
 
 Two things that may not match, and I would rather you say so than smooth over: that list of names comes from the published set and what my screen offers can lag behind it, and the panel may be showing plugins for the folder I currently have open. If a name I pick is not on my screen, tell me plainly instead of assuming it is hiding somewhere.
 
