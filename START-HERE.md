@@ -68,7 +68,7 @@ Then click **Select folder**.
 
 You have it right if the folder you selected *contains* `starter-kit` rather than being it.
 
-Claude now works with the files in that folder. It will ask you before doing anything outside it. There are three expected reasons to leave it during this setup, all worth understanding now rather than being surprised by: writing down what gets installed, putting the rules into your settings folder, and downloading skills into it. All three are flagged in the steps where they happen. If it asks for something you did not expect, that is your cue to ask why before saying yes.
+Claude now works with the files in that folder. It will ask you before doing anything outside it. There are three expected reasons to leave it during this setup, all worth understanding now rather than being surprised by: writing down what gets installed and keeping a reference copy of it, putting the rules into your settings folder, and downloading skills into it. All three are flagged in the steps where they happen. If it asks for something you did not expect, that is your cue to ask why before saying yes.
 
 ## 1.6 Understand what it will and will not do
 
@@ -113,7 +113,11 @@ Ground rules for this whole setup:
 - If anything in these instructions turns out to be wrong on my machine, say so plainly rather than making it fit.
 - **Never delete, move, rename or overwrite anything of mine.** This kit adds; it does not replace. That applies to every file already on this machine, whether it is in my project or in `~/.claude/`, and whether or not it has the same name as something you are about to add. If something you want to add would collide with something I have, that is a decision for me, not a problem for you to solve quietly. The rules below say how to bring it to me.
 - **Where the two of us overlap, show me the choice.** When this kit offers something and I already have something covering the same ground, tell me what each one does, what I would gain and lose either way, and which you would pick and why. Say how confident you are, and say what would change your mind. If combining them genuinely makes more sense than picking one, propose the combination and show me what it would look like. Then wait. I decide.
-- **Write down what you add, as you go.** Keep a file at `~/.claude/starter-kit-manifest.md` listing every file you add, where it came from, and today's date. Create it in Step 2 and add a line to it every time you install something. It is what makes Step 11 honest.
+- **Write down what you add, as you go, and keep a pristine copy of it.** Two things, both in `~/.claude/`:
+  - a file at `starter-kit-manifest.md` listing every file you add, where it came from, and today's date. Add a line to it every time you install something.
+  - a folder at `starter-kit-baseline/` holding an untouched copy of every file exactly as installed, in the same shape as where it went, so `rules/starter-kit-03-….md` and `skills/deep-review/SKILL.md` and so on.
+
+  The baseline is the point. Months from now I will not remember which of these I edited, and without a copy of the original nobody can tell my improvement from a newer version of the file. **Never write to the baseline again after the install that created it**, and never read from it to "repair" anything. It is a reference, not a backup to restore from.
 
 **Step 1. Show me where I am and what you can reach.**
 Tell me which folder you are working in and list what is in it. Then explain in two sentences how your access actually works: that you can see this folder, that you will ask before touching anything outside it, and that you are about to ask exactly that in Steps 2, 4 and 6 when you write into my settings folder. I would rather understand the real boundary than be told a comforting version of it.
@@ -160,7 +164,7 @@ Install the numbered `.md` files from `starter-kit/rules/` into `~/.claude/rules
 
 **If a `starter-kit-` file is already there,** this setup has run on this machine before, probably for a different project. Do not overwrite it, because I may have edited it since. Tell me it is already installed, and if the version in `starter-kit/rules/` differs from the one on disk, show me the difference and ask before changing anything.
 
-Verify by listing both folders and showing me the count, and add each installed file to the manifest.
+Verify by listing both folders and showing me the count, add each installed file to the manifest, and copy each one into `~/.claude/starter-kit-baseline/rules/` as it goes in.
 
 Then tell me the honest limitation, because it would be easy to let me assume otherwise. Claude Code reads that folder when a conversation **starts**, so these files change nothing for the rest of this one. They load from my **next** conversation onward, in every project, and they work the same whether I use the app or the terminal. The same is true of `/learn`: it becomes available next time, not now.
 
@@ -190,10 +194,11 @@ When I say I am done, verify what I actually ended up with and show me. **Record
 **Step 6. Install the skills I agreed to in Step 2.**
 A skill is a set of instructions you load when a particular kind of job comes up, so you follow a worked method instead of improvising. Explain that in one sentence before you install anything.
 
-**None of them are copied inside this kit.** Every one is downloaded from the repository that maintains it, so I can pull a newer version later instead of being stuck with whatever was current the day this kit was written. They come from two places and the difference matters, so tell me which is which as you go. `starter-kit/reference/what-this-adds.md` names the repository and licence for every one.
+They come from three places and the difference matters, so tell me which is which as you go. `starter-kit/reference/what-this-adds.md` names the source and licence for every one.
 
-- **From the author's own public repositories.** `deep-review`, `llm-wiki`, `doc-confluence` and `audit`. Download each repository and copy the skill folder into `~/.claude/skills/`.
-- **From other people's public repositories.** Five skills from `obra/superpowers`, written by Jesse Vincent, MIT licensed. Same method. Tell me who wrote them as you install them, and tell me the credits are in the kit's README.
+- **Bundled in this kit**, because the author wrote them: `sounding-board` and `handoff-audit`, in `starter-kit/skills/`. Copy each folder into `~/.claude/skills/`.
+- **From the author's own public repositories:** `deep-review`, `llm-wiki`, `doc-confluence` and `audit`. Download each repository and copy the skill folder across, rather than bundling, so I can pull a newer version later.
+- **From other people's public repositories:** five skills from `obra/superpowers`, written by Jesse Vincent, MIT licensed. Same method. Tell me who wrote them as you install them, and tell me the credits are in the kit's README.
 
 **Never overwrite a skill folder that is already in `~/.claude/skills/`.** If one of these names already exists there, stop and bring it to me under the overlap rule above. Mine may be a version I have edited.
 
@@ -201,7 +206,7 @@ Be exact about where things go, because a skill in the wrong place looks install
 
 Downloading uses Git. If Git turns out to be missing, stop and tell me, and point me at the note at the bottom of `START-HERE.md`. Do not try to work around it.
 
-After each one, check the folder actually contains a `SKILL.md` and show me. A folder that downloaded empty is the failure mode here, and it looks exactly like success until I try to use it. Add every skill to the manifest with the repository it came from.
+After each one, check the folder actually contains a `SKILL.md` and show me. A folder that downloaded empty is the failure mode here, and it looks exactly like success until I try to use it. Add every skill to the manifest with the repository it came from **and the exact version you fetched**, a commit reference if you can get one, so a later comparison can tell a change I made from a change the authors made. Copy each installed skill folder into `~/.claude/starter-kit-baseline/skills/` untouched.
 
 Then tell me how to check they are actually available, rather than asserting it: ask you to list the skills you can see. If a new one is missing, the reliable fix is to start a new conversation, because that is when the folder is read afresh. Do not promise me it works in this conversation and do not promise me it does not; have me look.
 

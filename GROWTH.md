@@ -2,7 +2,9 @@
 
 Almost nothing here is on day one. Every item is behind a **trigger**: a specific moment you will recognise when it happens. Two of them, `deep-review` and `audit`, are **offered** on day one, and they are kept on this page because knowing *when* to reach for them is the part that matters. If you skipped them during setup, each section below says how to add it.
 
-**One rule holds everywhere on this page, the same as during setup: nothing here replaces anything of yours.** Every prompt below tells Claude to check whether a file already exists and to bring you the choice rather than writing over it. If one of them ever does otherwise on your machine, that is a bug in this page. That is deliberate. A tool installed before you have its problem is friction with no payoff, and installing it early can leave you with a setup you do not trust, because half of it does things you never asked for.
+Holding things back is deliberate. A tool installed before you have its problem is friction with no payoff, and installing it early leaves you with a setup you do not trust, because half of it does things you never asked for.
+
+**One rule holds everywhere on this page, the same as during setup: nothing here replaces anything of yours.** Every prompt below tells Claude to check whether a file already exists and to bring you the choice rather than writing over it. If one of them ever does otherwise on your machine, that is a bug in this page.
 
 Read this once so you know what exists. Then come back when something on this page describes your week.
 
@@ -62,25 +64,15 @@ If you skipped it, or it is genuinely not there, say:
 
 You already have the two-file version from day one (`_hot.md` and `_log.md`). If that habit has stuck and you want the fuller version, with a proper session-close routine and a generated handoff note you paste into the next conversation:
 
-**This one uses Terminal** (Applications, then Utilities). Open it and check first whether you have Node.js, a piece of software this tool needs:
+Ask Claude to do it. You do not need to open anything:
 
-```bash
-node --version
-```
+> Check whether Node.js is installed by running `node --version`. If it is missing, stop and tell me, because I will install it myself from nodejs.org rather than have you do it. If it is there, run `npx skills add aksheyw/context-bridge --global`, then show me that `~/.claude/skills/context-bridge/` exists and what is in it. **Do not overwrite it if it is already there**; show me instead.
 
-If that says `command not found`, go to [nodejs.org](https://nodejs.org), download the macOS installer, double-click it. No terminal needed for that part.
+If Claude says Node.js is missing, go to [nodejs.org](https://nodejs.org), download the macOS installer and double-click it. That part is a normal Mac install and nothing is typed.
 
-```bash
-npx skills add aksheyw/context-bridge --global
-```
+Then start a new conversation and type `/cb-` to see if the commands appear.
 
-```bash
-ls ~/.claude/skills/context-bridge/
-```
-
-Then restart Claude Code and type `/cb-` to see if the commands appear.
-
-> **The `--global` flag is not in that repo's README, checked 2026-08-01.** Without it the skill installs into whichever folder your terminal happens to be sitting in, so next month's project silently will not have it.
+> **The `--global` flag is not in that repo's README, checked 2026-08-01.** Without it the skill installs into whichever folder happens to be current, so next month's project silently will not have it.
 >
 > **If `/cb-` shows nothing, stop and do not debug it.** Keep using your two files. They give you most of the value, and a working habit beats a broken tool.
 
@@ -159,15 +151,11 @@ The thing worth knowing is not how to install it. It is **when to run it**, whic
 
 Reinstalling Claude Code is quick. The rules, the lessons and the project notebooks you built do not come back, because you are the only copy.
 
-**This one uses Terminal** (Applications, then Utilities):
+Ask Claude to do it:
 
-```bash
-cd ~/Desktop
-git clone https://github.com/aksheyw/claude-code-harness-backup.git
-bash claude-code-harness-backup/scripts/capture-harness.sh
-```
+> Download `https://github.com/aksheyw/claude-code-harness-backup` into a temporary folder, then run its `scripts/capture-harness.sh`. **Read me the warning it prints before you answer anything, and do not confirm on my behalf.** It is about to copy real passwords in plain text and I want to see that warning myself. Tell me exactly where it put the folder when it finishes.
 
-It prints a warning that it is about to copy real passwords in plain text, then **stops and waits for you to press Return.** That frozen screen is expected, not a crash.
+That pause is expected, not a crash. The script deliberately stops and waits for a person to agree before it copies anything sensitive, which is the behaviour you want from it.
 
 **The folder it produces holds real credentials. Never put it in a public repo.**
 

@@ -34,6 +34,8 @@ The four sections below are deliberately separate, and they get progressively le
 
 Everything the setup installed is written down as it happens, in a file at `~/.claude/starter-kit-manifest.md`. That is the list. Nothing was added that is not on it.
 
+Beside it sits `~/.claude/starter-kit-baseline/`, an untouched copy of every file exactly as it was installed. It is never written to again and never used to repair anything. Its only job is to answer one question later: did I change this file, or did it always look like that?
+
 Say this to Claude:
 
 > Show me `~/.claude/starter-kit-manifest.md`. For each line on it, check whether that file is actually still on disk and tell me. Do not change or remove anything.
@@ -48,7 +50,7 @@ There is one exception and it is worth knowing precisely. **If you already had a
 
 **Files that are now yours, whatever created them.** If you did not have a `CLAUDE.md` and the setup made one, it then interviewed you and filled it with your answers. The same is true of the two notebook files. Those started as this kit's templates and stopped being templates the moment you answered. **They are your writing, and nothing in this document treats them as the kit's to remove.** If you take everything else out, leave those exactly where they are. They are what makes Claude useful in this project, and they keep working on their own.
 
-Two things are left over even after all of the above, and neither does anything: the `starter-kit` folder you dragged into your project, which you can drag to the Bin whenever you like, and the manifest at `~/.claude/starter-kit-manifest.md`. Keep the manifest if the setup has ever run for more than one project, because it is the only record of what the other runs installed.
+Three things are left over even after all of the above, and none of them does anything: the `starter-kit` folder you dragged into your project, which you can drag to the Bin whenever you like, and the manifest and baseline folder in `~/.claude/`. Keep those last two while any of this is still installed anywhere, because together they are the only record of what was put where and what it looked like. They are small, and they cost nothing to leave.
 
 ## 2. Remove the parts you no longer want
 
@@ -62,11 +64,15 @@ There is no command here that sweeps up. You look at the list and remove what yo
 
 The reason for listing before deleting is that the folder is shared. Anything you have written yourself, or installed from anywhere else, lives there too, and a blanket delete would take those with it. You would not notice until something stopped behaving the way you taught it.
 
-**If you edited one of the kit's rules and want to keep your version,** say so before deleting, because a file you improved six weeks ago does not look any different from one you never opened. If the `starter-kit` folder is still in your project, Claude can compare the installed file against the original in `starter-kit/rules/` and show you what differs. Treat that as a prompt to think, not proof: a difference could be your edit or a later version of the kit, and Claude cannot always tell which. **When you are not sure, keep the file.** An extra rule costs you nothing; a deleted one you had improved is gone.
+**If you edited one of the kit's rules, you will want to keep your version,** and a file you improved six weeks ago does not look any different from one you never opened. So do not trust your memory. Say:
+
+> Compare every `starter-kit-` rule in `~/.claude/rules/` against its copy in `~/.claude/starter-kit-baseline/rules/` and show me every file that differs, with the differences.
+
+Anything that differs is something you changed, because the baseline is what was installed and nothing has written to it since. Keep those. **When you are not sure, keep the file anyway.** An extra rule costs you nothing; a deleted one you had improved is gone.
 
 **To take out a skill,** name it from the manifest list and have Claude delete that folder in `~/.claude/skills/`. Same principle as the rules: name the ones you mean.
 
-**And the same warning applies if you have edited one.** A skill you tuned six weeks ago looks identical to one you never opened. Ask Claude to compare the folder against the current version in the repository it came from and show you anything that differs. The same caution applies: the repository may simply have moved on since you installed it, so a difference is not proof you edited it. **When you are not sure, keep it.**
+**And check the same way first.** Have Claude compare the folder against its copy in `~/.claude/starter-kit-baseline/skills/`. Anything that differs is yours. That comparison is reliable because the baseline never changes, whereas comparing against the repository online is not: those authors keep working, so a difference there might be their newer version rather than your edit.
 
 **To take out what the kit added to your `CLAUDE.md`,** say:
 
