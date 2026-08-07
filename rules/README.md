@@ -6,9 +6,11 @@ Working habits, written as instructions to Claude Code. Each file is one rule: w
 
 ## Installing them
 
-Copy the numbered files into `~/.claude/rules/`, creating that folder if it does not exist. `~` is your home folder and `.claude` is a hidden folder inside it. Claude Code does this for you as a step in [START-HERE.md](../START-HERE.md).
+Copy the numbered files you have accepted into `~/.claude/rules/`, creating that folder if it does not exist. The setup in [START-HERE.md](../START-HERE.md) asks you which you want before it copies anything, so this is a description of what it does rather than an instruction to copy all eighteen. `~` is your home folder and `.claude` is a hidden folder inside it. Claude Code does this for you as a step in [START-HERE.md](../START-HERE.md).
 
-This README is not a rule. Leave it out of that folder. To remove the rest, delete the files. Nothing else depends on them.
+**They install with `starter-kit-` on the front of each filename**, so `03-write-the-project-instructions.md` lands as `starter-kit-03-write-the-project-instructions.md`. That is deliberate. The rules folder is shared with anything else you have put there, and the prefix means one of these can never land on top of a rule of your own, and can never be mistaken for one when you come to remove them.
+
+This README is not a rule. Leave it out of that folder. [`reference/undo.md`](../reference/undo.md) covers taking them out again. Nothing else depends on any single one.
 
 ## What the numbers mean
 

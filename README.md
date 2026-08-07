@@ -1,37 +1,43 @@
 <div align="center">
 
-# 🚪 claude-code-starter-kit: day one with the Claude Code desktop app, for people who have never opened a terminal
+# 🚪 claude-code-starter-kit: day one with the Claude Code desktop app, without opening a terminal
 
-### Every guide starts at a command line. This one starts with a download.
+### It adds to the setup you already have. It never replaces any of it.
 
-![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![day one is clicking not commands](https://img.shields.io/badge/day%20one-clicking%2C%20not%20commands-0E9384) ![18 rules, 9 on day one](https://img.shields.io/badge/rules-18%2C%209%20on%20day%20one-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
+![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![day one is clicking not commands](https://img.shields.io/badge/day%20one-clicking%2C%20not%20commands-0E9384) ![never overwrites your files](https://img.shields.io/badge/never-overwrites%20your%20files-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
 ---
 
 <img src="docs/without-a-door-vs-day-one.svg" width="100%"
-     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every change is shown before it happens, then nine guided steps in which Claude sets itself up: a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, a notebook that carries what you agreed into the next conversation, and one real piece of work finished. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
+     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every change is shown before it happens, then twelve guided steps in which Claude sets itself up: it offers a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, nine skills downloaded from the repositories that maintain them, and a notebook that carries what you agreed into the next conversation, installing only what you accept, and finishes one real piece of work. Nothing already on the machine is replaced, and edits are proposed for you to accept before they happen. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
 
-Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide describes the version that runs in a terminal. This one uses the desktop app, which is the same Claude Code with a normal Mac interface, and the docs put it plainly: no terminal required.
-
-This is the door. About ten minutes of clicking, then nine guided steps, ending in something you actually needed.
+Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide starts at a terminal. This one uses the desktop app, where the docs put it plainly: no terminal required. Day one is about ten minutes of clicking, then Claude sets itself up while you watch. If you already run Claude Code, it adds to what you have and replaces none of it.
 
 ## Two files, and you only read one today
 
-**[START-HERE.md](START-HERE.md)** is the whole day-one path. About ten minutes by hand, then you paste a brief into Claude Code and it sets itself up while you watch, stopping after each step to show you proof it worked.
+**[START-HERE.md](START-HERE.md)** is the whole day-one path. It stops after each step to show you proof that step worked.
 
 **[GROWTH.md](GROWTH.md)** is everything left out, each item behind the moment that earns it. Read it once. Install none of it.
 
-## Why almost nothing is on the day-one list
+## Nothing here lands on top of anything of yours
+
+Most setup guides assume an empty machine. The people most likely to want this one already have rules, an instructions file and a few skills of their own, put there over months.
+
+So the setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
+
+Nothing is renamed, moved or copied over. Its rules install with a `starter-kit-` prefix so they cannot collide with yours, and everything it adds goes on a list you can read at any time. The full catalogue is [`reference/what-this-adds.md`](reference/what-this-adds.md), readable before you install a thing.
+
+## Why the day-one list stops where it does
 
 A tool installed before you have its problem is friction with no payoff. Install all eight and you get a setup you stop trusting, because half of it does things you never asked for and cannot explain.
 
-So the test for day one is strict: you feel the value the same afternoon, it needs no engineering knowledge, and it cannot fail silently.
+So the test for day one is strict: you feel the value the same afternoon, it is something the author genuinely uses rather than something that sounded good, and it cannot fail silently.
 
-**Seven things pass:** the app itself, one project folder, a `CLAUDE.md` it reads every time, eighteen rules of which nine apply from day one, two or three plugins, a notebook that carries what you agreed into the next conversation, and one real piece of work finished.
+**Seven things pass**, and on a machine that already has some of them you take only what you are missing: the app and one project folder, a `CLAUDE.md` it reads every time, up to eighteen rules of which nine apply from day one, two or three plugins bringing sixteen tool connections, up to nine skills, a notebook that carries what you agreed into the next conversation, and one real piece of work finished.
 
-Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until the first time an app you are building needs a paid key. So do version control, which keeps every earlier version of your work so you can go back to one; quality gates, which are checks that have to pass before your work goes live; review councils, which are several Claudes arguing a decision out before you commit to it; and backups. [GROWTH.md](GROWTH.md) names the moment that earns each one.
+Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until an app you are building needs a paid key. So do version control, which keeps every earlier version of your work so you can go back to one, and quality gates, which are checks that have to pass before your work goes live. [GROWTH.md](GROWTH.md) names the moment that earns each one.
 
 <details>
 <summary>📦 <b>What is in here</b>, and where the depth went</summary>
@@ -42,13 +48,14 @@ Most things fail. Secret scanning, which checks you have not pasted a password i
 |---|---|
 | [`START-HERE.md`](START-HERE.md) | The day-one path. Part 1 by hand, Part 2 pasted into Claude Code. |
 | [`GROWTH.md`](GROWTH.md) | The growth menu. Every item behind a trigger, plus what to deliberately skip. |
+| [`reference/what-this-adds.md`](reference/what-this-adds.md) | The full catalogue: every rule, skill and template, where each comes from, and how to judge an overlap with something you already have. |
 | [`rules/`](rules) | 18 rules that load into every session, plus an index with the reading order. |
 | [`commands/learn.md`](commands/learn.md) | `/learn`: turn a correction into a rule you never have to give twice. |
 | [`templates/`](templates) | A `CLAUDE.md` skeleton, the two notebook files, and the lines that make them get read. |
-| [`reference/undo.md`](reference/undo.md) | How to reverse everything here. Worth reading before you start, not after. |
+| [`reference/undo.md`](reference/undo.md) | What was added, where it went, and how to take out the parts you no longer want. |
 | [`reference/connectors.md`](reference/connectors.md) | The sixteen tool connections that arrive on day one, and how to switch one on. |
 
-A few install commands in `GROWTH.md` differ from the repo they point at. Each says so in place, with the date it was checked and the reason. They were run on a Mac before being written down. If a repo has since fixed its own instructions, follow the repo.
+One install note in `GROWTH.md` differs from the repo it points at, and says so in place with the date it was checked and the reason. It was run on a Mac before being written down. If that repo has since fixed its own instructions, follow the repo.
 
 </details>
 
@@ -62,24 +69,31 @@ You type `/learn`. It writes the correction into a lessons file, and points your
 
 ## When to skip this
 
-**You already run Claude Code daily.** You have made these calls already and yours fit you better. The repos below are the useful part for you.
-
 **You are on the free Claude plan.** Claude Code needs Pro, Max, Team or Enterprise, and nothing here works around that.
 
-**You want maximum power today.** This is deliberately small, because the failure it is built against is installing all eight and being able to explain none of them.
+**You are not on a Mac.** The clicking path is the whole point and it is macOS only. The terminal version works anywhere, and this kit's rules, templates and skills work with it, but Part 1 will not help you.
+
+**You want every tool on day one.** This holds things back on purpose, because the failure it is built against is installing all eight and being able to explain none of them.
+
+## Credits
+
+Other people's work is downloaded from the repository that maintains it, never copied in here, so you can pull newer versions the same way anyone else would.
+
+- **[obra/superpowers](https://github.com/obra/superpowers)** by Jesse Vincent, MIT. Five of its fourteen skills are on the day-one list: brainstorming, test-driven development, systematic debugging, requesting code review, and verification before completion.
+- **Anthropic's Knowledge Work marketplace**, which ships with the Claude app and is where day one's plugins come from.
 
 ## Where to go once you outgrow it
 
-Each of these publishes one layer in depth. [GROWTH.md](GROWTH.md) says which to reach for and when.
+Day one installs skills from two of these, `claude-code-deep-review` and `claude-code-learned-skills`. [GROWTH.md](GROWTH.md) says which of the rest to reach for and when.
 
-- [claude-code-rules](https://github.com/aksheyw/claude-code-rules): the full rules layer
-- [claude-code-pm-agents](https://github.com/aksheyw/claude-code-pm-agents): product-manager subagents, including a review council
-- [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review): a review method that runs several passes, a different angle each time
-- [context-bridge](https://github.com/aksheyw/context-bridge): the fuller project notebook and a generated handoff prompt
+- [claude-code-rules](https://github.com/aksheyw/claude-code-rules): the full rules layer. The eighteen here are its day-one subset
+- [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills): skills pulled out of real sessions. Three are on the day-one list
+- [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review): review in several passes, a different angle each time
+- [claude-code-pm-agents](https://github.com/aksheyw/claude-code-pm-agents): product-manager subagents, including the review council
+- [context-bridge](https://github.com/aksheyw/context-bridge): the fuller notebook, and a handoff note for the next conversation
 - [claude-code-ship-gate](https://github.com/aksheyw/claude-code-ship-gate): checks that must pass before anything reaches your live branch
 - [claude-code-guardrail-hooks](https://github.com/aksheyw/claude-code-guardrail-hooks): checks that fire the moment a file is written
-- [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills): skills pulled out of real sessions
-- [claude-code-harness-backup](https://github.com/aksheyw/claude-code-harness-backup): moving your setup to a new machine without losing what you wrote
+- [claude-code-harness-backup](https://github.com/aksheyw/claude-code-harness-backup): moving your setup to a new machine intact
 
 ## License
 

@@ -50,7 +50,7 @@ If it comes back with real issues, it is connected. If it says it cannot reach L
 
 Open **+** then **Connectors** and look first. That screen carries more than the sixteen this plugin brings.
 
-If the tool you want genuinely is not offered there, adding it by hand is one of the terminal situations flagged at the top of [START-HERE.md](../START-HERE.md). It is rare, and nothing on day one needs it.
+If the tool you want genuinely is not offered there, adding it by hand needs the command-line version of Claude Code, which this kit does not set up. It is rare, and nothing on day one needs it.
 
 **These two commands need the command-line version of Claude Code, which the desktop app does not install.** If you have only ever used the app, you do not have it yet; the fold at the bottom of [START-HERE.md](../START-HERE.md) has the one line that installs it. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**. The name is yours to choose, the address comes from that tool's own documentation:
 

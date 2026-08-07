@@ -1,8 +1,8 @@
-# How to undo everything
+# How to stop, go back, and take this kit out again
 
 Knowing the way out is what makes you willing to try things. Read this once now, before you need it.
 
-Nothing in the day-one setup is hard to reverse. Almost all of it is deleting a file, and you can ask Claude to do the deleting while you watch.
+**The short version: this kit never removes anything.** The setup only ever adds, and it writes down everything it adds. So there is nothing to restore, nothing to dig out of a folder, and no way for undoing it to cost you work. Taking it out is you deleting files you can see on a list, if and when you want to.
 
 ## Stop it mid-task
 
@@ -26,69 +26,73 @@ This is the short version. Rule `05-how-to-stop-it-and-get-back` in your rules f
 
 ---
 
-# Removing what this kit installed
+# Taking this kit back out
 
-The three sections below are deliberately separate, and they get progressively less reversible. Do not run the later ones to achieve the earlier ones.
+The four sections below are deliberately separate, and they get progressively less reversible. Do not run the later ones to achieve the earlier ones.
 
-## 1. Remove this kit, and nothing else
+## 1. See exactly what was added
 
-This is almost certainly the one you want. It takes the kit out of the way and leaves everything else alone.
-
-**Nothing here is deleted outright.** Everything the kit installed is *moved* into one folder in your project called `starter-kit-undo-kept`, so you can look through it before you throw anything away. That matters more than it sounds: `CLAUDE.md` and the two notebook files started as templates, but Steps 2 and 7 filled them with **your** project information. By the time you undo, they are your writing, not the kit's. Deleting them because the kit created them would throw away exactly the work the kit was for.
-
-**If you already had a file with one of these names before you ran the setup**, the setup was told to ask you first and to rename yours by adding `.before-starter-kit` to the end. Undoing puts that one back.
+Everything the setup installed is written down as it happens, in a file at `~/.claude/starter-kit-manifest.md`. That is the list. Nothing was added that is not on it.
 
 Say this to Claude:
 
-> Undo the starter kit. Show me every file before you touch it, and do not touch anything not on this list.
->
-> The list is exactly: in `~/.claude/rules/`, the eighteen files named below. In `~/.claude/commands/`: `learn.md`. In this project: `CLAUDE.md`, and inside `.claude/wiki/`, the two files `_hot.md` and `_log.md`.
->
-> **Delete nothing.** Make a folder in my project called `starter-kit-undo-kept`, and for each file on the list that exists, move it in there, keeping the folder it came from as a subfolder so I can tell a rule from a notebook file. If `starter-kit-undo-kept` already exists, stop and tell me rather than writing into it.
->
-> Then, for any file on the list that has a `.before-starter-kit` copy sitting beside where it was, rename that copy back to the original name. That is the file I had before the setup, and it goes back where it was.
->
-> Then, only if `.claude/wiki/` is now completely empty, remove the folder itself. If anything else is in there it is mine, so leave the folder and tell me what is in it.
->
-> Finally, list what is now in `starter-kit-undo-kept` and tell me plainly that nothing has been destroyed and I can delete that folder myself once I have looked through it.
->
-> Do not touch anything else in `~/.claude/`, do not search the rest of my project for backup files, and tell me if anything on the list is missing rather than assuming.
+> Show me `~/.claude/starter-kit-manifest.md`. For each line on it, check whether that file is actually still on disk and tell me. Do not change or remove anything.
 
-Once you have looked inside `starter-kit-undo-kept` and are sure there is nothing in it you want, drag it to the Bin. That is the only deletion in this section, and you are the one doing it.
+You will see three kinds of thing.
 
-The eighteen rule files, by exact name, so nothing else goes with them:
+**Files the kit added under its own name.** Every rule it installed starts with `starter-kit-`. That prefix exists for exactly this moment: those files are unambiguously the kit's, so removing them can never catch a rule of yours by accident. The skills it downloaded sit in their own named folders in `~/.claude/skills/`. The one thing without a prefix is `~/.claude/commands/learn.md`, because Claude Code takes a command's name from its filename and renaming it would turn `/learn` into something else.
 
-```
-01-start-in-the-right-folder.md      20-agree-the-shape-first.md
-02-talk-to-me-in-plain-words.md      21-write-so-it-lands.md
-03-write-the-project-instructions.md 22-saving-is-not-publishing.md
-04-stop-before-anything-expensive.md 23-before-anyone-else-uses-it.md
-05-how-to-stop-it-and-get-back.md    30-agree-the-approach-before-any-code.md
-06-make-it-prove-it.md               31-ask-for-a-test-that-fails-first.md
-07-never-guess-never-undersell.md    32-code-that-stays-easy-to-change.md
-08-get-it-out-of-the-chat.md         33-delegate-the-reading-keep-the-judgement.md
-09-every-correction-becomes-a-rule.md 34-pressure-test-the-expensive-decisions.md
-```
+**Files that were already yours.** None of them were replaced, renamed or moved. If you had a rule, a notebook file or a skill before you started, it is untouched.
 
-**Why the list rather than "delete everything in the rules folder".** That folder is shared. Anything you write yourself later, or install from anywhere else, lives there too. A blanket delete takes those with it and you will not notice until something stops behaving the way you taught it.
+There is one exception and it is worth knowing precisely. **If you already had a `CLAUDE.md`, the setup may have added sections to it, but only ones you said yes to at the time.** Nothing in it was rewritten or removed. The manifest names every block that was appended, so the file is still yours and the additions are still identifiable. Removing them is covered below.
 
-To remove **one** rule rather than all eighteen, delete just that file by name.
+**Files that are now yours, whatever created them.** If you did not have a `CLAUDE.md` and the setup made one, it then interviewed you and filled it with your answers. The same is true of the two notebook files. Those started as this kit's templates and stopped being templates the moment you answered. **They are your writing, and nothing in this document treats them as the kit's to remove.** If you take everything else out, leave those exactly where they are. They are what makes Claude useful in this project, and they keep working on their own.
 
-Then ask Claude to list `~/.claude/rules/` and `~/.claude/commands/` so you can see what is left.
+Two things are left over even after all of the above, and neither does anything: the `starter-kit` folder you dragged into your project, which you can drag to the Bin whenever you like, and the manifest at `~/.claude/starter-kit-manifest.md`. Keep the manifest if the setup has ever run for more than one project, because it is the only record of what the other runs installed.
 
-## 2. Remove a plugin or a connection
+## 2. Remove the parts you no longer want
+
+There is no command here that sweeps up. You look at the list and remove what you choose, and Claude does the removing while you watch.
+
+**One thing to know before you start, because it is easy to get wrong.** The rules, the skills and the `/learn` command live in `~/.claude/`, which is **your whole machine, not this project**. If you have run this setup for more than one project, removing them here removes them everywhere. Only the `CLAUDE.md` and the notebook are specific to a single project. The manifest records which run installed what, so read it first and decide deliberately rather than assuming you are only affecting the folder you are sitting in.
+
+**To take out the rules,** say:
+
+> List every file in `~/.claude/rules/` whose name starts with `starter-kit-`, show me the list, and wait. Do not touch any other file in that folder, and do not touch anything not on the manifest. When I say go ahead, delete just the ones I name.
+
+The reason for listing before deleting is that the folder is shared. Anything you have written yourself, or installed from anywhere else, lives there too, and a blanket delete would take those with it. You would not notice until something stopped behaving the way you taught it.
+
+**If you edited one of the kit's rules and want to keep your version,** say so before deleting, because a file you improved six weeks ago does not look any different from one you never opened. If the `starter-kit` folder is still in your project, Claude can compare the installed file against the original in `starter-kit/rules/` and show you what differs. Treat that as a prompt to think, not proof: a difference could be your edit or a later version of the kit, and Claude cannot always tell which. **When you are not sure, keep the file.** An extra rule costs you nothing; a deleted one you had improved is gone.
+
+**To take out a skill,** name it from the manifest list and have Claude delete that folder in `~/.claude/skills/`. Same principle as the rules: name the ones you mean.
+
+**And the same warning applies if you have edited one.** A skill you tuned six weeks ago looks identical to one you never opened. Ask Claude to compare the folder against the current version in the repository it came from and show you anything that differs. The same caution applies: the repository may simply have moved on since you installed it, so a difference is not proof you edited it. **When you are not sure, keep it.**
+
+**To take out what the kit added to your `CLAUDE.md`,** say:
+
+> Read the manifest and list every block it records as appended to my `CLAUDE.md`, including the two notebook headings `## Start of every conversation` and `## End of every working session`. Show me each block as it stands **now**, and compare it against what the manifest says was originally added. If I have edited or added anything inside one of them, show me that first and ask, because those words are mine even though the heading came from the kit. Then remove only the ones I name and leave the rest of the file exactly as it is.
+
+Provided you look at that comparison, none of it touches a word you wrote. If the setup created the file rather than adding to it, skip this entirely: the file is yours now, and taking sections out of it is just editing your own notes.
+
+**To take out the `/learn` command,** delete `~/.claude/commands/learn.md`. Check the manifest first, because if you already had a `learn.md` of your own, the setup will have left yours alone and installed nothing there.
+
+**To remove one rule rather than all of them,** delete just that file by name. Nothing else depends on any single one.
+
+Then ask Claude to list `~/.claude/rules/`, `~/.claude/commands/` and `~/.claude/skills/` so you can see what is left.
+
+## 3. Remove a plugin or a connection
 
 **A plugin:** open **Customize** in the left sidebar and click the **Plugins** tab. Same screen you checked during setup.
 
 **A connection:** click the **+** button next to the prompt box, choose **Connectors**, pick the one you want, and disconnect. Same place you turned it on. That removes Claude's access. It changes nothing inside the tool itself.
 
-## 3. Remove Claude Code entirely
+## 4. Remove Claude Code entirely
 
-**Read this before running it.** `~/.claude/` is not just this kit. It holds every plugin you have installed, your permission settings, your conversation history, anything Claude has remembered, and any rules or commands you wrote yourself. `~/.claude.json` holds account and connection state.
+**Read this before running it.** `~/.claude/` is not just this kit. It holds every plugin you have installed, your permission settings, your conversation history, anything Claude has remembered, and any rules, skills or commands you wrote yourself. `~/.claude.json` holds account and connection state.
 
 Deleting them is not "uninstalling the starter kit". It is resetting Claude Code to the day you installed it, and nothing here restores it afterwards.
 
-If that is genuinely what you want, and only then, this is the command. It is one of the terminal situations flagged at the top of [START-HERE.md](../START-HERE.md). Finder can reach hidden folders through **Go** then **Go to Folder**, so you could delete them by hand instead; the documented route is the typed one below. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, and type:
+If that is genuinely what you want, and only then, this is the command. It is deliberately one you type yourself rather than one you ask Claude to run, because asking Claude Code to delete its own settings while it is running is a bad idea. Finder can reach hidden folders through **Go** then **Go to Folder**, so you could delete them by hand instead; the documented route is the typed one below. Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, and type:
 
 ```bash
 rm -rf ~/.claude ~/.claude.json

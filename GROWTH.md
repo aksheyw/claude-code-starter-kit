@@ -1,6 +1,8 @@
 # What to add, and when
 
-Nothing here is on day one. Every item is behind a **trigger**: a specific moment you will recognise when it happens. That is deliberate. A tool installed before you have its problem is friction with no payoff, and installing it early can leave you with a setup you do not trust, because half of it does things you never asked for.
+Almost nothing here is on day one. Every item is behind a **trigger**: a specific moment you will recognise when it happens. Two of them, `deep-review` and `audit`, are **offered** on day one, and they are kept on this page because knowing *when* to reach for them is the part that matters. If you skipped them during setup, each section below says how to add it.
+
+**One rule holds everywhere on this page, the same as during setup: nothing here replaces anything of yours.** Every prompt below tells Claude to check whether a file already exists and to bring you the choice rather than writing over it. If one of them ever does otherwise on your machine, that is a bug in this page. That is deliberate. A tool installed before you have its problem is friction with no payoff, and installing it early can leave you with a setup you do not trust, because half of it does things you never asked for.
 
 Read this once so you know what exists. Then come back when something on this page describes your week.
 
@@ -16,7 +18,7 @@ Roughly in the order the triggers tend to arrive.
 
 Version control keeps a history of your project, so you can return to any state you saved. It only protects what you have saved into that history, so a file you never added, or an hour of work since your last save, is not in it. Most of the rest of this page assumes you have this turned on.
 
-Most Macs already have the tool it needs, called Git, so this is usually nothing to install. If Claude tells you Git is missing, open Terminal from your Applications folder, type `xcode-select --install`, and click Install when the system window appears. That window is normal and you have not broken anything.
+Most Macs already have the tool it needs, called Git, so this is usually nothing to install. If Claude tells you Git is missing, ask it to run `xcode-select --install` for you, and click **Install** when the macOS window appears. That window is normal and you have not broken anything.
 
 Ask Claude Code:
 
@@ -24,7 +26,7 @@ Ask Claude Code:
 
 The trying-it part is the point. An undo you have never run is not an undo you trust, and until you trust it you will keep working timidly.
 
-One thing to settle at the same time, before it matters: ask it to create a `.gitignore` and explain what goes in it. That file lists what never gets uploaded, and getting it right now is far cheaper than getting it wrong later. See the secret-scanning section below for why.
+One thing to settle at the same time, before it matters: ask it to **check whether you already have a `.gitignore`, show you what is in it and propose additions as a diff if you do**, and to create one and explain it if you do not. That file lists what never gets uploaded, and getting it right now is far cheaper than getting it wrong later. See the secret-scanning section below for why.
 
 ---
 
@@ -40,26 +42,15 @@ Two ways to fix it, and the cheap one is enough at first.
 
 > Here is a plan. Do not improve it. Try to find the reason it fails. What is the one assumption it rests on, and what happens if that assumption is wrong?
 
-**The structured one.** A published review method that runs several passes with a different angle each time, rather than one pass that sees what it saw the first time.
+**The structured one.** A review method that runs several passes with a different angle each time, rather than one pass that sees what it saw the first time. **If you accepted it during setup you already have it**, so type `/deep-review` and it runs. Start a new conversation first if it does not appear, because that is when new skills are picked up.
 
-**This one uses Terminal.** It lives in your Applications folder, inside a subfolder called **Utilities**. Open it and type these in, one block at a time, pressing Return after each line:
+If you skipped it, or it is genuinely not there, say:
 
-```bash
-cd ~/Desktop
-git clone https://github.com/aksheyw/claude-code-deep-review.git
-cd claude-code-deep-review
-mkdir -p ~/.claude/skills/deep-review ~/.claude/rules
-cp SKILL.md ~/.claude/skills/deep-review/SKILL.md
-cp rule.md  ~/.claude/rules/deep-review.md
-```
+> Check whether `~/.claude/skills/deep-review/` exists. If it does, leave it alone and tell me what is in it. If it does not, download [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review) into a temporary folder, copy the skill into `~/.claude/skills/deep-review/`, delete the download, and show me the `SKILL.md` is there.
 
-```bash
-ls ~/.claude/skills/deep-review/
-```
+**The rule that goes with it** lives in that same repository as `rule.md`, and it is never installed by default. It makes Claude reach for the review method on its own rather than waiting to be asked. Ask for it when you find yourself typing `/deep-review` every time and wishing you did not have to:
 
-Should print `SKILL.md`. Restart Claude Code, type `/deep-review`, check it completes.
-
-> **These match that repo's README, re-checked 2026-08-02.** An earlier version of this page warned that they differed. That warning was written on 2026-08-01, the repo was corrected on 2026-08-02, and the warning outlived it by a day. Follow the repo if the two ever disagree again.
+> Fetch `rule.md` from that repository. **Before saving it, check whether a rule of that name is already in `~/.claude/rules/`.** If one is, show me both and let me choose rather than replacing mine. If not, save it as `starter-kit-deep-review.md` and tell me it loads from my next conversation.
 
 **The most expensive version** is running your plan past a genuinely different AI model, from a different company, because two models trained differently fail differently. Worth knowing about. Not worth paying for in week two.
 
@@ -105,17 +96,11 @@ This is the one thing on this page that is genuinely unrecoverable, and not for 
 
 Two things, in this order. First, ask Claude Code:
 
-> Set up this project so secrets never get committed. Create a `.env` file for the keys, add it to `.gitignore`, and show me both files. Explain what each one does.
+> Set up this project so secrets never get committed. **First check whether `.env` or `.gitignore` already exists.** If either does, show me what is in it and propose additions as a diff rather than writing a new one over it. If neither exists, create them, show me both, and explain what each one does.
 
-Second, a scan that runs automatically every time a file is written. **This part uses Terminal** (Applications, then Utilities):
+Second, a scan that runs automatically every time a file is written. Ask Claude to do this rather than typing it yourself:
 
-```bash
-cd ~/Desktop
-git clone https://github.com/aksheyw/claude-code-guardrail-hooks.git
-cd claude-code-guardrail-hooks
-mkdir -p ~/.claude/scripts/hooks
-cp hooks/secret-scan-postwrite.sh ~/.claude/scripts/hooks/
-```
+> Download `https://github.com/aksheyw/claude-code-guardrail-hooks` into a temporary folder. **Before you copy anything, check whether `~/.claude/scripts/hooks/secret-scan-postwrite.sh` already exists.** If it does, show me both versions and what differs, and wait for me to choose rather than replacing mine. If it does not, copy just that one file across, create the folder if needed, then delete the temporary download and tell me.
 
 **Copy only that one file.** The others in that repo are built around a different way of working. In particular, one of them blocks Claude whenever a message starts with a word like "wait", which is a natural way to redirect mid-sentence, and it will look like the tool is broken.
 
@@ -160,23 +145,11 @@ The `ship-gate:` prefix is not decoration. Installed this way the commands are n
 
 **Trigger.** The week you first plan to put something in front of a customer, a friend, or an app store.
 
-**This one uses Terminal** (Applications, then Utilities):
+**If you accepted it during setup you already have this too**, so type `/audit` and it runs. If you skipped it, ask Claude to install it from [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) the same way, checking first that the folder is not already there. It sweeps for the kinds of bug that repeat: raw database values showing up in the interface, a form that fails silently, a permission left open.
 
-```bash
-cd ~/Desktop
-git clone https://github.com/aksheyw/claude-code-learned-skills.git
-cd claude-code-learned-skills
-mkdir -p ~/.claude/skills
-cp -r skills/audit ~/.claude/skills/
-```
+The thing worth knowing is not how to install it. It is **when to run it**, which is before somebody who is not you touches the thing, not after they report something broken.
 
-```bash
-ls ~/.claude/skills/audit/
-```
-
-Should print `SKILL.md`.
-
-> **Take one skill, not all twelve.** Nine of the others are about servers, containers and machine-learning data, which is not your problem. An earlier version of this page also warned that the repo's own install command was broken. It was, and it was fixed on 2026-08-02, re-checked the same day. Follow the repo.
+> **Its repository holds twelve skills and day one took three** (`audit`, `llm-wiki`, `doc-confluence`). Most of the rest are about servers, containers and machine-learning data, which is not your problem. Look at [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) yourself if you become curious, and ask Claude to install any one of them the same way Step 6 did.
 
 ---
 

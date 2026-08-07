@@ -1,0 +1,99 @@
+# What this kit adds, and where each piece comes from
+
+This is the catalogue the setup reads in Step 2. It exists so you can see the whole offer in one place before any of it lands on your machine, and so Claude can compare it against what you already have.
+
+**Nothing here replaces anything of yours.** Where a piece of this overlaps with something you already run, the setup shows you both and asks you to choose. Where you have nothing, it is a straight addition.
+
+**Everything here is either written by the author of this kit or downloaded from the repository that maintains it.** Nothing that belongs to somebody else is copied into this repo. That means you can update those pieces later from their source, the same way the author does. The credits are at the bottom of the [README](../README.md).
+
+---
+
+## 1. Rules
+
+**What a rule is.** A short instruction file that Claude reads at the start of every conversation, in every project, whether or not you mention it. Eighteen of them.
+
+**Where they come from.** Written for this kit. They install into `~/.claude/rules/` with `starter-kit-` on the front of each filename, so they cannot land on top of a rule you already have and so they are unambiguous to remove later.
+
+| Block | What it covers | When it starts mattering |
+|---|---|---|
+| 01 to 09 | Where a session stands, plain words, the project instructions file, stopping and getting back, asking for proof, not guessing, getting things out of the chat, banking corrections | Your first hour |
+| 20 to 23 | Agreeing shape before drafting, writing so it lands, saving is not publishing, checking before someone else uses it | The first time something you made goes to somebody else |
+| 30 to 34 | Agreeing the approach before code, asking for a failing test first, code that stays easy to change, delegating reading, pressure-testing expensive decisions | The first time you are building software rather than documents |
+
+**What it overlaps with.** If you already keep rules in `~/.claude/rules/`, expect real overlap in the 01 to 09 block, because that block is about working habits everybody eventually writes down. Judge by what each file says, not by its name.
+
+---
+
+## 2. The project instructions file, and the notebook
+
+**What they are.** `CLAUDE.md` is the one page Claude reads at the start of every conversation about a project. The notebook is two files, `_hot.md` for where things stand right now and `_log.md` for one entry per working session, plus a short block added to `CLAUDE.md` that makes them actually get read.
+
+**Also installed, and easy to miss because they are small:**
+
+| What | Where it goes | Why |
+|---|---|---|
+| `learn.md`, the `/learn` command | `~/.claude/commands/learn.md` | Turns a correction into a rule you never have to give twice. It keeps its exact filename, because Claude Code takes a command's name from the file, and a prefix would make it `/starter-kit-learn`. If you already have a `learn.md`, the setup stops and asks rather than touching it. |
+| The list of what was installed | `~/.claude/starter-kit-manifest.md` | A dated record of every file added and where it came from, so removing things later is exact rather than guesswork. If it is already there from an earlier run, a new dated section is added and nothing existing is replaced. |
+
+**Where they come from.** Templates in this kit. They are skeletons, and the setup fills them in with your real answers rather than leaving you the placeholders.
+
+**What it overlaps with.** If you already have a `CLAUDE.md`, the setup never replaces or rewrites it. It offers you the sections the template has that yours does not, one at a time, and adds only the ones you accept. If you already keep a notebook, it leaves it alone and offers to bring it up to date instead.
+
+---
+
+## 3. Skills from the author's own public repositories
+
+**What a skill is.** A set of instructions Claude loads when a particular kind of job comes up, so it follows a worked method instead of improvising.
+
+These are downloaded rather than copied into this kit, so you can pull a newer version whenever you want one. All are MIT licensed.
+
+| Skill | What it does | Repository |
+|---|---|---|
+| `deep-review` | Reviews something in several passes, a different angle each time, instead of one pass that sees what it saw the first time | [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review) |
+| `llm-wiki` | The fuller version of the notebook: a project wiki that compounds across sessions, with a check for contradictions | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
+| `doc-confluence` | Organises a project's documents so anything can be found in one or two hops, and scans for rot | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
+| `audit` | A pre-release sweep for the bug classes that repeat, before something goes in front of somebody who is not you | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
+
+**Not on the day-one list, and why:** `council-full`, from [claude-code-pm-agents](https://github.com/aksheyw/claude-code-pm-agents), puts several Claudes in different roles to argue a decision out. One run costs many times a normal request, which matters on a plan with usage limits, so it sits in [GROWTH.md](../GROWTH.md) instead. `context-bridge` overlaps with the notebook you set up in Step 9, and running two notebooks means neither gets trusted. `claude-code-ship-gate` and `claude-code-guardrail-hooks` are not plain skills, they install differently, and they are in [GROWTH.md](../GROWTH.md) behind the moment that earns them. `claude-code-rules` is the full rules layer, of which the eighteen here are the day-one subset.
+
+---
+
+## 4. Skills from other people's public repositories
+
+Downloaded from the repository that maintains them. Not copied into this kit, because they are not this kit's to redistribute.
+
+| Skill | What it does | Repository | Author | Licence |
+|---|---|---|---|---|
+| `brainstorming` | Forces the shape of a thing to be agreed before anyone starts building it | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
+| `test-driven-development` | Write the failing check first, then the code that makes it pass | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
+| `systematic-debugging` | A method for finding out why something broke, instead of guessing at fixes | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
+| `requesting-code-review` | How to ask for a review that finds things, rather than one that agrees with you | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
+| `verification-before-completion` | Run the check and read the output before saying something is done | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
+
+The `obra/superpowers` repository holds fourteen skills. The five above are the ones this kit installs, because they are the ones with real use behind them. You can install the rest yourself from the same repository whenever you want them.
+
+**A note on where these live.** There is also an `obra/superpowers-marketplace` repository. That one is an index that points at this one; the skills themselves are in `obra/superpowers`. If you go looking, go to the second.
+
+---
+
+## 5. Plugins
+
+**What a plugin is.** A bundle that adds skills and tool connections together. Anthropic ships a catalogue of them, called the Knowledge Work marketplace, which is added to your app by default.
+
+The setup has you look at that catalogue and install two or three, starting with **Product Management**, which is what Step 8 uses to produce your first real piece of work. Nothing is installed from anywhere except Anthropic's own catalogue on day one.
+
+**What it overlaps with.** If you already have plugins installed, the setup asks you to read out what your screen says rather than assuming. Installing something twice is the failure here, and it is avoidable by looking first.
+
+---
+
+## How to judge an overlap
+
+The setup will bring you choices. These are the questions worth asking about each one.
+
+**Does the new one actually do something different, or does it just say it differently?** Two files can cover the same ground in different words. If they do, keep yours. You wrote it for a reason and it fits you.
+
+**Is one a superset of the other?** If the kit's version says everything yours says and more, taking it costs you nothing. If yours says something the kit's does not, that sentence is the part worth keeping, and combining is usually better than choosing.
+
+**Would having both be worse than having either?** Two notebooks means neither is trusted. Two rules that disagree means Claude follows whichever it read last. When two things genuinely conflict rather than merely overlap, pick one.
+
+**When in doubt, keep yours and skip the kit's.** You can always add it later. Nothing else in this kit depends on any single rule being present.

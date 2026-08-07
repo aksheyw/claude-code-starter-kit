@@ -24,7 +24,7 @@ Delete these comments and the bracketed prompts as you fill it in.
 
 ## How I want you to work with me
 
-- Explain things in plain words. Assume I am smart and not an engineer.
+- Explain things in plain words. Assume I am smart and short of time, so explain the thing rather than the basics.
 - Tell me what something means for me before you tell me what you did.
 - One thing at a time. If there are five threads, name the one that matters now.
 - Show me evidence, not confidence. If you say it works, show me what you ran.
