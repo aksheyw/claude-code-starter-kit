@@ -34,7 +34,7 @@ This is the catalogue the setup reads in Step 2. It exists so you can see the wh
 |---|---|---|
 | `learn.md`, the `/learn` command | `~/.claude/commands/learn.md` | Turns a correction into a rule you never have to give twice. It keeps its exact filename, because Claude Code takes a command's name from the file, and a prefix would make it `/starter-kit-learn`. If you already have a `learn.md`, the setup stops and asks rather than touching it. |
 | The list of what was installed | `~/.claude/starter-kit-manifest.md` | A dated record of every file added and where it came from, so removing things later is exact rather than guesswork. If it is already there from an earlier run, a new dated section is added and nothing existing is replaced. |
-| An untouched copy of everything installed | `~/.claude/starter-kit-baseline/` | The same files exactly as they arrived. It is never written to again. Months later it is the only way to tell a change you made from a change the authors made, which is what stops you deleting your own improvements by mistake. |
+| An untouched copy of everything installed | `~/.claude/starter-kit-baseline/` | The rules, the `/learn` command, each skill folder and the exact text of anything added to your `CLAUDE.md`, all exactly as they arrived. A copy already in there is never overwritten. Months later it is the only way to tell a change you made from a change the authors made, which is what stops you deleting your own improvements by mistake. |
 
 **Where they come from.** Templates in this kit. They are skeletons, and the setup fills them in with your real answers rather than leaving you the placeholders.
 

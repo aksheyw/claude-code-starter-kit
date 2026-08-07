@@ -14,7 +14,7 @@ Three things before you start.
 
 **You need macOS 11 (Big Sur) or later.** Apple menu, then About This Mac. That is the app's requirement; the terminal version in the fold at the bottom needs macOS 13.
 
-**You need Git, and this is the one thing that might not already be true.** Git is a standard developer tool that most Macs already have. Day one uses it, because every skill is downloaded from the repository that maintains it rather than shipped inside this kit, so you can update them later. If your Mac turns out not to have it, Claude can install it for you and a normal macOS window appears for you to click. That is covered under "If something went wrong" at the bottom of this page.
+**You need Git, and this is the one thing that might not already be true.** Git is a standard developer tool that most Macs already have. Day one uses it, because most of the skills are downloaded from the repository that maintains them rather than shipped inside this kit, so you can update them later. If your Mac turns out not to have it, Claude can install it for you and a normal macOS window appears for you to click. That is covered under "If something went wrong" at the bottom of this page.
 
 You do **not** need Node.js, npm or Homebrew. The app includes everything else.
 
@@ -117,7 +117,9 @@ Ground rules for this whole setup:
   - a file at `starter-kit-manifest.md` listing every file you add, where it came from, and today's date. Add a line to it every time you install something.
   - a folder at `starter-kit-baseline/` holding an untouched copy of every file exactly as installed, in the same shape as where it went, so `rules/starter-kit-03-….md` and `skills/deep-review/SKILL.md` and so on.
 
-  The baseline is the point. Months from now I will not remember which of these I edited, and without a copy of the original nobody can tell my improvement from a newer version of the file. **Never write to the baseline again after the install that created it**, and never read from it to "repair" anything. It is a reference, not a backup to restore from.
+  The baseline is the point. Months from now I will not remember which of these I edited, and without a copy of the original nobody can tell my improvement from a newer version of the file.
+
+  **The rule is per file, not per folder: never overwrite a copy that is already in the baseline.** If a later run installs something new, add it. If a later run touches something already snapshotted, leave the snapshot exactly as it is, because it is the record of what I originally got. Never read from the baseline to "repair" anything either. It is a reference, not a backup to restore from.
 
 **Step 1. Show me where I am and what you can reach.**
 Tell me which folder you are working in and list what is in it. Then explain in two sentences how your access actually works: that you can see this folder, that you will ask before touching anything outside it, and that you are about to ask exactly that in Steps 2, 4 and 6 when you write into my settings folder. I would rather understand the real boundary than be told a comforting version of it.
@@ -153,7 +155,7 @@ Then deal with the list of what gets installed. It lives at `~/.claude/starter-k
 
 **If I already have one:** do not replace it and do not rewrite it. Read it, then read the template, and tell me which sections the template has that mine does not. For each one, show me the section and ask whether I want it added. Add only what I say yes to, and add it without disturbing what is already there. If mine already says something the template says differently, show me both versions side by side and tell me they differ. **Existing text is never replaced by this setup.** If I prefer the template's wording, say plainly that changing my own sentence is an edit I should make deliberately, offer to do it as a separate task once the setup is finished, and move on rather than doing it here.
 
-Either way, record in the manifest what you created or which sections you appended.
+Either way, record it in the manifest: what you created, or the exact heading of every section you appended. **And if you appended anything, save the exact text you added to `~/.claude/starter-kit-baseline/appended-blocks/`**, so that if I edit inside one of those sections later, anyone can tell my words from the ones the kit put there. That copy is what makes removing them safe.
 
 **Step 4. Install the rules, without touching any rule I already have.**
 The rules are short instruction files that load at the start of every conversation, in every project. Explain that first, and explain that this is the step that writes outside my project folder.
@@ -164,7 +166,7 @@ Install the numbered `.md` files from `starter-kit/rules/` into `~/.claude/rules
 
 **If a `starter-kit-` file is already there,** this setup has run on this machine before, probably for a different project. Do not overwrite it, because I may have edited it since. Tell me it is already installed, and if the version in `starter-kit/rules/` differs from the one on disk, show me the difference and ask before changing anything.
 
-Verify by listing both folders and showing me the count, add each installed file to the manifest, and copy each one into `~/.claude/starter-kit-baseline/rules/` as it goes in.
+Verify by listing both folders and showing me the count, add each installed file to the manifest, and copy each one into the baseline as it goes in: the rules into `~/.claude/starter-kit-baseline/rules/` and `learn.md` into `~/.claude/starter-kit-baseline/commands/`.
 
 Then tell me the honest limitation, because it would be easy to let me assume otherwise. Claude Code reads that folder when a conversation **starts**, so these files change nothing for the rest of this one. They load from my **next** conversation onward, in every project, and they work the same whether I use the app or the terminal. The same is true of `/learn`: it becomes available next time, not now.
 
@@ -230,7 +232,7 @@ For each of the two, in turn: **if it is not there, copy it in from `starter-kit
 
 **Branch B, the file was already mine.** Change nothing yet. Show me what is in it, tell me whether it still looks current, and propose the lines you would add for today. Show me that as a diff and wait for my yes. **Do not delete anything from it, including anything that looks like a leftover example, because you cannot tell my shorthand from a template I never cleaned up.** Adding to a notebook I already keep is the whole idea; rewriting it is not.
 
-Then add the block from `starter-kit/templates/CLAUDE-wiki-snippet.md` to the bottom of my `CLAUDE.md` so you actually read them, unless something equivalent is already in there, in which case say so and skip it. Record in the manifest that you appended it, naming the two headings, so it can be found again.
+Then add the block from `starter-kit/templates/CLAUDE-wiki-snippet.md` to the bottom of my `CLAUDE.md` so you actually read them, unless something equivalent is already in there, in which case say so and skip it. Record it in the manifest by naming the two headings, **and save the exact text you appended to `~/.claude/starter-kit-baseline/appended-blocks/`**, so that if I edit inside one of those sections later, anyone can tell my words from the ones the kit put there.
 Show me what to say at the end of a working session to keep them current. Record what you created in the manifest.
 
 **Step 10. Read the manifest back to me.**
@@ -252,7 +254,7 @@ Then stop. I have enough for today.
 
 ## What you should have at the end
 
-A project folder Claude works in. A `CLAUDE.md` it reads every time, either new or extended without losing what was already in it. A set of rules loaded into every conversation, none of which landed on top of anything of yours. A handful of skills, every one of them downloaded from the repository that maintains it, so you can update them later. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. One real piece of work already finished. And a list, at `~/.claude/starter-kit-manifest.md`, of exactly what was added and where.
+A project folder Claude works in. A `CLAUDE.md` it reads every time, either new or extended without losing what was already in it. A set of rules loaded into every conversation, none of which landed on top of anything of yours. A handful of skills: two written for this kit, and the rest downloaded from the repositories that maintain them so you can update them later. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. One real piece of work already finished. And a list, at `~/.claude/starter-kit-manifest.md`, of exactly what was added and where.
 
 Everything else waits until you feel the problem it solves, and [GROWTH.md](GROWTH.md) names those moments.
 

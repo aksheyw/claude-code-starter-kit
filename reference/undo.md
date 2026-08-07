@@ -34,7 +34,7 @@ The four sections below are deliberately separate, and they get progressively le
 
 Everything the setup installed is written down as it happens, in a file at `~/.claude/starter-kit-manifest.md`. That is the list. Nothing was added that is not on it.
 
-Beside it sits `~/.claude/starter-kit-baseline/`, an untouched copy of every file exactly as it was installed. It is never written to again and never used to repair anything. Its only job is to answer one question later: did I change this file, or did it always look like that?
+Beside it sits `~/.claude/starter-kit-baseline/`, holding an untouched copy of everything the setup put on your machine: the rules, the `/learn` command, each skill folder, and the exact text of any block it added to your `CLAUDE.md`. A copy already in there is never overwritten, and none of it is ever used to repair anything. Its only job is to answer one question later: did I change this, or did it always look like that?
 
 Say this to Claude:
 
@@ -50,41 +50,43 @@ There is one exception and it is worth knowing precisely. **If you already had a
 
 **Files that are now yours, whatever created them.** If you did not have a `CLAUDE.md` and the setup made one, it then interviewed you and filled it with your answers. The same is true of the two notebook files. Those started as this kit's templates and stopped being templates the moment you answered. **They are your writing, and nothing in this document treats them as the kit's to remove.** If you take everything else out, leave those exactly where they are. They are what makes Claude useful in this project, and they keep working on their own.
 
-Three things are left over even after all of the above, and none of them does anything: the `starter-kit` folder you dragged into your project, which you can drag to the Bin whenever you like, and the manifest and baseline folder in `~/.claude/`. Keep those last two while any of this is still installed anywhere, because together they are the only record of what was put where and what it looked like. They are small, and they cost nothing to leave.
-
 ## 2. Remove the parts you no longer want
 
 There is no command here that sweeps up. You look at the list and remove what you choose, and Claude does the removing while you watch.
 
 **One thing to know before you start, because it is easy to get wrong.** The rules, the skills and the `/learn` command live in `~/.claude/`, which is **your whole machine, not this project**. If you have run this setup for more than one project, removing them here removes them everywhere. Only the `CLAUDE.md` and the notebook are specific to a single project. The manifest records which run installed what, so read it first and decide deliberately rather than assuming you are only affecting the folder you are sitting in.
 
-**To take out the rules,** say:
+**Do the comparison first, before you delete anything.** This is the step that stops you throwing away your own work, and it only takes one message:
+
+> Compare everything the manifest lists against its copy in `~/.claude/starter-kit-baseline/`: the `starter-kit-` rules, `~/.claude/commands/learn.md`, each installed skill folder, and each block recorded as appended to my `CLAUDE.md`. Show me every single thing that differs, with the differences. **Change and delete nothing.**
+
+Anything that differs is something **you** changed, because the baseline is exactly what was installed and nothing has written to it since. Those are the files worth keeping. Work through that list before you read any further.
+
+Then remove what you have decided to remove.
+
+**The rules:**
 
 > List every file in `~/.claude/rules/` whose name starts with `starter-kit-`, show me the list, and wait. Do not touch any other file in that folder, and do not touch anything not on the manifest. When I say go ahead, delete just the ones I name.
 
 The reason for listing before deleting is that the folder is shared. Anything you have written yourself, or installed from anywhere else, lives there too, and a blanket delete would take those with it. You would not notice until something stopped behaving the way you taught it.
 
-**If you edited one of the kit's rules, you will want to keep your version,** and a file you improved six weeks ago does not look any different from one you never opened. So do not trust your memory. Say:
+**A skill:** name it from the manifest list and have Claude delete that folder in `~/.claude/skills/`. Same principle: name the ones you mean.
 
-> Compare every `starter-kit-` rule in `~/.claude/rules/` against its copy in `~/.claude/starter-kit-baseline/rules/` and show me every file that differs, with the differences.
+**The `/learn` command:** delete `~/.claude/commands/learn.md`. Check the manifest first, because if you already had a `learn.md` of your own the setup left yours alone and installed nothing.
 
-Anything that differs is something you changed, because the baseline is what was installed and nothing has written to it since. Keep those. **When you are not sure, keep the file anyway.** An extra rule costs you nothing; a deleted one you had improved is gone.
+**What the kit added to your `CLAUDE.md`:**
 
-**To take out a skill,** name it from the manifest list and have Claude delete that folder in `~/.claude/skills/`. Same principle as the rules: name the ones you mean.
+> List every block the manifest records as appended to my `CLAUDE.md`, including the two notebook headings `## Start of every conversation` and `## End of every working session`. Show me each one as it stands now beside the copy in the baseline. Then remove only the ones I name, and leave the rest of the file exactly as it is.
 
-**And check the same way first.** Have Claude compare the folder against its copy in `~/.claude/starter-kit-baseline/skills/`. Anything that differs is yours. That comparison is reliable because the baseline never changes, whereas comparing against the repository online is not: those authors keep working, so a difference there might be their newer version rather than your edit.
-
-**To take out what the kit added to your `CLAUDE.md`,** say:
-
-> Read the manifest and list every block it records as appended to my `CLAUDE.md`, including the two notebook headings `## Start of every conversation` and `## End of every working session`. Show me each block as it stands **now**, and compare it against what the manifest says was originally added. If I have edited or added anything inside one of them, show me that first and ask, because those words are mine even though the heading came from the kit. Then remove only the ones I name and leave the rest of the file exactly as it is.
-
-Provided you look at that comparison, none of it touches a word you wrote. If the setup created the file rather than adding to it, skip this entirely: the file is yours now, and taking sections out of it is just editing your own notes.
-
-**To take out the `/learn` command,** delete `~/.claude/commands/learn.md`. Check the manifest first, because if you already had a `learn.md` of your own, the setup will have left yours alone and installed nothing there.
+If the setup created that file rather than adding to it, skip this entirely. The file is yours now, and taking sections out of it is just editing your own notes.
 
 **To remove one rule rather than all of them,** delete just that file by name. Nothing else depends on any single one.
 
+**When you are not sure about anything, keep it.** An extra rule costs you nothing. A deleted file you had improved is gone.
+
 Then ask Claude to list `~/.claude/rules/`, `~/.claude/commands/` and `~/.claude/skills/` so you can see what is left.
+
+**Three things are left over once you are done, and none of them does anything.** The `starter-kit` folder in your project, which you can drag to the Bin whenever you like. And the manifest and the baseline folder in `~/.claude/`. **Keep those last two while any of this is still installed anywhere**, because together they are the only record of what was put where and what it looked like. They are small and they cost nothing to leave. Once you have removed everything from every project, they are safe to delete too.
 
 ## 3. Remove a plugin or a connection
 

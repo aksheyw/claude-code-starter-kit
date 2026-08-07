@@ -4,7 +4,9 @@ Almost nothing here is on day one. Every item is behind a **trigger**: a specifi
 
 Holding things back is deliberate. A tool installed before you have its problem is friction with no payoff, and installing it early leaves you with a setup you do not trust, because half of it does things you never asked for.
 
-**One rule holds everywhere on this page, the same as during setup: nothing here replaces anything of yours.** Every prompt below tells Claude to check whether a file already exists and to bring you the choice rather than writing over it. If one of them ever does otherwise on your machine, that is a bug in this page.
+**One rule holds everywhere on this page, the same as during setup: nothing here replaces anything of yours.** Wherever a step below installs something, it checks whether you already have it and brings you the choice rather than writing over it. If one of them ever does otherwise on your machine, that is a bug in this page.
+
+One step on this page, the backup at the bottom, is typed by you rather than run by Claude, and it says why in place. Two others elsewhere in the kit are the same: adding a tool connection that is not in the bundled set, and removing Claude Code entirely. Each says why where it appears. Nothing on day one needs any of them.
 
 Read this once so you know what exists. Then come back when something on this page describes your week.
 
@@ -66,7 +68,7 @@ You already have the two-file version from day one (`_hot.md` and `_log.md`). If
 
 Ask Claude to do it. You do not need to open anything:
 
-> Check whether Node.js is installed by running `node --version`. If it is missing, stop and tell me, because I will install it myself from nodejs.org rather than have you do it. If it is there, run `npx skills add aksheyw/context-bridge --global`, then show me that `~/.claude/skills/context-bridge/` exists and what is in it. **Do not overwrite it if it is already there**; show me instead.
+> **First, check whether `~/.claude/skills/context-bridge/` already exists. If it does, stop, show me what is in it, and install nothing.** Only if it is absent: check Node.js is present by running `node --version`, and if that is missing stop and tell me, because I will install Node myself from nodejs.org rather than have you do it. If both checks are clear, run `npx skills add aksheyw/context-bridge --global`, then show me the folder it created and what is in it.
 
 If Claude says Node.js is missing, go to [nodejs.org](https://nodejs.org), download the macOS installer and double-click it. That part is a normal Mac install and nothing is typed.
 
@@ -151,11 +153,17 @@ The thing worth knowing is not how to install it. It is **when to run it**, whic
 
 Reinstalling Claude Code is quick. The rules, the lessons and the project notebooks you built do not come back, because you are the only copy.
 
-Ask Claude to do it:
+**This is the one place on this page where you type the command yourself, and the reason is the point.** The script stops halfway and waits for a person to press Return before it copies anything, because it is about to put real passwords in plain text on your disk. That pause is a safety feature, and having Claude click through it on your behalf would remove the only thing standing between you and a folder full of credentials. So this one is yours.
 
-> Download `https://github.com/aksheyw/claude-code-harness-backup` into a temporary folder, then run its `scripts/capture-harness.sh`. **Read me the warning it prints before you answer anything, and do not confirm on my behalf.** It is about to copy real passwords in plain text and I want to see that warning myself. Tell me exactly where it put the folder when it finishes.
+Open Terminal, which lives in your Applications folder inside a subfolder called **Utilities**, and type these one block at a time:
 
-That pause is expected, not a crash. The script deliberately stops and waits for a person to agree before it copies anything sensitive, which is the behaviour you want from it.
+```bash
+cd ~/Desktop
+git clone https://github.com/aksheyw/claude-code-harness-backup.git
+bash claude-code-harness-backup/scripts/capture-harness.sh
+```
+
+It prints the warning, then **stops and waits for you to press Return.** That frozen screen is expected, not a crash.
 
 **The folder it produces holds real credentials. Never put it in a public repo.**
 

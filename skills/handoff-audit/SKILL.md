@@ -44,7 +44,7 @@ write: *their call* · *verified, and here is the evidence* · *unverified*.
 |---|---|
 | **A number**, especially one about to be said to somebody else | Trace it to the thing that produced it, and name that thing in the same breath |
 | **A tool or approach** carried from a previous handoff | Re-derive it from the shape of today's task. Do not inherit it |
-| **A constraint** ("we only get four slides", "the limit is two", "that tool cannot do X") | Quote the sentence that states it. **If you cannot find that sentence, the constraint does not exist** |
+| **A constraint** ("we only get four slides", "the limit is two", "that tool cannot do X") | Find and quote the sentence that states it. **If you cannot find that sentence, treat the constraint as unverified rather than real**, and if the work depends on it, go to whoever set it and ask before designing around it |
 | **A claim that something exists and works** ("it is wired up", "we sent that", "it is live") | Go and look. Installed is not running. Drafted is not sent. Written is not deployed |
 | **A status** ("done", "blocked", "three of five") | Check the live source, not the note about it |
 
