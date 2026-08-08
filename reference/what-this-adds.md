@@ -16,7 +16,7 @@ This is the catalogue the setup reads in Step 2. It exists so you can see the wh
 
 | Block | What it covers | When it starts mattering |
 |---|---|---|
-| 01 to 09 | Where a session stands, plain words, the project instructions file, stopping and getting back, asking for proof, not guessing, getting things out of the chat, banking corrections | Your first hour |
+| 01 to 09 | Where a session stands, plain words, the project instructions file, stopping before anything expensive or hard to undo, stopping and getting back, asking for proof, not guessing, getting things out of the chat, banking corrections | Your first hour |
 | 20 to 23 | Agreeing shape before drafting, writing so it lands, saving is not publishing, checking before someone else uses it | The first time something you made goes to somebody else |
 | 30 to 34 | Agreeing the approach before code, asking for a failing test first, code that stays easy to change, delegating reading, pressure-testing expensive decisions | The first time you are building software rather than documents |
 

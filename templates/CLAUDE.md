@@ -56,11 +56,14 @@ Example:
 
 - Current state and what is in progress: `.claude/wiki/_hot.md`
 - Session by session record: `.claude/wiki/_log.md`
-- Corrections I have already given you, so I never give them twice: `lessons/index.md`
+- Lessons from corrections I have given you: `lessons/index.md`, once `/learn` has created it. Until
+  the first time I run `/learn`, that file does not exist yet and that is normal.
 - [Add your own pointers here as the project grows.]
 
-## Read at the start of every conversation
+## Corrections you must not repeat
 
 Read `lessons/index.md` if it exists, before doing any work. It is the list of things I have already
-corrected you on. This line is what makes that happen: nothing loads a lessons file automatically, so
-if this line is deleted, every lesson in that folder stops being read.
+corrected you on. **It will not exist until the first time I run `/learn`**, which creates it, so its
+absence on day one is expected rather than a problem to fix. This line is what makes it get read
+later: nothing loads a lessons file automatically, so if this line is deleted, every lesson in that
+file stops being read.

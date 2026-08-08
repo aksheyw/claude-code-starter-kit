@@ -27,7 +27,7 @@ Most setup guides assume an empty machine. The people most likely to want this o
 
 So the setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
 
-Nothing is renamed, moved or copied over. Its rules install with a `starter-kit-` prefix so they cannot collide with yours, and everything it adds goes on a list you can read at any time. The full catalogue is [`reference/what-this-adds.md`](reference/what-this-adds.md), readable before you install a thing.
+Nothing is renamed, moved or copied over. Its rules install with a `starter-kit-` prefix so they cannot collide with yours, and everything it adds goes on a list you can read at any time. The full catalogue is [`reference/what-this-adds.md`](reference/what-this-adds.md), readable before you install a thing, and [`reference/undo.md`](reference/undo.md) is the way back out, worth reading before you start rather than after.
 
 ## Why the day-one list stops where it does
 
@@ -68,18 +68,13 @@ You type `/learn`. It writes the correction into a lessons file, and points your
 
 **The tools are the residue. The habit is the thing.** Your set will look different from this one within a couple of months, and that is the point, not drift.
 
-<details>
-<summary>📋 <b>When to skip this</b>: the free plan, a Windows machine, or wanting everything on day one</summary>
-
-<br>
+## When to skip this
 
 **You are on the free Claude plan.** Claude Code needs Pro, Max, Team or Enterprise, and nothing here works around that.
 
 **You are not on a Mac.** The clicking path is the whole point and it is macOS only. The terminal version works anywhere, and this kit's rules, templates and skills work with it, but Part 1 will not help you.
 
 **You want every tool on day one.** This holds things back on purpose, because the failure it is built against is installing all eight and being able to explain none of them.
-
-</details>
 
 <details>
 <summary>📄 <b>Credits</b>: five skills from Jesse Vincent's obra/superpowers, and Anthropic's own plugin catalogue</summary>

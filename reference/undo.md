@@ -40,11 +40,15 @@ Say this to Claude:
 
 > Show me `~/.claude/starter-kit-manifest.md`. For each line on it, check whether that file is actually still on disk and tell me. Do not change or remove anything.
 
-You will see three kinds of thing.
+You will see four kinds of thing.
 
-**Files the kit added under its own name.** Every rule it installed starts with `starter-kit-`. That prefix exists for exactly this moment: those files are unambiguously the kit's, so removing them can never catch a rule of yours by accident. The skills it downloaded sit in their own named folders in `~/.claude/skills/`. The one thing without a prefix is `~/.claude/commands/learn.md`, because Claude Code takes a command's name from its filename and renaming it would turn `/learn` into something else.
+**Files the kit added under its own name.** Every rule it installed starts with `starter-kit-`. That prefix exists for exactly this moment: those files are unambiguously the kit's, so removing them can never catch a rule of yours by accident.
 
-**Files that were already yours.** None of them were replaced, renamed or moved. If you had a rule, a notebook file or a skill before you started, it is untouched.
+**Things the kit added that carry NO prefix, and this is the part to read slowly.** The skills sit in their own named folders in `~/.claude/skills/`, and the `/learn` command is `~/.claude/commands/learn.md`. Neither is marked. `learn.md` cannot be, because Claude Code takes a command's name from its filename and renaming it would turn `/learn` into something else. The skill folders are not either, because a skill has to be found by its real name to work.
+
+**So for skills and for `learn.md`, the name alone does not tell you who put it there.** The manifest does, and it is the only thing that does. It records each one as either installed by this kit or already yours and left alone. **Nothing in this section is safe to remove on the strength of its name.**
+
+**Files that were already yours.** None of them were replaced, renamed or moved. If you had a rule, a notebook file or a skill before you started, it is untouched. **That includes ones with the same name as something the kit offers:** if you already had a skill called `deep-review`, the setup stopped, showed you the collision and installed nothing over it. Your version is still there and **the kit never owned it.** The manifest records that as skipped rather than installed.
 
 There is one exception and it is worth knowing precisely. **If you already had a `CLAUDE.md`, the setup may have added sections to it, but only ones you said yes to at the time.** Nothing in it was rewritten or removed. The manifest names every block that was appended, so the file is still yours and the additions are still identifiable. Removing them is covered below.
 
@@ -60,7 +64,13 @@ There is no command here that sweeps up. You look at the list and remove what yo
 
 > Compare everything the manifest lists against its copy in `~/.claude/starter-kit-baseline/`: the `starter-kit-` rules, `~/.claude/commands/learn.md`, each installed skill folder, and each block recorded as appended to my `CLAUDE.md`. Show me every single thing that differs, with the differences. **Change and delete nothing.**
 
-Anything that differs is something **you** changed, because the baseline is exactly what was installed and nothing has written to it since. Those are the files worth keeping. Work through that list before you read any further.
+Three things can come back, and the third one matters most.
+
+- **Identical to the baseline.** The kit installed it and you never touched it. Safe to remove.
+- **Differs from the baseline.** Something changed it after it was installed, and the baseline itself never changes, so the difference is real. **It is usually you, but not always.** If you ran the setup again later and agreed to update a rule when it showed you the difference, that is the kit's change wearing the same appearance. The manifest's later dated sections are what tell the two apart, so read those before assuming the edit was yours. Either way, **a file in this category is worth looking at before you remove it.**
+- **No baseline copy at all.** This does **not** mean the kit installed it and lost the record. It means **the kit never installed it**, so the thing on your disk is yours, or something you got somewhere else. The most likely case is a skill you already had, where the setup saw the collision and correctly installed nothing. **Never delete anything in this category.** Check the manifest, which will show it as skipped rather than installed.
+
+Work through that list before you read any further.
 
 Then remove what you have decided to remove.
 
@@ -70,7 +80,7 @@ Then remove what you have decided to remove.
 
 The reason for listing before deleting is that the folder is shared. Anything you have written yourself, or installed from anywhere else, lives there too, and a blanket delete would take those with it. You would not notice until something stopped behaving the way you taught it.
 
-**A skill:** name it from the manifest list and have Claude delete that folder in `~/.claude/skills/`. Same principle: name the ones you mean.
+**A skill:** skill folders carry no prefix, so **check the manifest says this kit installed it, not that it found it already there and skipped it**, and check it has a baseline copy. A skill with no baseline copy is one the kit never installed, which means it is yours. Then name it and have Claude delete that folder in `~/.claude/skills/`. Same principle: name the ones you mean, and being on the manifest is not the same as having been installed by it.
 
 **The `/learn` command:** delete `~/.claude/commands/learn.md`. Check the manifest first, because if you already had a `learn.md` of your own the setup left yours alone and installed nothing.
 
@@ -90,7 +100,7 @@ Then ask Claude to list `~/.claude/rules/`, `~/.claude/commands/` and `~/.claude
 
 ## 3. Remove a plugin or a connection
 
-**A plugin:** open **Customize** in the left sidebar and click the **Plugins** tab. Same screen you checked during setup.
+**A plugin:** **check the manifest first.** It records, for each plugin, whether it was already installed before your setup ran or installed during it. Removing one you already had would be taking away something that was never the kit's to add, and the screen itself cannot tell you which is which. Then open **Customize** in the left sidebar and click the **Plugins** tab. Same screen you checked during setup.
 
 **A connection:** click the **+** button next to the prompt box, choose **Connectors**, pick the one you want, and disconnect. Same place you turned it on. That removes Claude's access. It changes nothing inside the tool itself.
 
