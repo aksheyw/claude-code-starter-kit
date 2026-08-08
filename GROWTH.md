@@ -54,7 +54,7 @@ If you skipped it, or it is genuinely not there, say:
 
 **The rule that goes with it** lives in that same repository as `rule.md`, and it is never installed by default. It makes Claude reach for the review method on its own rather than waiting to be asked. Ask for it when you find yourself typing `/deep-review` every time and wishing you did not have to:
 
-> Fetch `rule.md` from that repository. **Before saving it, check whether a rule of that name is already in `~/.claude/rules/`.** If one is, show me both and let me choose rather than replacing mine. If not, save it as `starter-kit-deep-review.md` and tell me it loads from my next conversation.
+> Fetch `rule.md` from that repository. **Before saving it, check whether a rule of that name is already in `~/.claude/rules/`.** If one is, show me both and let me choose rather than replacing mine. If not, save it as `deep-review-rule.md`, **without a `starter-kit-` prefix**, because that prefix means the day-one setup installed the file and this one is yours. Then tell me it loads from my next conversation.
 
 **The most expensive version** is running your plan past a genuinely different AI model, from a different company, because two models trained differently fail differently. Worth knowing about. Not worth paying for in week two.
 

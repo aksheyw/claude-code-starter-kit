@@ -34,11 +34,11 @@ This is the catalogue the setup reads in Step 2. It exists so you can see the wh
 |---|---|---|
 | `learn.md`, the `/learn` command | `~/.claude/commands/learn.md` | Turns a correction into a rule you never have to give twice. It keeps its exact filename, because Claude Code takes a command's name from the file, and a prefix would make it `/starter-kit-learn`. If you already have a `learn.md`, the setup stops and asks rather than touching it. |
 | The list of what was installed | `~/.claude/starter-kit-manifest.md` | A dated record of every file added and where it came from, so removing things later is exact rather than guesswork. If it is already there from an earlier run, a new dated section is added and nothing existing is replaced. |
-| An untouched copy of everything installed | `~/.claude/starter-kit-baseline/` | The rules, the `/learn` command, each skill folder and the exact text of anything added to your `CLAUDE.md`, all exactly as they arrived. A copy already in there is never overwritten. Months later it is the only way to tell a change you made from a change the authors made, which is what stops you deleting your own improvements by mistake. |
+| An untouched copy of everything installed | `~/.claude/starter-kit-baseline/` | The rules, the `/learn` command, each skill folder, and the exact text of anything added to your `CLAUDE.md` or to a notebook you already kept, all exactly as they arrived and filed under the project it happened in. A copy already in there is never overwritten. Months later it is the only way to tell a change you made from a change the authors made, which is what stops you deleting your own improvements by mistake. |
 
 **Where they come from.** Templates in this kit. They are skeletons, and the setup fills them in with your real answers rather than leaving you the placeholders.
 
-**What it overlaps with.** If you already have a `CLAUDE.md`, the setup never replaces or rewrites it. It offers you the sections the template has that yours does not, one at a time, and adds only the ones you accept. If you already keep a notebook, it leaves it alone and offers to bring it up to date instead.
+**What it overlaps with.** If you already have a `CLAUDE.md`, the setup never replaces or rewrites it. It offers you the sections the template has that yours does not, one at a time, and adds only the ones you accept. If you already keep a notebook, it never rewrites it either. It shows you the lines it would add, as a diff, and adds them only if you say yes, and it writes down what it added so you can find it again later.
 
 ---
 
@@ -46,12 +46,12 @@ This is the catalogue the setup reads in Step 2. It exists so you can see the wh
 
 **What a skill is.** A set of instructions Claude loads when a particular kind of job comes up, so it follows a worked method instead of improvising.
 
-These two are the author's own writing, so they are in this repo rather than downloaded. They install from `starter-kit/skills/`.
+These two are the author's own writing, so they are in this repo rather than downloaded. They install from `starter-kit/skills/`, and both are MIT licensed under this repository's own [LICENSE](../LICENSE).
 
-| Skill | What it does |
-|---|---|
-| `sounding-board` | A thinking partner for the decisions that are really a test of judgement. It agrees what the problem is before proposing anything, does the reading itself instead of interviewing you, comes back with a view rather than a menu, argues against that view before committing to it, and tells you when you are wrong. |
-| `handoff-audit` | Reads what a previous conversation left behind as a list of claims rather than a briefing, and re-checks the ones today's work depends on. Also the discipline for writing a handoff the next conversation can audit. This is the one that stops a confident wrong note surviving for weeks. |
+| Skill | What it does | Source | Licence |
+|---|---|---|---|
+| `sounding-board` | A thinking partner for the decisions that are really a test of judgement. It agrees what the problem is before proposing anything, does the reading itself instead of interviewing you, comes back with a view rather than a menu, argues against that view before committing to it, and tells you when you are wrong. | Bundled in this kit | MIT |
+| `handoff-audit` | Reads what a previous conversation left behind as a list of claims rather than a briefing, and re-checks the ones today's work depends on. Also the discipline for writing a handoff the next conversation can audit. This is the one that stops a confident wrong note surviving for weeks. | Bundled in this kit | MIT |
 
 **What it overlaps with.** If you already have a thinking-partner or review skill of your own, `sounding-board` is the one most likely to duplicate it. Read both and keep one.
 

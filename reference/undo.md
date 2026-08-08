@@ -34,7 +34,7 @@ The four sections below are deliberately separate, and they get progressively le
 
 Everything the setup installed is written down as it happens, in a file at `~/.claude/starter-kit-manifest.md`. That is the list. Nothing was added that is not on it.
 
-Beside it sits `~/.claude/starter-kit-baseline/`, holding an untouched copy of everything the setup put on your machine: the rules, the `/learn` command, each skill folder, and the exact text of any block it added to your `CLAUDE.md`. A copy already in there is never overwritten, and none of it is ever used to repair anything. Its only job is to answer one question later: did I change this, or did it always look like that?
+Beside it sits `~/.claude/starter-kit-baseline/`, holding an untouched copy of everything the setup put on your machine: the rules, the `/learn` command, each skill folder, and the exact text of any block it added to your `CLAUDE.md` or to a notebook you already kept, filed under the name of the project it happened in. A copy already in there is never overwritten, and none of it is ever used to repair anything. Its only job is to answer one question later: did I change this, or did it always look like that?
 
 Say this to Claude:
 
@@ -46,11 +46,11 @@ You will see four kinds of thing.
 
 **Things the kit added that carry NO prefix, and this is the part to read slowly.** The skills sit in their own named folders in `~/.claude/skills/`, and the `/learn` command is `~/.claude/commands/learn.md`. Neither is marked. `learn.md` cannot be, because Claude Code takes a command's name from its filename and renaming it would turn `/learn` into something else. The skill folders are not either, because a skill has to be found by its real name to work.
 
-**So for skills and for `learn.md`, the name alone does not tell you who put it there.** The manifest does, and it is the only thing that does. It records each one as either installed by this kit or already yours and left alone. **Nothing in this section is safe to remove on the strength of its name.**
+So for skills and for `learn.md`, the name alone does not tell you who put it there. The manifest does, and it is the only thing that does. It records each one as either installed by this kit or already yours and left alone. **Nothing in this section is safe to remove on the strength of its name.**
 
-**Files that were already yours.** None of them were replaced, renamed or moved. If you had a rule, a notebook file or a skill before you started, it is untouched. **That includes ones with the same name as something the kit offers:** if you already had a skill called `deep-review`, the setup stopped, showed you the collision and installed nothing over it. Your version is still there and **the kit never owned it.** The manifest records that as skipped rather than installed.
+**Files that were already yours.** None of them were replaced, renamed or moved. If you had a rule, a `learn.md` command or a skill before you started, it is untouched. **Two of your files may have gained lines, and only ones you approved at the time:** your `CLAUDE.md`, and your notebook if you already kept one. Nothing in either was rewritten or removed, the manifest names every addition, and the baseline holds a copy of the added text so you can tell it from your own writing. Removing them is covered below. **That includes ones with the same name as something the kit offers:** if you already had a skill called `deep-review`, the setup stopped, showed you the collision and installed nothing over it. Your version is still there and **the kit never owned it.** The manifest records that as skipped rather than installed.
 
-There is one exception and it is worth knowing precisely. **If you already had a `CLAUDE.md`, the setup may have added sections to it, but only ones you said yes to at the time.** Nothing in it was rewritten or removed. The manifest names every block that was appended, so the file is still yours and the additions are still identifiable. Removing them is covered below.
+Those two are worth knowing precisely, because they are the only files of yours this setup writes into at all. **It only ever appends, only ever a block you approved when it showed you, and never once rewrites or removes a line you wrote.** The manifest names every block, and the baseline holds its exact text, so the file is still yours and the kit's additions are still identifiable years later. Removing them is covered below.
 
 **Files that are now yours, whatever created them.** If you did not have a `CLAUDE.md` and the setup made one, it then interviewed you and filled it with your answers. The same is true of the two notebook files. Those started as this kit's templates and stopped being templates the moment you answered. **They are your writing, and nothing in this document treats them as the kit's to remove.** If you take everything else out, leave those exactly where they are. They are what makes Claude useful in this project, and they keep working on their own.
 
@@ -62,13 +62,14 @@ There is no command here that sweeps up. You look at the list and remove what yo
 
 **Do the comparison first, before you delete anything.** This is the step that stops you throwing away your own work, and it only takes one message:
 
-> Compare everything the manifest lists against its copy in `~/.claude/starter-kit-baseline/`: the `starter-kit-` rules, `~/.claude/commands/learn.md`, each installed skill folder, and each block recorded as appended to my `CLAUDE.md`. Show me every single thing that differs, with the differences. **Change and delete nothing.**
+> Compare everything the manifest lists against its copy in `~/.claude/starter-kit-baseline/`: the `starter-kit-` rules, `~/.claude/commands/learn.md`, each installed skill folder, and every block recorded as appended to my `CLAUDE.md` or to a notebook file, checking the folder for this project inside `appended-blocks/`. Show me every single thing that differs, with the differences. **Change and delete nothing.**
 
-Three things can come back, and the third one matters most.
+Four things can come back, and the last two matter most.
 
 - **Identical to the baseline.** The kit installed it and you never touched it. Safe to remove.
 - **Differs from the baseline.** Something changed it after it was installed, and the baseline itself never changes, so the difference is real. **It is usually you, but not always.** If you ran the setup again later and agreed to update a rule when it showed you the difference, that is the kit's change wearing the same appearance. The manifest's later dated sections are what tell the two apart, so read those before assuming the edit was yours. Either way, **a file in this category is worth looking at before you remove it.**
-- **No baseline copy at all.** This does **not** mean the kit installed it and lost the record. It means **the kit never installed it**, so the thing on your disk is yours, or something you got somewhere else. The most likely case is a skill you already had, where the setup saw the collision and correctly installed nothing. **Never delete anything in this category.** Check the manifest, which will show it as skipped rather than installed.
+- **No baseline copy at all.** Usually this means **the kit never installed it**, so the thing on your disk is yours, or something you got somewhere else. The most likely case is a skill you already had, where the setup saw the collision and correctly installed nothing, or a rule you added later yourself from somewhere on the growth page. **Never delete anything in this category.** Check the manifest, which will show it as skipped rather than installed, or not name it at all.
+- **One exception to that last one, and it is not a problem.** Your `CLAUDE.md` and your two notebook files have no baseline copy of the whole file, by design. Whether the setup created them and you filled them in, or they were already yours and only gained a block you approved, the file itself is your writing rather than the kit's. What the baseline holds for those is only the exact blocks that were **added**. They are on the manifest and they are not the kit's to remove, so they belong under "files that are now yours" above rather than in this list.
 
 Work through that list before you read any further.
 
@@ -83,6 +84,8 @@ The reason for listing before deleting is that the folder is shared. Anything yo
 **A skill:** skill folders carry no prefix, so **check the manifest says this kit installed it, not that it found it already there and skipped it**, and check it has a baseline copy. A skill with no baseline copy is one the kit never installed, which means it is yours. Then name it and have Claude delete that folder in `~/.claude/skills/`. Same principle: name the ones you mean, and being on the manifest is not the same as having been installed by it.
 
 **The `/learn` command:** delete `~/.claude/commands/learn.md`. Check the manifest first, because if you already had a `learn.md` of your own the setup left yours alone and installed nothing.
+
+**What the kit added to a notebook you already kept:** if Step 9 added lines to a `_hot.md` or `_log.md` that was already yours, the manifest names them and the baseline holds their exact text under this project's folder. Ask Claude to show you those lines beside the copy in the baseline, and to remove only the ones you name. **Everything else in those files is your own writing and nothing here treats it as removable.** If the setup created the notebook rather than finding it, there is nothing to take out: the file is yours, see above.
 
 **What the kit added to your `CLAUDE.md`:**
 
