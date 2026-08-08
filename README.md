@@ -68,7 +68,10 @@ You type `/learn`. It writes the correction into a lessons file, and points your
 
 **The tools are the residue. The habit is the thing.** Your set will look different from this one within a couple of months, and that is the point, not drift.
 
-## When to skip this
+<details>
+<summary>📋 <b>When to skip this</b>: the free plan, a Windows machine, or wanting everything on day one</summary>
+
+<br>
 
 **You are on the free Claude plan.** Claude Code needs Pro, Max, Team or Enterprise, and nothing here works around that.
 
@@ -76,14 +79,24 @@ You type `/learn`. It writes the correction into a lessons file, and points your
 
 **You want every tool on day one.** This holds things back on purpose, because the failure it is built against is installing all eight and being able to explain none of them.
 
-## Credits
+</details>
+
+<details>
+<summary>📄 <b>Credits</b>: five skills from Jesse Vincent's obra/superpowers, and Anthropic's own plugin catalogue</summary>
+
+<br>
 
 Other people's work is downloaded from the repository that maintains it, never copied in here, so you can pull newer versions the same way anyone else would.
 
 - **[obra/superpowers](https://github.com/obra/superpowers)** by Jesse Vincent, MIT. Five of its fourteen skills are on the day-one list: brainstorming, test-driven development, systematic debugging, requesting code review, and verification before completion.
 - **Anthropic's Knowledge Work marketplace**, which ships with the Claude app and is where day one's plugins come from.
 
-## Where to go once you outgrow it
+</details>
+
+<details>
+<summary>🔍 <b>Where to go once you outgrow it</b>: the eight layer repos, and which day one already used</summary>
+
+<br>
 
 Day one installs skills from two of these, `claude-code-deep-review` and `claude-code-learned-skills`. [GROWTH.md](GROWTH.md) says which of the rest to reach for and when.
 
@@ -95,6 +108,8 @@ Day one installs skills from two of these, `claude-code-deep-review` and `claude
 - [claude-code-ship-gate](https://github.com/aksheyw/claude-code-ship-gate): checks that must pass before anything reaches your live branch
 - [claude-code-guardrail-hooks](https://github.com/aksheyw/claude-code-guardrail-hooks): checks that fire the moment a file is written
 - [claude-code-harness-backup](https://github.com/aksheyw/claude-code-harness-backup): moving your setup to a new machine intact
+
+</details>
 
 ## License
 
