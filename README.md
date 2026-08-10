@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚪 claude-code-starter-kit: day one with the Claude Code desktop app, without opening a terminal
+# 🚪 claude-code-starter-kit: finish something real in one evening, on a Mac, without opening a terminal
 
-### It adds to the setup you already have. It never replaces any of it.
+### You finish a real piece of your own work, and Claude still knows the project on Monday morning.
 
 ![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![day one is clicking not commands](https://img.shields.io/badge/day%20one-clicking%2C%20not%20commands-0E9384) ![never overwrites your files](https://img.shields.io/badge/never-overwrites%20your%20files-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
 
@@ -13,7 +13,7 @@
 <img src="docs/without-a-door-vs-day-one.svg" width="100%"
      alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every edit is proposed for you to accept, then twelve guided steps in which Claude sets itself up: it offers a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, eleven skills, most of them downloaded from the repositories that maintain them, and a notebook that carries what you agreed into the next conversation, installing only what you accept, and finishes one real piece of work. Nothing already on the machine is replaced, and edits are proposed for you to accept before they happen. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
 
-Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. Almost every guide starts at a terminal. This one uses the desktop app, where the docs put it plainly: no terminal required. Day one is about ten minutes of clicking, then Claude sets itself up while you watch. If you already run Claude Code, it adds to what you have and replaces none of it.
+Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. By the end of the evening it will have drafted whatever you are working on this week, and it will still know the project next time you open it. Almost every guide starts at a terminal. This one uses the desktop app, where the docs put it plainly: no terminal required. The clicking part is about ten minutes.
 
 ## Two files, and you only read one today
 
@@ -21,23 +21,23 @@ Claude Code is Anthropic's assistant with access to the files in one folder you 
 
 **[GROWTH.md](GROWTH.md)** is everything left out, each item behind the moment that earns it. Read it once. Install none of it.
 
-## Nothing here lands on top of anything of yours
-
-Most setup guides assume an empty machine. The people most likely to want this one already have rules, an instructions file and a few skills of their own, put there over months.
-
-So the setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
-
-Nothing is renamed, moved or copied over. Its rules install with a `starter-kit-` prefix so they cannot collide with yours, and everything it adds goes on a list you can read at any time. The full catalogue is [`reference/what-this-adds.md`](reference/what-this-adds.md), readable before you install a thing, and [`reference/undo.md`](reference/undo.md) is the way back out, worth reading before you start rather than after.
-
 ## Why the day-one list stops where it does
 
-A tool installed before you have its problem is friction with no payoff. Install all eight and you get a setup you stop trusting, because half of it does things you never asked for and cannot explain.
+A tool installed before you have its problem is friction with no payoff. Install all eight of the repos this kit sits in front of and you get a setup you stop trusting, because half of it does things you never asked for and cannot explain.
 
 So the test for day one is strict: you feel the value the same afternoon, it is something the author genuinely uses rather than something that sounded good, and it cannot fail silently.
 
 **Seven things pass**, and on a machine that already has some of them you take only what you are missing: the app and one project folder, a `CLAUDE.md` it reads every time, up to eighteen rules of which nine apply from day one, two or three plugins bringing sixteen tool connections, up to eleven skills, a notebook that carries what you agreed into the next conversation, and one real piece of work finished.
 
 Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until an app you are building needs a paid key. So do version control, which keeps every earlier version of your work so you can go back to one, and quality gates, which are checks that have to pass before your work goes live. [GROWTH.md](GROWTH.md) names the moment that earns each one.
+
+## If you already use Claude Code, nothing here lands on top of yours
+
+If you are starting from an empty machine there is nothing of yours for any of it to collide with. You still choose what goes in either way, item by item, and a gap you were never shown does not count as agreed.
+
+The setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
+
+Nothing is renamed, moved or copied over. Three files of yours can gain lines, and only if you say yes to the exact lines first: your `CLAUDE.md`, and either of the two notebook files if you already keep them. Those are only ever added to, never rewritten. Its rules install with a `starter-kit-` prefix so they cannot collide with yours, and everything it adds goes on a list you can read at any time. The full catalogue is [`reference/what-this-adds.md`](reference/what-this-adds.md), readable before you install a thing, and [`reference/undo.md`](reference/undo.md) is the way back out, worth reading before you start rather than after.
 
 <details>
 <summary>📦 <b>What is in here</b>, and where the depth went</summary>
