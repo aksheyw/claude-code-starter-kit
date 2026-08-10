@@ -96,7 +96,7 @@ The `obra/superpowers` repository holds fourteen skills. The five above are the 
 
 **What a plugin is.** A bundle that adds skills and tool connections together. Anthropic ships a catalogue of them, called the Knowledge Work marketplace, which is added to your app by default.
 
-The setup has you look at that catalogue and install two or three, starting with **Product Management**, which is what Step 8 uses to produce your first real piece of work. Nothing is installed from anywhere except Anthropic's own catalogue on day one.
+The setup has you look at that catalogue and install two or three, starting with **Product Management**, which Step 8 reaches for first when it fits the job you bring it. Nothing is installed from anywhere except Anthropic's own catalogue on day one.
 
 **What it overlaps with.** If you already have plugins installed, the setup asks you to read out what your screen says rather than assuming. Installing something twice is the failure here, and it is avoidable by looking first.
 

@@ -17,7 +17,7 @@ Claude Code is Anthropic's assistant with access to the files in one folder you 
 
 ## Two files, and you only read one today
 
-**[START-HERE.md](START-HERE.md)** is the whole day-one path. It stops after each step to show you proof that step worked.
+**[START-HERE.md](START-HERE.md)** is the whole day-one path. It stops after each step to show you proof that step worked, and its payoff step is Claude drafting a real piece of your own work and saving it into your folder. In one test run that was an autumn repricing plan for a ceramics studio, with two costed options and the letter to its stockists.
 
 **[GROWTH.md](GROWTH.md)** is everything left out, each item behind the moment that earns it. Read it once. Install none of it.
 
@@ -33,7 +33,7 @@ Most things fail. Secret scanning, which checks you have not pasted a password i
 
 ## If you already use Claude Code, nothing here lands on top of yours
 
-If you are starting from an empty machine there is nothing of yours for any of it to collide with. You still choose what goes in either way, and nothing is added that you were not shown first.
+If you are starting from an empty machine there is nothing of yours for any of it to collide with. You are still shown every item, and asked about every optional one.
 
 The setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
 

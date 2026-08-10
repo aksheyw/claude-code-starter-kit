@@ -4,7 +4,7 @@ You have used Claude in a browser. Claude Code is the same Claude with access to
 
 It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking and pasting nearly the whole way through. The one thing that can need a typed command is a Mac without Git, and if that happens Claude runs the installer for you and this page tells you what to expect.
 
-**This kit adds to what you already have. It never replaces it.** If you have used Claude Code before and have your own rules, your own instructions file, your own skills, none of them are replaced, renamed or deleted. Three files can gain something, and only by your saying yes to it first: your project instructions file, and either of your two notebook files if you already keep them. Those only ever have lines added, never rewritten, and everything added is written down so you can find it again. The setup looks at what is there first, tells you where this kit fills a gap, tells you where it overlaps with something of yours, and asks you to decide. Nothing is copied over anything. If you are starting from an empty machine there is nothing of yours to weigh any of it against, so that part is quick, but every item is still shown to you and still waits for your yes. A thing you were never shown does not count as agreed.
+**This kit adds to what you already have. It never replaces it.** If you have used Claude Code before and have your own rules, your own instructions file, your own skills, none of them are replaced, renamed or deleted. Three files can gain something, and only by your saying yes to it first: your project instructions file, and either of your two notebook files if you already keep them. Those only ever have lines added, never rewritten, and everything added is written down so you can find it again. The setup looks at what is there first, tells you where this kit fills a gap, tells you where it overlaps with something of yours, and asks you to decide. Nothing is copied over anything. If you are starting from an empty machine there is nothing of yours to weigh any of it against, so that part is quick, but every item is still shown to you, and everything optional waits for your yes. A thing you were never shown does not count as agreed.
 
 **Part 1 is clicking, about ten minutes.** Then you paste a brief into Claude and it sets itself up while you watch, stopping after each step to show you it worked. Part 2 takes longer than it used to, usually twenty to forty minutes, because it now downloads a handful of skills and because you are making real choices in the middle of it rather than watching a copy run.
 
@@ -195,7 +195,7 @@ Being listed and being installed are not the same thing, so go by what the scree
 - **If there is an Install button next to it,** tell me to click it, and wait until I tell you it has finished.
 - **If it is not in the list at all,** tell me to use the **Browse** button on that same screen to find it, and talk me through it while I look. Once I have found it, have me click **Install** and wait until the screen says it is installed or enabled before you go on.
 
-Either way, do not tell me it worked until I have told you what I can see. Step 8 needs this plugin actually installed, so if I read out something that does not match any of the three cases above, say so rather than guessing which one I meant.
+Either way, do not tell me it worked until I have told you what I can see. Step 8 reaches for this plugin first and can work without it, so if I read out something that does not match any of the three cases above, say so rather than guessing which one I meant.
 
 Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones worth considering, depending on what I told you in Step 3 that this project is: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
 
@@ -203,7 +203,7 @@ Two things that may not match, and I would rather you say so than smooth over: t
 
 When I say I am done, verify what I actually ended up with and show me. **Record the plugins in the manifest**, which means writing to `~/.claude/` again, and for each one say whether it was already installed before today or installed during this run. Undo depends on that difference, because removing a plugin I already had would be taking away something that was never yours to add.
 
-Then tell me the honest limitation, the same way you will for the rules in Step 4. **A plugin installed just now may not be active in this conversation.** If Step 8 behaves as though the plugin is not there, the fix is to start a new conversation and ask me to paste Step 8 again, because that is when plugins are picked up. Do not promise me it is live in this conversation and do not promise me it is not. When we get to Step 8, if what comes back looks like an ordinary draft rather than something the plugin shaped, say so plainly instead of letting me wonder which of the two it was.
+Then tell me the honest limitation, the same way you will for the rules in Step 4. **A plugin installed just now may not be active in this conversation.** If Step 8 behaves as though the plugin is not there, the fix is to start a new conversation and ask me to paste Step 8 again, because that is when plugins are picked up. Do not promise me it is live in this conversation and do not promise me it is not. Step 8 opens by having you tell me which of those two you are in, so leave that question to it rather than guessing here.
 
 **Step 6. Install the skills I agreed to in Step 2.**
 A skill is a set of instructions you load when a particular kind of job comes up, so you follow a worked method instead of improvising. Explain that in one sentence before you install anything.
@@ -230,7 +230,16 @@ Tell me that two of the sixteen, Gmail and Google Calendar, arrive with no addre
 Tell me `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
 
 **Step 8. Prove it works on something real.**
-Ask me what I am actually working on this week. Then use the product-management plugin to produce a real first draft of it: a spec, a competitive brief, a research synthesis, whatever fits. Not a demo, the real thing.
+Ask me what I am actually working on this week. Then produce a real first draft of it. Not a demo, the real thing.
+
+Before you draft anything, tell me whether you can see the `product-management` skills at all, and name them. If you cannot see them, that is Step 5 not having taken effect yet rather than a judgement about my job, and the fix is a new conversation, so say which of the two it is rather than quietly deciding.
+
+Then use one of those skills if it genuinely fits what I said. **If none of them fits my job, say so in one line and do the work directly.** The draft is the point, not the tool, and a skill stretched over the wrong job produces something shaped like the tool rather than like my week.
+
+**Build it only from what I have told you and what is in my files.** Do not fill a gap with a number, a competitor, a price or a market fact you were not given, however plausible it looks or however much the tool asks for one. Where you need something you do not have, ask me for it, or list it at the end as a gap with what it would change. **A first draft with honest gaps in it is worth more to me than a complete-looking one I cannot trust**, because I am going to make a real decision on this.
+
+**Then save it into my project folder as a file and tell me the filename.** A draft that only exists in this conversation is gone when I close the tab, and this is the one thing today was for. Open the two or three assumptions the draft rests on at the top of it, so I can check those first, and if you did arithmetic, show me one of the calculations rather than only its answer.
+
 This step matters more than the seven before it. If I do not see something useful today I will not come back tomorrow.
 
 **Step 9. Set up the notebook that survives between conversations.**
