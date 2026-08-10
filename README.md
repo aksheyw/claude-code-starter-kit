@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🚪 claude-code-starter-kit: finish something real in one evening, on a Mac, without opening a terminal
+# 🚪 claude-code-starter-kit: finish something real in one evening, on a Mac, usually without opening a terminal
 
 ### You finish a real piece of your own work, and Claude still knows the project on Monday morning.
 
-![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![day one is clicking not commands](https://img.shields.io/badge/day%20one-clicking%2C%20not%20commands-0E9384) ![never overwrites your files](https://img.shields.io/badge/never-overwrites%20your%20files-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
+![requires the Claude desktop app](https://img.shields.io/badge/requires-Claude%20desktop%20app-D97757) ![needs a paid plan](https://img.shields.io/badge/needs-a%20paid%20plan-B42318) ![day one is clicking and pasting](https://img.shields.io/badge/day%20one-clicking%20and%20pasting-0E9384) ![never overwrites your files](https://img.shields.io/badge/never-overwrites%20your%20files-1B2A4A) ![MIT license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -33,7 +33,7 @@ Most things fail. Secret scanning, which checks you have not pasted a password i
 
 ## If you already use Claude Code, nothing here lands on top of yours
 
-If you are starting from an empty machine there is nothing of yours for any of it to collide with. You still choose what goes in either way, item by item, and a gap you were never shown does not count as agreed.
+If you are starting from an empty machine there is nothing of yours for any of it to collide with. You still choose what goes in either way, and nothing is added that you were not shown first.
 
 The setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
 
