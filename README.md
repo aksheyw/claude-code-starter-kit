@@ -17,7 +17,7 @@ Claude Code is Anthropic's assistant with access to the files in one folder you 
 
 ## Two files, and you only read one today
 
-**[START-HERE.md](START-HERE.md)** is the whole day-one path. It stops after each step to show you proof that step worked, and its payoff step is Claude drafting a real piece of your own work and saving it into your folder. In one test run that was an autumn repricing plan for a ceramics studio, with two costed options and the letter to its stockists.
+**[START-HERE.md](START-HERE.md)** is the whole day-one path. It stops after each step to show you proof that step worked, and its payoff step is Claude drafting a real piece of your own work and saving it into your folder. [`reference/example-first-draft.md`](reference/example-first-draft.md) is one it actually produced, so you can see the shape before you spend an evening.
 
 **[GROWTH.md](GROWTH.md)** is everything left out, each item behind the moment that earns it. Read it once. Install none of it.
 

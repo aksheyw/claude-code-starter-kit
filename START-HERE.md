@@ -238,9 +238,11 @@ Before you draft anything, tell me whether you can see the `product-management` 
 
 Then use one of those skills if it genuinely fits what I said. **If none of them fits my job, say so in one line and do the work directly.** The draft is the point, not the tool, and a skill stretched over the wrong job produces something shaped like the tool rather than like my week.
 
-**Build it only from what I have told you and what is in my files.** Do not fill a gap with a number, a competitor, a price or a market fact you were not given, however plausible it looks or however much the tool asks for one. Where you need something you do not have, ask me for it, or list it at the end as a gap with what it would change. **A first draft with honest gaps in it is worth more to me than a complete-looking one I cannot trust**, because I am going to make a real decision on this.
+**Build it only from what I have told you and what is in my files.** Do not fill a gap with a number, a competitor, a price or a market fact you were not given, however plausible it looks or however much the tool asks for one. **A first draft with honest gaps in it is worth more to me than a complete-looking one I cannot trust**, because I am going to make a real decision on this.
 
-**Then save it into my project folder as a file and tell me the filename.** A draft that only exists in this conversation is gone when I close the tab, and this is the one thing today was for. Open the two or three assumptions the draft rests on at the top of it, so I can check those first, and if you did arithmetic, show me one of the calculations rather than only its answer.
+**If the real thing needs a number you do not have, do not stop and do not invent it.** Build every part that does not depend on it, show the arithmetic so I can put my own number in, and where you have to use a figure to show me the shape, call it illustrative in that same sentence rather than in a note I will skim past. Then tell me the one missing thing that would turn this draft into a decision, and roughly what it would cost me to go and get it.
+
+**Then save it into my project folder as a file and tell me the filename.** A draft that only exists in this conversation is gone when I close the tab, and this is the one thing today was for. Open it with the assumptions it rests on, all of them, and do not trim that list to look tidy, because the one you would cut is the one that quietly turns out to matter. Show me the working behind any number I might act on, not only its answer.
 
 This step matters more than the seven before it. If I do not see something useful today I will not come back tomorrow.
 
