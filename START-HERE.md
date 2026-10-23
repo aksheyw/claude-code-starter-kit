@@ -62,7 +62,7 @@ If it asks you to upgrade, your plan does not include Claude Code yet. If it ask
 
 Look at the row under the box where you type. The first control there says where Claude will work. On a new session the middle of the screen may also show a short list with **Choose environment** under it, which does the same job.
 
-Click it, and under **Local** choose **This computer**. That means Claude works on your own machine with your own files, which is what you want. Then choose **Open folder…** and pick your folder.
+Click it, and under **Local** choose **This computer**. That means Claude works on your own machine with your own files, which is what you want. A folder control then appears beside it, saying **Choose…**. Click it, choose **Open folder…** at the bottom of its list, pick your folder in the window that opens, and click **Open**.
 
 If the labels on your screen differ, you are still looking for the same two things: **Local**, and your folder.
 
