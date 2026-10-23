@@ -8,7 +8,7 @@ For anything bigger than a small fix, approve the plan before a single file is t
 
 **How to apply it.**
 
-- Use plan mode. In the desktop app it is in the mode selector next to the send button; in the terminal, press Shift and Tab together to cycle until it says plan. Either way it reads, investigates and writes a proposal, and cannot change your files until you approve one.
+- Use plan mode. In the desktop app it is in the mode selector in the row under the box where you type; in the terminal, press Shift and Tab together to cycle until it says plan. Either way it reads, investigates and writes a proposal, and cannot change your files until you approve one.
 - What a plan has to say: what changes, which files, in what order, what it will not touch, and how you will know it worked.
 - Ask what it considered and rejected. A plan with one option in it is a preference wearing a plan's clothes.
 - Split anything large into steps you can check one at a time. Approve step one, see it work, then step two. A plan you approve in one go is a plan you cannot check.

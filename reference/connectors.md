@@ -2,11 +2,11 @@
 
 A connector lets Claude Code read from and write to a tool you already use, so you can ask a question in plain language instead of opening six tabs. "What did we ship last sprint and what are people complaining about?" reaches your tracker and your support inbox and comes back as one answer.
 
-**You do not have to configure any of this by hand.** The `product-management` plugin brings sixteen connectors with it, fourteen of which arrive pointed at the right address and need only your sign-in. The two Google ones, Gmail and Google Calendar, arrive with no address filled in. This kit does not cover them. Skip them for now. The **+** button then **Connectors** is what tells you the truth on your own machine.
+**You do not have to configure any of this by hand.** The `product-management` plugin brings sixteen connectors with it, fourteen of which arrive pointed at the right address and need only your sign-in. The two Google ones, Gmail and Google Calendar, arrive with no address filled in. This kit does not cover them. Skip them for now. The **+** button then **Add connectors** is what tells you the truth on your own machine.
 
 ## What arrives with the plugin
 
-Read on 2026-08-02 from the manifest in the live marketplace repo, `anthropics/knowledge-work-plugins`, so this is what you get installing it today.
+Read on 2026-08-02 from the manifest in the live marketplace repo, `anthropics/knowledge-work-plugins`, and re-read on 2026-10-24 with the same sixteen and the same two blank.
 
 | Connector | What it reaches |
 |---|---|
@@ -32,7 +32,7 @@ Read on 2026-08-02 from the manifest in the live marketplace repo, `anthropics/k
 
 ## Turning one on
 
-Click the **+** button next to the prompt box and choose **Connectors**. It sits directly below the **Plugins** entry in that same **+** menu, which is a different screen from the **Plugins** tab under **Customize** in the sidebar.
+Click the **+** button next to the prompt box and choose **Add connectors**. On some versions of the app that menu says **Connectors** instead; choose it, then **Browse connectors**. This is the **+** menu next to where you type, not **Customize** in the sidebar.
 
 That lists every connector available to you and whether it is connected. Pick one of the fourteen that arrives with an address and it opens your browser to sign in, the same flow as connecting any app to any other app. **You never paste an API key.**
 
@@ -44,11 +44,11 @@ Ask for something only that tool knows:
 
 > What are the three most recently updated issues in Linear?
 
-If it comes back with real issues, it is connected. If it says it cannot reach Linear, open **+** then **Connectors** again and check the status line next to it.
+If it comes back with real issues, it is connected. If it says it cannot reach Linear, open **Settings** then **Connectors** and check the status next to it.
 
 ## Adding one that is not in the list
 
-Open **+** then **Connectors** and look first. That screen carries more than the sixteen this plugin brings.
+Open **+** then **Add connectors** and look first. That directory carries more than the sixteen this plugin brings.
 
 If the tool you want genuinely is not offered there, adding it by hand needs the command-line version of Claude Code, which this kit does not set up. It is rare, and nothing on day one needs it.
 

@@ -112,7 +112,7 @@ Then restart, ask it to write a fake API key into a test file, and check you get
 
 This one is not in the set Anthropic installs by default, so you add where it comes from first, then install it.
 
-**In the desktop app:** open **Customize** in the left sidebar, click the **Plugins** tab, and use **Add** to add a source from a GitHub address. The address is `aksheyw/claude-code-ship-gate`. Then use **Browse** on that same screen to install **ship-gate**.
+**In the desktop app:** open **Customize** in the left sidebar, click **Plugins**, then **Add**, then **Add marketplace**, and enter the GitHub address `aksheyw/claude-code-ship-gate`. Then open **Discover** on that same screen, select **ship-gate** and click **Add**. Claude Code picks it up the next time a conversation starts.
 
 **If you use the terminal version**, the same thing is two typed commands:
 
@@ -143,7 +143,7 @@ The `ship-gate:` prefix is not decoration. Installed this way the commands are n
 
 The thing worth knowing is not how to install it. It is **when to run it**, which is before somebody who is not you touches the thing, not after they report something broken.
 
-> **Its repository holds twelve skills and day one took three** (`audit`, `llm-wiki`, `doc-confluence`). Most of the rest are about servers, containers and machine-learning data, which is not your problem. Look at [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) yourself if you become curious, and ask Claude to install any one of them the same way Step 6 did.
+> **Its repository holds twelve skills and day one took three** (`audit`, `llm-wiki`, `doc-confluence`). The rest are about servers, containers and machine-learning data, plus guides to wording instructions for particular AI models. None of that is a day-one problem. Look at [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) yourself if you become curious, and ask Claude to install any one of them the same way Step 6 did.
 
 ---
 

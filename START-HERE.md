@@ -2,7 +2,7 @@
 
 You have used Claude in a browser. Claude Code is the same Claude with access to the files in one folder you choose, so it hands you a finished spreadsheet instead of describing one, and it can remember your project between conversations if you set it up to.
 
-It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation on it says *"No terminal required."* Setting it up is clicking and pasting nearly the whole way through. The one thing that can need a typed command is a Mac without Git, and if that happens Claude runs the installer for you and this page tells you what to expect.
+It comes in two forms. Most guides you will find describe the one that runs in a terminal. **This one uses the desktop app, which is the same Claude Code with a normal Mac interface**, and Anthropic's own documentation says it lets you review Claude's changes *"without using a terminal."* Setting it up is clicking and pasting nearly the whole way through. The one thing that can need a typed command is a Mac without Git, and if that happens Claude runs the installer for you and this page tells you what to expect.
 
 **This kit adds to what you already have. It never replaces it.** If you have used Claude Code before and have your own rules, your own instructions file, your own skills, none of them are replaced, renamed or deleted. Three files can gain something, and only by your saying yes to it first: your project instructions file, and either of your two notebook files if you already keep them. Those only ever have lines added, never rewritten, and everything added is written down so you can find it again. The setup looks at what is there first, tells you where this kit fills a gap, tells you where it overlaps with something of yours, and asks you to decide. Nothing is copied over anything. If you are starting from an empty machine there is nothing of yours to weigh any of it against, so that part is quick, but every item is still shown to you, and everything optional waits for your yes. A thing you were never shown does not count as agreed.
 
@@ -12,7 +12,7 @@ Three things before you start.
 
 **You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, so check this before you begin. Nothing later on this page works around it.
 
-**You need macOS 11 (Big Sur) or later.** Apple menu, then About This Mac. That is the app's requirement; the terminal version in the fold at the bottom needs macOS 13.
+**You need macOS 13 (Ventura) or later.** Apple menu, then About This Mac. The app needs it, and so does the terminal version in the fold at the bottom.
 
 **You need Git, and this is the one thing that might not already be true.** Git is a standard developer tool that most Macs already have. Day one uses it, because most of the skills are downloaded from the repository that maintains them rather than shipped inside this kit, so you can update them later. If your Mac turns out not to have it, Claude can install it for you and a normal macOS window appears for you to click. That is covered under "If something went wrong" at the bottom of this page.
 
@@ -48,7 +48,7 @@ If you already have it installed, skip to 1.4.
 
 ## 1.4 Open the Code tab
 
-Three tabs sit across the top: **Chat**, **Cowork** and **Code**.
+Three tabs sit at the top of the left sidebar: **Chat**, **Cowork** and **Code**. If they show only as icons, hover over one to see its name.
 
 - **Chat** is the Claude you already know. No access to your files.
 - **Cowork** runs longer jobs on its own in the background.
@@ -60,9 +60,11 @@ If it asks you to upgrade, your plan does not include Claude Code yet. If it ask
 
 ## 1.5 Point it at your folder
 
-Choose **Local** for the environment. That means Claude works on your own machine with your own files, which is what you want.
+Look at the row of controls under the box where you type. Click the first one, the environment, and pick the top entry under **Local**. That means Claude works on your own machine with your own files, which is what you want.
 
-Then click **Select folder**.
+Then click the folder control beside it and choose **Open folder…**.
+
+If you do not see those controls under the box, your copy of the app has the older layout and the same two choices sit elsewhere on the screen. You are still looking for the same two things: **Local**, and your folder.
 
 **Choose the outer folder, the one you made in 1.1. Do not choose `starter-kit`.** This is the easiest thing on the page to get wrong, because `starter-kit` is the folder you were just handling and it has the more interesting name. Pick it and every instruction in Part 2 points one level too deep, and the setup fails on its second step.
 
@@ -74,15 +76,17 @@ Claude now works with the files in that folder. It will ask you before doing any
 
 This is the part worth thirty seconds, because it is what makes everything after it safe to try.
 
-The Code tab starts in **Manual mode**. Claude does not edit your files. It *proposes* a change, shows you a diff, which is a side-by-side of exactly what would change, and waits. You press **Accept** or **Reject**. Anthropic's documentation is unambiguous: *"Your files aren't modified until you accept."*
+**First, set the mode to Manual.** The mode selector is in the same row under the box where you type. Check it now rather than assuming, because the app remembers a mode for each folder and a new folder does not always start in Manual. Everything in this section is true of Manual mode.
 
-If you reject something, Claude asks how you would rather do it.
+In Manual mode, Claude does not edit your files. It *proposes* a change, shows you a diff, which is a side-by-side of exactly what would change, and waits. You approve it or decline it. Anthropic's documentation puts it plainly: Claude *"proposes each change and waits for your approval before applying it."*
+
+If you decline something, Claude asks how you would rather do it.
 
 Two more controls worth knowing before you need them:
 
 - **The promise covers edits, not commands.** When Claude proposes an edit to a file, you get the diff and it waits. When it asks to *run a command*, such as copying a file or downloading one, you are approving the command rather than seeing a preview of everything it will change on disk. Those changes also sit outside `/rewind`. The setup below is written to tell you what each command will touch before it asks, and it is fair to make it say so if it does not.
 - **Stop it any time.** Click the stop button. Or just type what you actually wanted and press Enter, which redirects it without stopping first.
-- **Other modes exist**, in a selector next to the send button. *Accept edits* stops asking, which is faster once you trust it. *Plan* makes it think out loud without touching anything. There are more than these, and which you see depends on your plan and setup, so read the selector rather than trusting this list. Stay in Manual for now.
+- **Other modes exist**, in that same selector. *Accept edits* stops asking, which is faster once you trust it. *Plan* makes it think out loud without touching anything. *Auto* has a background checker approve actions for you instead of asking you. There are more than these, and which you see depends on your plan and setup, so read the selector rather than trusting this list. Stay in Manual for now.
 
 You are set up. Everything from here is Claude doing the work.
 
@@ -92,7 +96,7 @@ You are set up. Everything from here is Claude doing the work.
 
 Copy everything between the two lines and paste it into the Code tab.
 
-In Manual mode, which is where you start, expect it to ask before it edits a file or runs a command. Permissions you have already granted, on this machine or by whoever set it up, can change which further prompts appear. Read what it asks.
+In Manual mode, which you set in 1.6, expect it to ask before it edits a file or runs a command. Permissions you have already granted, on this machine or by whoever set it up, can change which further prompts appear. Read what it asks.
 
 Some requests will look alarming and are not. **Steps 2, 3, 4, 5, 6 and 9 all ask to write into `~/.claude/`, a hidden settings folder in your home directory, outside your project.** That is the point: the list of what was installed, the reference copies, the rules, the `/learn` command and the skills all go there so they apply in every project from now on, not just this one. If they went in your project folder they would only ever apply here. Steps 10 and 11 read from that same folder without changing anything. **Step 6 also asks for one more place**, a temporary folder outside your project to download skills into, which it deletes again in the same step and tells you when it has.
 
@@ -192,14 +196,14 @@ While I have it open, ask me whether **Product Management** is in the list, and 
 Being listed and being installed are not the same thing, so go by what the screen says next to it, not by whether the name appears:
 
 - **If it says it is installed or enabled,** nothing to do. Tell me in one line what it adds, and carry on.
-- **If there is an Install button next to it,** tell me to click it, and wait until I tell you it has finished.
-- **If it is not in the list at all,** tell me to use the **Browse** button on that same screen to find it, and talk me through it while I look. Once I have found it, have me click **Install** and wait until the screen says it is installed or enabled before you go on.
+- **If it is in my list but turned off,** tell me to turn on its toggle, and wait until I tell you it is on.
+- **If it is not in my list at all,** tell me to open **Discover** on that same screen to find it, and talk me through it while I look. Once I have found it, have me select it and click **Add**, and wait until it shows in my list, turned on, before you go on.
 
 Either way, do not tell me it worked until I have told you what I can see. Step 8 reaches for this plugin first and can work without it, so if I read out something that does not match any of the three cases above, say so rather than guessing which one I meant.
 
 Then show me what else is in that set and let me choose one or two more, so I end up with two or three in total. Ones worth considering, depending on what I told you in Step 3 that this project is: `small-business`, `marketing`, `brand-voice`, `design`, `data`, `operations`, `engineering`. Explain each in one line. **Do not tell me to install them all.**
 
-Two things that may not match, and I would rather you say so than smooth over: that list of names comes from the published set and what my screen offers can lag behind it, and the panel may be showing plugins for the folder I currently have open. If a name I pick is not on my screen, tell me plainly instead of assuming it is hiding somewhere.
+Two things that may not match, and I would rather you say so than smooth over: that list of names comes from the published set and what my screen offers can lag behind it, and on a Team or Enterprise plan an administrator decides which plugins I can see at all. If a name I pick is not on my screen, tell me plainly instead of assuming it is hiding somewhere.
 
 When I say I am done, verify what I actually ended up with and show me. **Record the plugins in the manifest**, which means writing to `~/.claude/` again, and for each one say whether it was already installed before today or installed during this run. Undo depends on that difference, because removing a plugin I already had would be taking away something that was never yours to add.
 
@@ -227,7 +231,7 @@ After each one, check the folder actually contains a `SKILL.md` and show me. A f
 Then tell me how to check they are actually available, rather than asserting it: ask you to list the skills you can see. If a new one is missing, the reliable fix is to start a new conversation, because that is when the folder is read afresh. Do not promise me it works in this conversation and do not promise me it does not; have me look.
 
 **Step 7. Tell me what came with the plugins.**
-Tell me the product-management plugin also brought sixteen connections to tools like Slack, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Connectors**. That is a different menu from the **Customize** screen you sent me to in Step 5, so tell me plainly that this is the **+** button next to where I type, not the sidebar.
+Tell me the product-management plugin also brought sixteen connections to tools like Slack, Notion, Linear, Jira and Figma, and that I turn one on with the **+** button next to the prompt box, choosing **Add connectors**. On some versions of the app that menu says **Connectors** instead, followed by **Browse connectors**. That is a different menu from the **Customize** screen you sent me to in Step 5, so tell me plainly that this is the **+** button next to where I type, not the sidebar.
 Tell me that two of the sixteen, Gmail and Google Calendar, arrive with no address filled in and are not covered by this kit, so I should skip them rather than spend day one on mail and calendar. Say that plainly rather than letting me discover it by failing.
 Tell me `starter-kit/reference/connectors.md` explains what is there and what to be careful about. Do not connect any of them now.
 

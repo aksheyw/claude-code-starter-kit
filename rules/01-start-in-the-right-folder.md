@@ -6,7 +6,7 @@ Claude Code works in the folder the session was pointed at, and everything insid
 
 **How to apply it.**
 
-- In the desktop app you pick the folder when the session starts: choose **Local**, then **Select folder**. That folder is the project for the whole session. In the terminal you move into the folder first, `cd ~/Documents/my-project`, and then type `claude`. Typing `claude` without moving first starts it in your home folder, which is the case this rule exists to prevent.
+- In the desktop app you pick the folder when the session starts: in the row under the box where you type, choose **Local**, then the folder control and **Open folder…**. That folder is the project for the whole session. In the terminal you move into the folder first, `cd ~/Documents/my-project`, and then type `claude`. Typing `claude` without moving first starts it in your home folder, which is the case this rule exists to prevent.
 - Give each project its own folder and start the session inside it. Not the folder that holds all your projects, not Documents, not your home folder.
 - Keep out of it anything you would not hand to a stranger: personal documents, downloads, another project's files.
 - If you are not sure where a session is standing, ask before anything runs: "which folder are you working in, and what is in it?"

@@ -105,7 +105,7 @@ Then ask Claude to list `~/.claude/rules/`, `~/.claude/commands/` and `~/.claude
 
 **A plugin:** **check the manifest first.** It records, for each plugin, whether it was already installed before your setup ran or installed during it. Removing one you already had would be taking away something that was never the kit's to add, and the screen itself cannot tell you which is which. Then open **Customize** in the left sidebar and click the **Plugins** tab. Same screen you checked during setup.
 
-**A connection:** click the **+** button next to the prompt box, choose **Connectors**, pick the one you want, and disconnect. Same place you turned it on. That removes Claude's access. It changes nothing inside the tool itself.
+**A connection:** open **Settings**, then **Connectors**, in the desktop app, pick the one you want, and disconnect. That removes Claude's access. It changes nothing inside the tool itself.
 
 ## 4. Remove Claude Code entirely
 

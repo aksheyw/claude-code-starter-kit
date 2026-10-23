@@ -86,7 +86,7 @@ Downloaded from the repository that maintains them. Not copied into this kit, be
 | `requesting-code-review` | How to ask for a review that finds things, rather than one that agrees with you | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
 | `verification-before-completion` | Run the check and read the output before saying something is done | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
 
-The `obra/superpowers` repository holds fourteen skills. The five above are the ones this kit installs, because they are the ones with real use behind them. You can install the rest yourself from the same repository whenever you want them.
+The `obra/superpowers` repository holds fifteen skills, checked 2026-10-24. The five above are the ones this kit installs, because they are the ones with real use behind them. You can install the rest yourself from the same repository whenever you want them.
 
 **A note on where these live.** There is also an `obra/superpowers-marketplace` repository. That one is an index that points at this one; the skills themselves are in `obra/superpowers`. If you go looking, go to the second.
 
