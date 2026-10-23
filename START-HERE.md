@@ -216,7 +216,7 @@ They come from three places and the difference matters, so tell me which is whic
 
 - **Bundled in this kit**, because the author wrote them: `sounding-board` and `handoff-audit`, in `starter-kit/skills/`. Copy each folder into `~/.claude/skills/`.
 - **From the author's own public repositories:** `deep-review`, `llm-wiki`, `doc-confluence` and `audit`. Download each repository and copy the skill folder across, rather than bundling, so I can pull a newer version later.
-- **From other people's public repositories:** five skills from `obra/superpowers`, written by Jesse Vincent, MIT licensed. Same method. Tell me who wrote them as you install them, and point me at `starter-kit/reference/what-this-adds.md`, which names the author and licence of every one, and at the credits in the kit's README.
+- **From other people's public repositories:** four skills from `obra/superpowers`, written by Jesse Vincent, MIT licensed. Same method. Tell me who wrote them as you install them, and point me at `starter-kit/reference/what-this-adds.md`, which names the author and licence of every one, and at the credits in the kit's README.
 
 **Never overwrite a skill folder that is already in `~/.claude/skills/`.** If one of these names already exists there, stop and bring it to me under the overlap rule above. Mine may be a version I have edited. **When I tell you to leave mine alone, record it in the manifest as `SKIPPED, already present, not installed by this kit`**, in those words, and do not copy anything into the baseline for it. That line is what stops a later cleanup deleting my own work because it recognised the name.
 

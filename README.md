@@ -11,7 +11,7 @@
 ---
 
 <img src="docs/without-a-door-vs-day-one.svg" width="100%"
-     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every edit is proposed for you to accept, then twelve guided steps in which Claude sets itself up: it offers a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, eleven skills, most of them downloaded from the repositories that maintain them, and a notebook that carries what you agreed into the next conversation, installing only what you accept, and finishes one real piece of work. Nothing already on the machine is replaced, and edits are proposed for you to accept before they happen. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
+     alt="Without a front door, a newcomer meets eight separate Claude Code repos with no order and no starting point, installs all eight, understands none of them, and stops trusting the setup. With this kit, day one is ten minutes of clicking to install the Claude desktop app and pick one project folder where every edit is proposed for you to accept, then twelve guided steps in which Claude sets itself up: it offers a CLAUDE.md, eighteen rules, two or three plugins bringing sixteen tool connections, ten skills, most of them downloaded from the repositories that maintain them, and a notebook that carries what you agreed into the next conversation, installing only what you accept, and finishes one real piece of work. Nothing already on the machine is replaced, and edits are proposed for you to accept before they happen. Everything else stays locked behind a trigger, a specific moment that tells you when to add it, described in GROWTH.md.">
 
 Claude Code is Anthropic's assistant with access to the files in one folder you choose, so it hands you a finished document rather than describing one. By the end of the evening it will have drafted whatever you are working on this week, and it will still know the project next time you open it. Almost every guide starts at a terminal. This one uses the desktop app, which Anthropic's docs say works without a terminal. The clicking part is about ten minutes.
 
@@ -27,7 +27,7 @@ A tool installed before you have its problem is friction with no payoff. Install
 
 So the test for day one is strict: you feel the value the same afternoon, it is something the author genuinely uses rather than something that sounded good, and it cannot fail silently.
 
-**Seven things pass**, and on a machine that already has some of them you take only what you are missing: the app and one project folder, a `CLAUDE.md` it reads every time, up to eighteen rules of which nine apply from day one, two or three plugins bringing sixteen tool connections, up to eleven skills, a notebook that carries what you agreed into the next conversation, and one real piece of work finished.
+**Seven things pass**, and on a machine that already has some of them you take only what you are missing: the app and one project folder, a `CLAUDE.md` it reads every time, up to eighteen rules of which nine apply from day one, two or three plugins bringing sixteen tool connections, up to ten skills, a notebook that carries what you agreed into the next conversation, and one real piece of work finished.
 
 Most things fail. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until an app you are building needs a paid key. So do version control, which keeps every earlier version of your work so you can go back to one, and quality gates, which are checks that have to pass before your work goes live. [GROWTH.md](GROWTH.md) names the moment that earns each one.
 
@@ -50,7 +50,7 @@ Nothing is renamed, moved or copied over. Three files of yours can gain lines, a
 | [`GROWTH.md`](GROWTH.md) | The growth menu. Every item behind a trigger, plus what to deliberately skip. |
 | [`reference/what-this-adds.md`](reference/what-this-adds.md) | The full catalogue: every rule, skill and template, where each comes from, and how to judge an overlap with something you already have. |
 | [`rules/`](rules) | 18 rules that load into every session, plus an index with the reading order. |
-| [`skills/`](skills) | The two skills written for this kit. The other nine are downloaded from the repositories that maintain them. |
+| [`skills/`](skills) | The two skills written for this kit. The other eight are downloaded from the repositories that maintain them. |
 | [`commands/learn.md`](commands/learn.md) | `/learn`: turn a correction into a rule you never have to give twice. |
 | [`templates/`](templates) | A `CLAUDE.md` skeleton, the two notebook files, and the lines that make them get read. |
 | [`reference/undo.md`](reference/undo.md) | What was added, where it went, and how to take out the parts you no longer want. |
@@ -77,13 +77,13 @@ You type `/learn`. It writes the correction into a lessons file, and points your
 **You want every tool on day one.** This holds things back on purpose, because the failure it is built against is installing all eight and being able to explain none of them.
 
 <details>
-<summary>📄 <b>Credits</b>: five skills from Jesse Vincent's obra/superpowers, and Anthropic's own plugin catalogue</summary>
+<summary>📄 <b>Credits</b>: four skills from Jesse Vincent's obra/superpowers, and Anthropic's own plugin catalogue</summary>
 
 <br>
 
 Other people's work is downloaded from the repository that maintains it, never copied in here, so you can pull newer versions the same way anyone else would.
 
-- **[obra/superpowers](https://github.com/obra/superpowers)** by Jesse Vincent, MIT. Five of its fifteen skills are on the day-one list: brainstorming, test-driven development, systematic debugging, requesting code review, and verification before completion.
+- **[obra/superpowers](https://github.com/obra/superpowers)** by Jesse Vincent, MIT. Four of its fifteen skills are on the day-one list: test-driven development, systematic debugging, requesting code review, and verification before completion.
 - **Anthropic's Knowledge Work marketplace**, which ships with the Claude app and is where day one's plugins come from.
 
 </details>
