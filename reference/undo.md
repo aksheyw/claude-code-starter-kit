@@ -91,7 +91,7 @@ The reason for listing before deleting is that the folder is shared. Anything yo
 
 > List every block the manifest records as appended to my `CLAUDE.md`, including the two notebook headings `## Start of every conversation` and `## End of every working session`. Show me each one as it stands now beside the copy in the baseline. Then remove only the ones I name, and leave the rest of the file exactly as it is.
 
-If the setup created that file rather than adding to it, skip this entirely. The file is yours now, and taking sections out of it is just editing your own notes.
+If the setup created that file in Step 3, the prompt above lists only one block: the two notebook headings Step 9 added. Everything else in the file came from your own answers in Step 3, so it is yours now, and taking sections out of it is just editing your own notes.
 
 **To remove one rule rather than all of them,** delete just that file by name. Nothing else depends on any single one.
 

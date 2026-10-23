@@ -207,7 +207,7 @@ Two things that may not match, and I would rather you say so than smooth over: t
 
 When I say I am done, verify what I actually ended up with and show me. **Record the plugins in the manifest**, which means writing to `~/.claude/` again, and for each one say whether it was already installed before today or installed during this run. Undo depends on that difference, because removing a plugin I already had would be taking away something that was never yours to add.
 
-Then tell me the honest limitation, the same way you will for the rules in Step 4. **A plugin installed just now may not be active in this conversation.** If Step 8 behaves as though the plugin is not there, the fix is to start a new conversation and ask me to paste Step 8 again, because that is when plugins are picked up. Do not promise me it is live in this conversation and do not promise me it is not. Step 8 opens by having you tell me which of those two you are in, so leave that question to it rather than guessing here.
+Then tell me the honest limitation, the same way you will for the rules in Step 4. **A plugin installed just now may not be active in this conversation.** If Step 8 behaves as though the plugin is not there, the fix is to start a new conversation, because that is when plugins are picked up. Tell me then to open `starter-kit/START-HERE.md`, copy just the paragraphs under **Step 8**, and paste them into the new conversation. Do not promise me it is live in this conversation and do not promise me it is not. Step 8 opens by having you tell me which of those two you are in, so leave that question to it rather than guessing here.
 
 **Step 6. Install the skills I agreed to in Step 2.**
 A skill is a set of instructions you load when a particular kind of job comes up, so you follow a worked method instead of improvising. Explain that in one sentence before you install anything.
@@ -222,7 +222,7 @@ They come from three places and the difference matters, so tell me which is whic
 
 Be exact about where things go, because a skill in the wrong place looks installed and does nothing. Create `~/.claude/skills/` first if it is not there. Download each repository into a temporary folder outside my project, copy the skill's own folder to `~/.claude/skills/<skill-name>/` so that `SKILL.md` sits directly inside it, then delete the temporary download and tell me you have.
 
-**Find that folder, do not assume where it is.** These repositories are laid out differently from one another, and a skill's folder is whichever one has its `SKILL.md` directly inside it, often but not always under a top-level `skills/`. Search the download for `SKILL.md` rather than guessing a path. **If a skill you were told to install has no `SKILL.md` anywhere in its download, stop and tell me the repository name and what you did find**, rather than copying the nearest folder that looks right. A wrong folder installs silently and fails months later. **Never overwrite a folder that is already there**, per the rule above.
+**Find that folder, do not assume where it is.** These repositories are laid out differently from one another, and a skill's folder is whichever one has its `SKILL.md` directly inside it, often but not always under a top-level `skills/`. Search the download for `SKILL.md` rather than guessing a path. **If a skill you were told to install has no `SKILL.md` anywhere in its download, stop and tell me the repository name and what you did find**, rather than copying the nearest folder that looks right. A wrong folder installs silently and fails months later. **If the `SKILL.md` sits at the very top of the download, the download is the skill.** Then copy only `SKILL.md` and any file or folder it names, never the `.git` folder, `README.md` or `LICENSE`, because those are the repository's, not the skill's. **Never overwrite a folder that is already there**, per the rule above.
 
 Downloading uses Git. If Git turns out to be missing, stop and tell me, and point me at the note at the bottom of `START-HERE.md`. Do not try to work around it.
 
@@ -238,7 +238,7 @@ Tell me `starter-kit/reference/connectors.md` explains what is there and what to
 **Step 8. Prove it works on something real.**
 Ask me what I am actually working on this week. Then produce a real first draft of it. Not a demo, the real thing.
 
-Before you draft anything, tell me whether you can see the `product-management` skills at all, and name them. If you cannot see them, that is Step 5 not having taken effect yet rather than a judgement about my job, and the fix is a new conversation, so say which of the two it is rather than quietly deciding.
+Before you draft anything, tell me whether you can see the `product-management` skills at all, and name them. If you cannot see them, that is Step 5 not having taken effect yet rather than a judgement about my job, and the fix is a new conversation, so say which of the two it is rather than quietly deciding. Then ask me whether to start that new conversation now or carry on here without them, and do what I say.
 
 Then use one of those skills if it genuinely fits what I said. **If none of them fits my job, say so in one line and do the work directly.** The draft is the point, not the tool, and a skill stretched over the wrong job produces something shaped like the tool rather than like my week.
 

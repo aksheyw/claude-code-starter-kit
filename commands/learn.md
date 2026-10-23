@@ -49,8 +49,10 @@ success:
 
 - Open the project's `CLAUDE.md`. If there is no `CLAUDE.md`, say so and offer to create one, because
   without it nothing here loads.
-- Search it for `lessons/index.md`. If a pointer is already there, change nothing and say so.
-- If it is missing, show the user this line and ask before adding it:
+- Search it for an instruction to **read** `lessons/index.md`. A line that only names the file, such
+  as a list of where things live, does not count, because naming a file does not make anything read
+  it. If a read instruction is already there, change nothing and say so.
+- If there is none, show the user this line and ask before adding it:
 
 ```markdown
 Read `lessons/index.md` if it exists, before doing any work. It is the list of corrections
