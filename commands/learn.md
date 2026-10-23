@@ -52,7 +52,9 @@ success:
 - Search it for an instruction to **read** `lessons/index.md`. A line that only names the file, such
   as a list of where things live, does not count, because naming a file does not make anything read
   it. If a read instruction is already there, change nothing and say so.
-- If there is none, show the user this line and ask before adding it:
+- If there is none, show the user this line and ask before adding it. Put it near the top of
+  `CLAUDE.md` under its own heading, `## Lessons`, never inside a section someone else added, so
+  that removing that section later cannot take this line with it:
 
 ```markdown
 Read `lessons/index.md` if it exists, before doing any work. It is the list of corrections
