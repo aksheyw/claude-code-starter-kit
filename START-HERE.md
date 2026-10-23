@@ -82,7 +82,7 @@ In Manual mode, Claude does not edit your files. It *proposes* a change, shows y
 
 If you decline something, Claude asks how you would rather do it.
 
-Two more controls worth knowing before you need them:
+Three more controls worth knowing before you need them:
 
 - **The promise covers edits, not commands.** When Claude proposes an edit to a file, you get the diff and it waits. When it asks to *run a command*, such as copying a file or downloading one, you are approving the command rather than seeing a preview of everything it will change on disk. Those changes also sit outside `/rewind`. The setup below is written to tell you what each command will touch before it asks, and it is fair to make it say so if it does not.
 - **Stop it any time.** Click the stop button. Or just type what you actually wanted and press Enter, which redirects it without stopping first.
@@ -207,7 +207,7 @@ Two things that may not match, and I would rather you say so than smooth over: t
 
 When I say I am done, verify what I actually ended up with and show me. **Record the plugins in the manifest**, which means writing to `~/.claude/` again, and for each one say whether it was already installed before today or installed during this run. Undo depends on that difference, because removing a plugin I already had would be taking away something that was never yours to add.
 
-Then tell me the honest limitation, the same way you will for the rules in Step 4. **A plugin installed just now may not be active in this conversation.** If Step 8 behaves as though the plugin is not there, the fix is to start a new conversation, because that is when plugins are picked up. Tell me then to open `starter-kit/START-HERE.md`, copy from **Step 8** down to the end of the block, so Steps 9 to 12 come too, and paste that into the new conversation. Do not promise me it is live in this conversation and do not promise me it is not. Step 8 opens by having you tell me which of those two you are in, so leave that question to it rather than guessing here.
+Then tell me the honest limitation, the same way you will for the rules in Step 4. **A plugin installed just now may not be active in this conversation.** If Step 8 behaves as though the plugin is not there, the fix is to start a new conversation, because that is when plugins are picked up. Tell me how: click **New** in the sidebar, pick the same folder, check the mode is Manual, and type *"Read starter-kit/START-HERE.md and carry on from Step 8."* That way the ground rules and Steps 9 to 12 come with it. Do not promise me it is live in this conversation and do not promise me it is not. Step 8 opens by having you tell me which of those two you are in, so leave that question to it rather than guessing here.
 
 **Step 6. Install the skills I agreed to in Step 2.**
 A skill is a set of instructions you load when a particular kind of job comes up, so you follow a worked method instead of improvising. Explain that in one sentence before you install anything.
