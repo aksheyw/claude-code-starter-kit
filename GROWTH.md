@@ -112,7 +112,7 @@ Then restart, ask it to write a fake API key into a test file, and check you get
 
 This one is not in the set Anthropic installs by default, so you add where it comes from first, then install it.
 
-**In the desktop app:** open **Customize** in the left sidebar, click **Plugins**, then **Add**, then **Add marketplace**, and enter the GitHub address `aksheyw/claude-code-ship-gate`. Then open **Discover** on that same screen, select **ship-gate** and click **Add**. Claude Code picks it up the next time a conversation starts.
+**In the desktop app:** open **Customize** in the left sidebar, click **Plugins**, then **Add**, then **Add marketplace**, and enter the GitHub address `aksheyw/claude-code-ship-gate`. Then switch to **Discover** on that same screen, search for **ship-gate** and click its **+** button. Claude Code picks it up the next time a conversation starts.
 
 **If you use the terminal version**, the same thing is two typed commands:
 

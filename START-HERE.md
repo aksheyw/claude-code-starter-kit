@@ -60,11 +60,11 @@ If it asks you to upgrade, your plan does not include Claude Code yet. If it ask
 
 ## 1.5 Point it at your folder
 
-Look at the row of controls under the box where you type. Click the first one, the environment, and pick the top entry under **Local**. That means Claude works on your own machine with your own files, which is what you want.
+Look at the row under the box where you type. The first control there says where Claude will work. On a new session the middle of the screen may also show a short list with **Choose environment** under it, which does the same job.
 
-Then click the folder control beside it and choose **Open folder…**.
+Click it and make sure **Local** is chosen. That means Claude works on your own machine with your own files, which is what you want. Then choose **Open folder…** and pick your folder.
 
-If you do not see those controls under the box, your copy of the app has the older layout and the same two choices sit elsewhere on the screen. You are still looking for the same two things: **Local**, and your folder.
+If the labels on your screen differ, you are still looking for the same two things: **Local**, and your folder.
 
 **Choose the outer folder, the one you made in 1.1. Do not choose `starter-kit`.** This is the easiest thing on the page to get wrong, because `starter-kit` is the folder you were just handling and it has the more interesting name. Pick it and every instruction in Part 2 points one level too deep, and the setup fails on its second step.
 
@@ -189,15 +189,15 @@ Show me the titles so I know what I agreed to, and tell me `starter-kit/rules/RE
 **Step 5. Have me look at the plugins I already have, before either of us installs anything.**
 Anthropic adds a catalogue of work plugins by default, called the Knowledge Work marketplace. That means the one I want is almost certainly listed, and it may already be installed. Those are two different things, so tell me which you are asking me to check. Looking first costs thirty seconds and saves me installing something twice.
 
-Tell me to open **Customize** in the left sidebar and click the **Plugins** tab. Then wait for me. This screen is mine to look at, not yours to run.
+Tell me to open **Customize** in the left sidebar, click **Plugins**, then **Yours**, which lists the plugins already on my account. Then wait for me. This screen is mine to look at, not yours to run.
 
 While I have it open, ask me whether **Product Management** is in the list, and have me read out what I see next to it.
 
 Being listed and being installed are not the same thing, so go by what the screen says next to it, not by whether the name appears:
 
 - **If it says it is installed or enabled,** nothing to do. Tell me in one line what it adds, and carry on.
-- **If it is in my list but turned off,** tell me to turn on its toggle, and wait until I tell you it is on.
-- **If it is not in my list at all,** tell me to open **Discover** on that same screen to find it, and talk me through it while I look. Once I have found it, have me select it and click **Add**, and wait until it shows in my list, turned on, before you go on.
+- **If it is under Yours but turned off,** tell me to turn on its toggle, and wait until I tell you it is on.
+- **If it is not under Yours at all,** tell me to switch to **Discover** next to it and search for it, and talk me through it while I look. Once I have found it, have me click its **+** or **Add** button, and wait until it shows under **Yours**, turned on, before you go on.
 
 Either way, do not tell me it worked until I have told you what I can see. Step 8 reaches for this plugin first and can work without it, so if I read out something that does not match any of the three cases above, say so rather than guessing which one I meant.
 
