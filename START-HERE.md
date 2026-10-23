@@ -48,11 +48,11 @@ If you already have it installed, skip to 1.4.
 
 ## 1.4 Open the Code tab
 
-Three tabs sit at the top of the left sidebar: **Chat**, **Cowork** and **Code**. If they show only as icons, hover over one to see its name.
+Two icons sit at the top of the left sidebar: a speech bubble and `</>`. Hover over one to see its name. Some versions of the app show a third, **Cowork**.
 
-- **Chat** is the Claude you already know. No access to your files.
-- **Cowork** runs longer jobs on its own in the background.
-- **Code** is the one you want. It works with the files in a folder you pick, and proposes every edit for you to accept before it happens.
+- **Chat**, the speech bubble, is the Claude you already know.
+- **Cowork**, if you see it, runs longer jobs on its own in the background.
+- **Code**, the `</>`, is the one you want. It works with the files in a folder you pick, and in Manual mode, which you set in 1.6, it proposes every edit for you to accept before it happens.
 
 Click **Code**.
 
@@ -62,7 +62,7 @@ If it asks you to upgrade, your plan does not include Claude Code yet. If it ask
 
 Look at the row under the box where you type. The first control there says where Claude will work. On a new session the middle of the screen may also show a short list with **Choose environment** under it, which does the same job.
 
-Click it and make sure **Local** is chosen. That means Claude works on your own machine with your own files, which is what you want. Then choose **Open folder…** and pick your folder.
+Click it, and under **Local** choose **This computer**. That means Claude works on your own machine with your own files, which is what you want. Then choose **Open folder…** and pick your folder.
 
 If the labels on your screen differ, you are still looking for the same two things: **Local**, and your folder.
 
