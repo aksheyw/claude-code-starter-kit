@@ -67,7 +67,7 @@ These are downloaded rather than copied into this kit, so you can pull a newer v
 | Skill | What it does | Repository |
 |---|---|---|
 | `deep-review` | Reviews something in several passes, a different angle each time, instead of one pass that sees what it saw the first time | [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review) |
-| `llm-wiki` | The fuller version of the notebook: a project wiki that compounds across sessions, with a check for contradictions. Comes with the four wiki commands listed above | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
+| `llm-wiki` | The fuller version of the notebook: a project wiki that compounds across sessions, with a check for contradictions. Comes with the four wiki commands listed above. The two-file notebook from Step 9 grows into this fuller wiki when you run `/wiki-init`, which adds the files it needs and leaves `_hot.md` and `_log.md` as they are | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
 | `doc-confluence` | Organises a project's documents so anything can be found in one or two hops, and scans for rot | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
 | `audit` | A pre-release sweep for the bug classes that repeat, before something goes in front of somebody who is not you | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
 
