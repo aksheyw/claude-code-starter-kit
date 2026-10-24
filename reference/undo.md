@@ -6,7 +6,7 @@ Knowing the way out is what makes you willing to try things. Read this once now,
 
 ## Stop it mid-task
 
-Press **Esc**. It stops where it is and keeps whatever it had already finished. Nothing closes and nothing is lost.
+Press **Esc**, or click the stop button. It stops where it is and keeps whatever it had already finished. Nothing closes and nothing is lost.
 
 If the app itself stops responding, quit it the normal Mac way, `Cmd` `Q`, and open it again. Your files are untouched.
 

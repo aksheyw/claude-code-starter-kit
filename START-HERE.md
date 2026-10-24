@@ -10,7 +10,7 @@ It comes in two forms. Most guides you will find describe the one that runs in a
 
 Three things before you start.
 
-**You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, so check this before you begin. Nothing later on this page works around it.
+**You need a paid Claude plan.** Pro, Max, Team or Enterprise. The free plan does not include Claude Code, so check this before you begin. Nothing later on this page works around it. The setup and the real piece of work at the end both use part of your plan's usage allowance, so if you are close to a limit, wait until it resets.
 
 **You need macOS 13 (Ventura) or later.** Apple menu, then About This Mac. The app needs it, and so does the terminal version in the fold at the bottom.
 
@@ -287,7 +287,7 @@ Then stop. I have enough for today.
 
 ## What you should have at the end
 
-A project folder Claude works in. A `CLAUDE.md` it reads every time, either new or extended without losing what was already in it. A set of rules loaded into every conversation, none of which landed on top of anything of yours. A handful of skills: two written for this kit, and the rest downloaded from the repositories that maintain them so you can update them later. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. A real first draft of this week's work, saved in your folder, with its gaps named. And a list, at `~/.claude/starter-kit-manifest.md`, of exactly what was added and where.
+A project folder Claude works in. A `CLAUDE.md` it reads every time, either new or extended without losing what was already in it. A set of rules loaded into every conversation, none of which landed on top of anything of yours. Up to twelve skills: two written for this kit, and the rest downloaded from the repositories that maintain them so you can update them later. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. A real first draft of this week's work, saved in your folder, with its gaps named. And a list, at `~/.claude/starter-kit-manifest.md`, of exactly what was added and where.
 
 Everything else waits until you feel the problem it solves, and [GROWTH.md](GROWTH.md) names those moments.
 
