@@ -33,8 +33,9 @@ This is the catalogue the setup reads in Step 2. It exists so you can see the wh
 | What | Where it goes | Why |
 |---|---|---|
 | `learn.md`, the `/learn` command | `~/.claude/commands/learn.md` | Turns a correction into a rule you never have to give twice. It keeps its exact filename, because Claude Code takes a command's name from the file, and a prefix would make it `/starter-kit-learn`. If you already have a `learn.md`, the setup stops and asks rather than touching it. |
+| The four wiki commands, `/wiki-init`, `/wiki-ingest`, `/wiki-query` and `/wiki-lint` | `~/.claude/commands/` | Only if you take the `llm-wiki` skill, and from the same repository. They set up, add to, search and check the fuller project wiki. They keep their exact filenames for the same reason as `learn.md`, and if you already have one with the same name the setup stops and asks rather than touching it. |
 | The list of what was installed | `~/.claude/starter-kit-manifest.md` | A dated record of every file added and where it came from, so removing things later is exact rather than guesswork. If it is already there from an earlier run, a new dated section is added and nothing existing is replaced. |
-| An untouched copy of everything installed | `~/.claude/starter-kit-baseline/` | The rules, the `/learn` command, each skill folder, and the exact text of anything added to your `CLAUDE.md` or to a notebook you already kept, all exactly as they arrived and filed under the project it happened in. A copy already in there is never overwritten. Months later it is the only way to tell a change you made from a change the authors made, which is what stops you deleting your own improvements by mistake. |
+| An untouched copy of everything installed | `~/.claude/starter-kit-baseline/` | The rules, the commands, each skill folder, and the exact text of anything added to your `CLAUDE.md` or to a notebook you already kept, all exactly as they arrived and filed under the project it happened in. A copy already in there is never overwritten. Months later it is the only way to tell a change you made from a change the authors made, which is what stops you deleting your own improvements by mistake. |
 
 **Where they come from.** Templates in this kit. They are skeletons, and the setup fills them in with your real answers rather than leaving you the placeholders.
 
@@ -66,7 +67,7 @@ These are downloaded rather than copied into this kit, so you can pull a newer v
 | Skill | What it does | Repository |
 |---|---|---|
 | `deep-review` | Reviews something in several passes, a different angle each time, instead of one pass that sees what it saw the first time | [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review) |
-| `llm-wiki` | The fuller version of the notebook: a project wiki that compounds across sessions, with a check for contradictions | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
+| `llm-wiki` | The fuller version of the notebook: a project wiki that compounds across sessions, with a check for contradictions. Comes with the four wiki commands listed above | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
 | `doc-confluence` | Organises a project's documents so anything can be found in one or two hops, and scans for rot | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
 | `audit` | A pre-release sweep for the bug classes that repeat, before something goes in front of somebody who is not you | [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills) |
 
@@ -84,7 +85,7 @@ Downloaded from the repository that maintains them. Not copied into this kit, be
 | `writing-plans` | Turns an agreed design into a step-by-step plan before any work starts; brainstorming hands off to it | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
 | `test-driven-development` | Write the failing check first, then the code that makes it pass | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
 | `systematic-debugging` | A method for finding out why something broke, instead of guessing at fixes | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
-| `requesting-code-review` | How to ask for a review that finds things, rather than one that agrees with you | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
+| `requesting-code-review` | How to ask for a review that finds things, rather than one that agrees with you. It works from version control, so it earns its place once you have turned that on in week two ([GROWTH.md](../GROWTH.md)) | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
 | `verification-before-completion` | Run the check and read the output before saying something is done | [obra/superpowers](https://github.com/obra/superpowers) | Jesse Vincent | MIT |
 
 The `obra/superpowers` repository holds fifteen skills, checked 2026-10-24. The six above are the ones this kit installs, because they are the ones with real use behind them. You can install the rest yourself from the same repository whenever you want them.
