@@ -287,7 +287,7 @@ Then stop. I have enough for today.
 
 ## What you should have at the end
 
-A project folder Claude works in. A `CLAUDE.md` it reads every time, either new or extended without losing what was already in it. A set of rules loaded into every conversation, none of which landed on top of anything of yours. A handful of skills: two written for this kit, and the rest downloaded from the repositories that maintain them so you can update them later. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. One real piece of work already finished. And a list, at `~/.claude/starter-kit-manifest.md`, of exactly what was added and where.
+A project folder Claude works in. A `CLAUDE.md` it reads every time, either new or extended without losing what was already in it. A set of rules loaded into every conversation, none of which landed on top of anything of yours. A handful of skills: two written for this kit, and the rest downloaded from the repositories that maintain them so you can update them later. Two or three plugins that do your actual job, plus sixteen tool connections waiting whenever you want them. A notebook that survives between conversations. A real first draft of this week's work, saved in your folder, with its gaps named. And a list, at `~/.claude/starter-kit-manifest.md`, of exactly what was added and where.
 
 Everything else waits until you feel the problem it solves, and [GROWTH.md](GROWTH.md) names those moments.
 
