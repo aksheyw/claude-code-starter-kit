@@ -103,7 +103,7 @@ Other people's work is downloaded from the repository that maintains it, never c
 
 Day one installs skills from two of these, `claude-code-deep-review` and `claude-code-learned-skills`. [GROWTH.md](GROWTH.md) says which of the rest to reach for and when.
 
-- [claude-code-rules](https://github.com/aksheyw/claude-code-rules): the full rules layer. The eighteen here are its day-one subset
+- [claude-code-rules](https://github.com/aksheyw/claude-code-rules): the thirteen rules I run myself. The eighteen here were written for this kit
 - [claude-code-learned-skills](https://github.com/aksheyw/claude-code-learned-skills): skills pulled out of real sessions. Three are on the day-one list
 - [claude-code-deep-review](https://github.com/aksheyw/claude-code-deep-review): review in several passes, a different angle each time. One skill is on the day-one list
 - [claude-code-pm-agents](https://github.com/aksheyw/claude-code-pm-agents): product-manager assistants, each with one job, including a council that reviews big decisions
