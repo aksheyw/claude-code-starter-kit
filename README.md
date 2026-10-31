@@ -23,9 +23,16 @@ Claude Code is Anthropic's assistant that works directly on the files in a folde
 
 ## Why the day-one list stops where it does
 
-A tool installed before you have its problem is friction with no payoff. This kit is the front door to eight other GitHub repositories of mine, listed at the bottom. Install all eight on day one and you get a setup you stop trusting, because half of it does things you never asked for and cannot explain.
+A tool installed before you have its problem is friction with no payoff. This kit is the front door to eight other GitHub repositories of mine, listed at the bottom.
 
-So the test for day one is strict: you feel the value the same day, it is something the author genuinely uses rather than something that sounded good, and you can check that it is working.
+The test for day one is strict: you feel the value the same day, it is something the author genuinely uses rather than something that sounded good, and you can check that it is working.
+
+<details>
+<summary>📋 <b>The seven things that pass the day-one test</b>, what each word means, and what waits</summary>
+
+<br>
+
+Install all eight on day one and you get a setup you stop trusting, because half of it does things you never asked for and cannot explain.
 
 **Seven things pass.** If your machine already has some of them, you take only what is missing.
 
@@ -39,13 +46,24 @@ So the test for day one is strict: you feel the value the same day, it is someth
 
 Most other tools fail that test. Secret scanning, which checks you have not pasted a password into a file where it can leak, waits until an app you are building needs a paid key. So do version control, which keeps every earlier version of your work so you can go back to one, and quality gates, which are checks that have to pass before your work goes live. [GROWTH.md](GROWTH.md) names the moment that earns each one.
 
+</details>
+
 ## If you already use Claude Code, nothing here lands on top of yours
 
 On an empty machine there is nothing of yours to collide with, but you are still shown every item and asked about every optional one.
 
-The setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why. Then it waits. You decide.
+The setup **looks first**, then shows you three lists: where it fills a gap, where it overlaps with something of yours, and where what you have is already better. Then it waits. You decide.
+
+<details>
+<summary>🌉 <b>What happens on an overlap</b>, which of your files can change, and how to undo it</summary>
+
+<br>
+
+For each overlap it says what both versions do, what you gain and lose either way, and which it would pick and why.
 
 Nothing is renamed, moved or copied over. Three files of yours can gain lines, and only if you say yes to the exact lines first: your `CLAUDE.md`, and either of the two notebook files if you already keep them. Those are only ever added to, never rewritten. Its rules install with a `starter-kit-` prefix so they cannot collide with yours, and everything it adds goes on a list you can read at any time. The full catalogue is [`reference/what-this-adds.md`](reference/what-this-adds.md), readable before you install a thing, and [`reference/undo.md`](reference/undo.md) is the way back out, worth reading before you start rather than after.
+
+</details>
 
 <details>
 <summary>📦 <b>What is in here</b>, and where the depth went</summary>
@@ -70,11 +88,18 @@ One install note in `GROWTH.md` differs from the repo it points at, and says so 
 
 ## The one habit the rest of it is downstream of
 
-When you correct Claude on something, write the correction down so you never have to give it twice.
+When you correct Claude on something, write the correction down so you never have to give it twice. **The tools are the residue. The habit is the thing.**
+
+<details>
+<summary>🔧 <b>How <code>/learn</code> does it</b>, and why your set will look different</summary>
+
+<br>
 
 You type `/learn`, a command this kit adds. It writes the correction into a lessons file, and points your project's `CLAUDE.md` at that file so it actually gets read next time. Both halves matter: a lesson nothing loads is a diary. Every rule in this repo started as one.
 
-**The tools are the residue. The habit is the thing.** Your set will look different from this one within a couple of months, and that is the point, not drift.
+Your set will look different from this one within a couple of months, and that is the point, not drift.
+
+</details>
 
 ## When to skip this
 
