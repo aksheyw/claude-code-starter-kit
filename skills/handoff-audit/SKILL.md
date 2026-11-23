@@ -81,6 +81,12 @@ forever. A recommendation with its reasoning can be argued with, which is the po
 **B5. Carry open questions as questions.** Do not quietly resolve something the person never answered.
 If a decision is owed, mark it owed and name who owes it.
 
+**B6. Run the carry-over check before calling a handoff complete.** Read the previous handoff and the
+new one. List every item from the previous one (pending work, open questions, settled rules, lessons)
+that the new one drops without a word. Restore each one, or say by name why it no longer applies. A
+decision the person made stays until they retire it. When you call the handoff complete, say what the
+check found, even if nothing was dropped. If there is no previous handoff, say so and skip this check.
+
 ---
 
 ## The self-check that catches the pattern
